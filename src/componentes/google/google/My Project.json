@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "hip-service-157313",
+  "private_key_id": "2e21fee07733bc7976f44ff97c31e0a32fee4806",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCtFrQ/6hCBKxod\nVSXtEr7AKixKjp1sINthuJ9Ok99eJ8si6xLDpbbEvddH4h35hjXsHZd1cQXwlu5f\nAkJsX9WZteUcPu1/U/Rpk6EUA2zKbUna0YS5ZsBz7oJiVjVFVyFfS5lePc+Kz0Qh\nZ1NzNSZG47byX0BqZ4zC9y7s59lIL2GtAT8E5TF6jmb686msmNBLsSDbv0OPsE/p\nitjzDTb0UTvnTw7l2YuhRsZqx+FBbToyCN7usUeYlrPmbjUo+/0MKRmrm9Hi+26+\n2MXmZDLsenY07SEP6adcZC+OnzKZeVWRwoA++x3tz3/RukK3VwAG2fARC2/hXMi1\n80lM32c/AgMBAAECggEAaXtzn5vCMSWWRZf1g/OvgaZx1YHyF8oyR+xeUWG2d0fi\n+MWvasHbjyxuPOVlBQKwa9Ng0PZu+z7Px+C1oBwLLSB3nm4PCFCem5SXTn4D150g\nrBSRQPeIg14v4UPONRKzSMLmlVMv3tUPHRg99/DFAeCWRkCcHfw7ATnoRAHLHbyZ\npmiXRUp6d6yjDI/ry65YT3ajwrjXxzFT54ikAvhrlsWflSqgFEXpC0A9+FBzIAAu\nxF8Ergq6jDJASkN7p91kCKNZAeydNlSizjvOEXRAXd+ThSVwT2qVJEWXp4mNx6l5\nQ7R9VUjTiqzYrZrOgw56jgVrIybTwylE29P4NklBmQKBgQDZGYqR+W2KcsOy+5+M\nPWCiKS5lY8zkexAiRsaxzqV/EUk+VB34jw8IJPZVZw/90ori9nhF5Q7u1eiEeVd3\np453MWFc2gwQSEG8R88QLlT/BXQVetqky40m7Lo4R6i1Z16D3KZFsN/HCzKTZWcJ\nTuJSAfEtBQLcHz8lqnf4oYI2JQKBgQDMGlsSNGHxsMWkI2jNrh/D86LlJiQvWmiC\nPUORvuQJ6VfuU9RtDRXLXSD7aStnDhNJi1RW1KeeQXeQf7XvFuC59aDaC6FPz+BP\nCZMEomyh/VGHqV5chTWv20xvWcYyHdxu7N7XkgWrR403oe7vqHUa9N2gih7TeLRU\noIXb41gQkwKBgQDFtgEAV4tu3n1i7syqRutOQvrB01WxbnGPBa3GGE+XnQJ7BNgW\nmRIzdJXxyN5DZg6eC6AU5znmQGB05JzHl4yi+BGXIeyCl4tmEG9+aPN3HFxPg4bD\nNazimgwtXPVD31Ov+q5iIWZqOsRgf6SKUZDC5onhWgL0vHAhuVFw2IVhEQKBgFjW\nx/k+j7tRxFVTjFSqi+0Q6UBwv6NU6NR3sieIPV4LEVkNaBMndOsV2DtWZavvtnl2\niflZirQZrt9Yl2pAPQT0Y1VFZquEwg/lDPchc8N2rbws/oOq/9lRzQ1SuDAsSzyF\nIeIXDxykglVKyOPMIVzgZG9yb0SA740+acVySWy9AoGAXtBcTcLfAV7FYNEu/kKO\n/8+nq72SGK0R4dKEFiZOv38XEVDve1W5nDiQZm+32PwO3hmnR+UQBc7Xwa71kiZd\n8FtRZ2s8afuW1MW989IGYH9FM5/WQJb02Xm1QHvXXCQiKH/VWSQqkQiD6+d8oR1G\nd7cY5VFY6tq0L3RWOWZVB6I=\n-----END PRIVATE KEY-----\n",
+  "client_email": "focusmeet@hip-service-157313.iam.gserviceaccount.com",
+  "client_id": "100098725625563543841",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/focusmeet%40hip-service-157313.iam.gserviceaccount.com"
+}

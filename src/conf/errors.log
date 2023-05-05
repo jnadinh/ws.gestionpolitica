@@ -1,0 +1,316 @@
+[05-May-2023 07:04:26 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 25
+[05-May-2023 07:04:26 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 25
+[05-May-2023 07:04:26 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type bool in D:\gestionpolitica\ws\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 52
+[05-May-2023 07:04:26 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 52
+[05-May-2023 07:04:26 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in D:\gestionpolitica\ws\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 58
+[05-May-2023 07:04:26 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  el valor null para la columna «usuarios_id» viola la restricción not null
+DETAIL:  La fila que falla contiene (1, null, JNADINHSA5426064369739750, 2023-05-05 00:04:26). in D:\gestionpolitica\ws\src\componentes\conector\ConectorDBPostgres.php on line 67
+[05-May-2023 07:08:42 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 25
+[05-May-2023 07:08:42 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 25
+[05-May-2023 07:08:42 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type bool in D:\gestionpolitica\ws\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 52
+[05-May-2023 07:08:42 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 52
+[05-May-2023 07:09:24 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 25
+[05-May-2023 07:09:24 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 25
+[05-May-2023 07:09:24 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type bool in D:\gestionpolitica\ws\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 52
+[05-May-2023 07:09:24 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 52
+[05-May-2023 07:09:42 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 25
+[05-May-2023 07:09:42 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 25
+[05-May-2023 07:09:42 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type bool in D:\gestionpolitica\ws\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 52
+[05-May-2023 07:09:42 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 52
+[05-May-2023 07:09:42 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in D:\gestionpolitica\ws\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 58
+[05-May-2023 07:09:42 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  el valor null para la columna «usuarios_id» viola la restricción not null
+DETAIL:  La fila que falla contiene (2, null, JNADINHSA5733632346534361, 2023-05-05 00:09:43). in D:\gestionpolitica\ws\src\componentes\conector\ConectorDBPostgres.php on line 67
+[05-May-2023 07:09:52 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 25
+[05-May-2023 07:09:52 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 25
+[05-May-2023 07:09:52 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type bool in D:\gestionpolitica\ws\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 52
+[05-May-2023 07:09:52 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 52
+[05-May-2023 07:19:26 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 25
+[05-May-2023 07:19:26 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 25
+[05-May-2023 07:20:30 Europe/Berlin] PHP Fatal error:  Cannot declare class App\Middleware\UserAuthMiddleware, because the name is already in use in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware2.php on line 19
+[05-May-2023 07:20:58 Europe/Berlin] PHP Fatal error:  Cannot declare class App\Middleware\UserAuthMiddleware, because the name is already in use in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware2.php on line 19
+[05-May-2023 07:22:15 Europe/Berlin] PHP Fatal error:  Cannot declare class App\Middleware2\UserAuthMiddleware2, because the name is already in use in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware2.php on line 19
+[05-May-2023 07:22:48 Europe/Berlin] PHP Fatal error:  Cannot declare class App\Middleware2\UserAuthMiddleware2, because the name is already in use in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware2.php on line 19
+[05-May-2023 07:24:44 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «FROM»
+LINE 1: SELECT u.usuario, u.id, FROM public.tab_usuarios u
+                                ^ in D:\gestionpolitica\ws\src\componentes\conector\ConectorDBPostgres.php on line 57
+[05-May-2023 07:24:44 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware2.php on line 77
+[05-May-2023 07:24:44 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware2.php on line 77
+[05-May-2023 07:24:44 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware2.php on line 78
+[05-May-2023 07:24:44 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware2.php on line 78
+[05-May-2023 07:24:44 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 25
+[05-May-2023 07:26:55 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «FROM»
+LINE 1: SELECT u.usuario, u.id, FROM public.tab_usuarios u
+                                ^ in D:\gestionpolitica\ws\src\componentes\conector\ConectorDBPostgres.php on line 57
+[05-May-2023 07:26:55 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware2.php on line 77
+[05-May-2023 07:26:55 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware2.php on line 77
+[05-May-2023 07:26:55 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware2.php on line 78
+[05-May-2023 07:26:55 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware2.php on line 78
+[05-May-2023 07:27:00 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «FROM»
+LINE 1: SELECT u.usuario, u.id, FROM public.tab_usuarios u
+                                ^ in D:\gestionpolitica\ws\src\componentes\conector\ConectorDBPostgres.php on line 57
+[05-May-2023 07:27:00 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware2.php on line 77
+[05-May-2023 07:27:00 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware2.php on line 77
+[05-May-2023 07:27:00 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware2.php on line 78
+[05-May-2023 07:27:00 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware2.php on line 78
+[05-May-2023 07:28:17 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «FROM»
+LINE 1: SELECT u.usuario, u.id, FROM public.tab_usuarios u
+                                ^ in D:\gestionpolitica\ws\src\componentes\conector\ConectorDBPostgres.php on line 57
+[05-May-2023 07:28:17 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware2.php on line 77
+[05-May-2023 07:28:17 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware2.php on line 77
+[05-May-2023 07:28:17 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware2.php on line 78
+[05-May-2023 07:28:17 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware2.php on line 78
+[05-May-2023 07:30:47 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «FROM»
+LINE 1: SELECT u.usuario, u.id, FROM public.tab_usuarios u
+                                ^ in D:\gestionpolitica\ws\src\componentes\conector\ConectorDBPostgres.php on line 57
+[05-May-2023 07:30:47 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware2.php on line 77
+[05-May-2023 07:30:47 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware2.php on line 77
+[05-May-2023 07:30:47 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware2.php on line 78
+[05-May-2023 07:30:47 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware2.php on line 78
+[05-May-2023 07:30:57 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «FROM»
+LINE 1: SELECT u.usuario, u.id, FROM public.tab_usuarios u
+                                ^ in D:\gestionpolitica\ws\src\componentes\conector\ConectorDBPostgres.php on line 57
+[05-May-2023 07:30:57 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware2.php on line 77
+[05-May-2023 07:30:57 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware2.php on line 77
+[05-May-2023 07:30:57 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware2.php on line 78
+[05-May-2023 07:30:57 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware2.php on line 78
+[05-May-2023 08:16:17 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type bool in D:\gestionpolitica\ws\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 48
+[05-May-2023 08:16:17 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 48
+[05-May-2023 08:18:42 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type bool in D:\gestionpolitica\ws\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 48
+[05-May-2023 08:18:42 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 48
+[05-May-2023 08:19:16 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «public.users»
+LINE 2:         FROM public.users u
+                     ^ in D:\gestionpolitica\ws\src\componentes\conector\ConectorDBPostgres.php on line 57
+[05-May-2023 08:19:16 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «public.token»
+LINE 1: UPDATE public.token SET updated_at=NOW() WHERE token = 'jnad...
+               ^ in D:\gestionpolitica\ws\src\componentes\conector\ConectorDBPostgres.php on line 67
+[05-May-2023 08:19:16 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 78
+[05-May-2023 08:19:16 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 78
+[05-May-2023 08:19:16 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 79
+[05-May-2023 08:19:16 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 79
+[05-May-2023 08:19:16 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 80
+[05-May-2023 08:19:16 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 80
+[05-May-2023 08:19:16 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 81
+[05-May-2023 08:19:16 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 81
+[05-May-2023 08:19:16 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 83
+[05-May-2023 08:19:16 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 83
+[05-May-2023 08:19:16 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «public.users»
+LINE 2:         FROM public.users u
+                     ^ in D:\gestionpolitica\ws\src\componentes\conector\ConectorDBPostgres.php on line 57
+[05-May-2023 08:19:16 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «public.token»
+LINE 1: UPDATE public.token SET updated_at=NOW() WHERE token = 'jnad...
+               ^ in D:\gestionpolitica\ws\src\componentes\conector\ConectorDBPostgres.php on line 67
+[05-May-2023 08:19:16 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 78
+[05-May-2023 08:19:16 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 78
+[05-May-2023 08:19:16 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 79
+[05-May-2023 08:19:16 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 79
+[05-May-2023 08:19:16 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 80
+[05-May-2023 08:19:16 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 80
+[05-May-2023 08:19:16 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 81
+[05-May-2023 08:19:16 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 81
+[05-May-2023 08:19:16 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 83
+[05-May-2023 08:19:16 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 83
+[05-May-2023 08:19:16 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «public.token»
+LINE 1: DELETE FROM public.token WHERE token='jnadinh' ;
+                    ^ in D:\gestionpolitica\ws\src\componentes\conector\ConectorDBPostgres.php on line 75
+[05-May-2023 08:21:18 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «public.users»
+LINE 2:         FROM public.users u
+                     ^ in D:\gestionpolitica\ws\src\componentes\conector\ConectorDBPostgres.php on line 57
+[05-May-2023 08:21:18 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «public.token»
+LINE 1: UPDATE public.token SET updated_at=NOW() WHERE token = 'jnad...
+               ^ in D:\gestionpolitica\ws\src\componentes\conector\ConectorDBPostgres.php on line 67
+[05-May-2023 08:21:18 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 78
+[05-May-2023 08:21:18 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 78
+[05-May-2023 08:21:18 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 79
+[05-May-2023 08:21:18 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 79
+[05-May-2023 08:21:18 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 80
+[05-May-2023 08:21:18 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 80
+[05-May-2023 08:21:18 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 81
+[05-May-2023 08:21:18 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 81
+[05-May-2023 08:21:18 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 83
+[05-May-2023 08:21:18 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 83
+[05-May-2023 08:24:33 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «public.users»
+LINE 2:         FROM public.users u
+                     ^ in D:\gestionpolitica\ws\src\componentes\conector\ConectorDBPostgres.php on line 57
+[05-May-2023 08:24:33 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «public.token»
+LINE 1: UPDATE public.token SET updated_at=NOW() WHERE token = 'JNAD...
+               ^ in D:\gestionpolitica\ws\src\componentes\conector\ConectorDBPostgres.php on line 67
+[05-May-2023 08:24:33 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 78
+[05-May-2023 08:24:33 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 78
+[05-May-2023 08:24:33 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 79
+[05-May-2023 08:24:33 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 79
+[05-May-2023 08:24:33 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 80
+[05-May-2023 08:24:33 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 80
+[05-May-2023 08:24:33 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 81
+[05-May-2023 08:24:33 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 81
+[05-May-2023 08:24:33 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 83
+[05-May-2023 08:24:33 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws\src\Middleware\UserAuthMiddleware.php on line 83
+[05-May-2023 08:32:35 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 08:32:35 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 08:32:35 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «public.users»
+LINE 2:         FROM public.users WHERE eliminado = FALSE ORDER BY i...
+                     ^ in D:\gestionpolitica\ws\src\componentes\conector\ConectorDBPostgres.php on line 57
+[05-May-2023 08:32:43 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 28
+[05-May-2023 08:32:43 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 31
+[05-May-2023 08:32:54 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 28
+[05-May-2023 08:32:54 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 31
+[05-May-2023 08:32:54 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «public.pagos»
+LINE 2:         FROM public.pagos ORDER BY fecha DESC
+                     ^ in D:\gestionpolitica\ws\src\componentes\conector\ConectorDBPostgres.php on line 57
+[05-May-2023 08:33:03 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 08:33:03 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 08:33:03 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «public.users»
+LINE 2:         FROM public.users WHERE eliminado = FALSE ORDER BY i...
+                     ^ in D:\gestionpolitica\ws\src\componentes\conector\ConectorDBPostgres.php on line 57
+[05-May-2023 08:33:20 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 08:33:20 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 08:33:20 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «public.users»
+LINE 2:         FROM public.users WHERE eliminado = FALSE ORDER BY i...
+                     ^ in D:\gestionpolitica\ws\src\componentes\conector\ConectorDBPostgres.php on line 57
+[05-May-2023 08:37:24 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 08:37:24 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 08:42:17 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 08:42:17 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 08:44:40 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 08:44:40 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 08:44:59 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 08:44:59 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 08:45:14 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 08:45:14 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 08:58:19 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 08:58:19 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 08:59:27 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 08:59:27 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 09:03:35 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 09:03:35 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 09:03:35 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 09:03:35 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 09:05:12 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 09:05:12 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 09:05:49 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 09:05:49 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 09:06:58 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 09:06:58 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 09:07:09 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 09:07:09 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 09:13:39 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 09:13:39 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 09:13:39 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «public.users»
+LINE 1: UPDATE public.users SET clave=MD5(null),  telefono = '232132...
+               ^ in D:\gestionpolitica\ws\src\componentes\conector\ConectorDBPostgres.php on line 67
+[05-May-2023 09:15:46 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 09:15:46 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 09:15:46 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 09:15:46 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 09:16:00 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 09:16:00 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 09:16:00 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 09:16:00 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 09:16:57 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 09:16:57 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 09:16:57 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 09:16:57 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 09:20:18 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 09:20:18 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 09:21:28 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 09:21:28 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 09:21:28 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 09:21:28 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 09:21:48 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 28
+[05-May-2023 09:21:48 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 31
+[05-May-2023 09:24:17 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 28
+[05-May-2023 09:24:17 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 31
+[05-May-2023 10:33:10 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 28
+[05-May-2023 10:33:10 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 31
+[05-May-2023 10:36:55 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 28
+[05-May-2023 10:36:55 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 31
+[05-May-2023 10:41:18 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 28
+[05-May-2023 10:41:18 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 31
+[05-May-2023 10:45:42 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 28
+[05-May-2023 10:45:42 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 31
+[05-May-2023 10:47:09 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 28
+[05-May-2023 10:47:09 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 31
+[05-May-2023 10:47:54 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 28
+[05-May-2023 10:47:54 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 31
+[05-May-2023 10:47:54 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la columna «sadsad»
+LINE 2:         '1', 'dsdas', sadsad, 23132, '213123',
+                              ^ in D:\gestionpolitica\ws\src\componentes\conector\ConectorDBPostgres.php on line 57
+[05-May-2023 10:48:50 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 28
+[05-May-2023 10:48:50 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 31
+[05-May-2023 10:49:11 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 28
+[05-May-2023 10:49:11 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 31
+[05-May-2023 10:49:11 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la columna «dsfasdf»
+LINE 2:         '1', 'dsfsdf', dsfasdf, 2312321, '2312321321',
+                               ^ in D:\gestionpolitica\ws\src\componentes\conector\ConectorDBPostgres.php on line 57
+[05-May-2023 10:51:50 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 28
+[05-May-2023 10:51:50 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 31
+[05-May-2023 10:51:50 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe el esquema «a»
+CONTEXT:  sentencia SQL: «CREATE TABLE dsfsadfds.tab_gestiones_archivos (
+		id SERIAL NOT NULL,
+		personas_gestiones_id INTEGER NOT NULL,
+		archivos_id INTEGER NOT NULL,
+		obs VARCHAR,
+		fecha_crea TIMESTAMP NOT NULL DEFAULT NOW(),
+		fecha_actualiza TIMESTAMP,
+		crea_personas_id INTEGER NOT NULL,
+		actualiza_personas_id INTEGER,
+		PRIMARY KEY (id),
+		FOREIGN KEY (personas_gestiones_id) REFERENCES a.tab_personas_gestiones(id),
+		FOREIGN KEY (archivos_id) REFERENCES a.tab_archivos(id),
+		FOREIGN KEY (crea_personas_id) REFERENCES a.tab_personas(id), 
+		FOREIGN KEY (actualiza_personas_id) REFERENCES a.tab_personas(id) 
+	);»
+función PL/pgSQL fun_esquema(character varying,character varying,integer,integer,integer,character varying,character varying,character varying,character varying,character varying,character varying,character varying,character varying) en la línea 174 en EXECUTE in D:\gestionpolitica\ws\src\componentes\conector\ConectorDBPostgres.php on line 57
+[05-May-2023 10:52:27 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 28
+[05-May-2023 10:52:27 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 31
+[05-May-2023 10:52:27 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe el esquema «a»
+CONTEXT:  sentencia SQL: «CREATE TABLE dsfsadfds.tab_gestiones_archivos (
+		id SERIAL NOT NULL,
+		personas_gestiones_id INTEGER NOT NULL,
+		archivos_id INTEGER NOT NULL,
+		obs VARCHAR,
+		fecha_crea TIMESTAMP NOT NULL DEFAULT NOW(),
+		fecha_actualiza TIMESTAMP,
+		crea_personas_id INTEGER NOT NULL,
+		actualiza_personas_id INTEGER,
+		PRIMARY KEY (id),
+		FOREIGN KEY (personas_gestiones_id) REFERENCES a.tab_personas_gestiones(id),
+		FOREIGN KEY (archivos_id) REFERENCES a.tab_archivos(id),
+		FOREIGN KEY (crea_personas_id) REFERENCES a.tab_personas(id), 
+		FOREIGN KEY (actualiza_personas_id) REFERENCES a.tab_personas(id) 
+	);»
+función PL/pgSQL fun_esquema(character varying,character varying,integer,integer,integer,character varying,character varying,character varying,character varying,character varying,character varying,character varying,character varying) en la línea 174 en EXECUTE in D:\gestionpolitica\ws\src\componentes\conector\ConectorDBPostgres.php on line 57
+[05-May-2023 10:52:41 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 28
+[05-May-2023 10:52:41 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 31
+[05-May-2023 10:52:41 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe el esquema «a»
+CONTEXT:  sentencia SQL: «CREATE TABLE dsfsadfds.tab_gestiones_archivos (
+		id SERIAL NOT NULL,
+		personas_gestiones_id INTEGER NOT NULL,
+		archivos_id INTEGER NOT NULL,
+		obs VARCHAR,
+		fecha_crea TIMESTAMP NOT NULL DEFAULT NOW(),
+		fecha_actualiza TIMESTAMP,
+		crea_personas_id INTEGER NOT NULL,
+		actualiza_personas_id INTEGER,
+		PRIMARY KEY (id),
+		FOREIGN KEY (personas_gestiones_id) REFERENCES a.tab_personas_gestiones(id),
+		FOREIGN KEY (archivos_id) REFERENCES a.tab_archivos(id),
+		FOREIGN KEY (crea_personas_id) REFERENCES a.tab_personas(id), 
+		FOREIGN KEY (actualiza_personas_id) REFERENCES a.tab_personas(id) 
+	);»
+función PL/pgSQL fun_esquema(character varying,character varying,integer,integer,integer,character varying,character varying,character varying,character varying,character varying,character varying,character varying,character varying) en la línea 174 en EXECUTE in D:\gestionpolitica\ws\src\componentes\conector\ConectorDBPostgres.php on line 57
+[05-May-2023 11:00:38 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 28
+[05-May-2023 11:00:38 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 31
+[05-May-2023 11:01:52 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 28
+[05-May-2023 11:01:52 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 31
+[05-May-2023 11:02:39 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 28
+[05-May-2023 11:02:39 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 31
+[05-May-2023 11:02:39 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 28
+[05-May-2023 11:02:39 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 31
+[05-May-2023 11:03:03 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 28
+[05-May-2023 11:03:03 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 31
+[05-May-2023 11:03:03 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 28
+[05-May-2023 11:03:03 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 31
+[05-May-2023 11:03:15 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 28
+[05-May-2023 11:03:15 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 31
+[05-May-2023 11:03:15 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 28
+[05-May-2023 11:03:15 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 31

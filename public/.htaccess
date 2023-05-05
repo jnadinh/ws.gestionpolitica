@@ -1,0 +1,11 @@
+# Redirect to front controller
+RewriteEngine On
+# RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]
+<IfModule mod_headers.c>
+   Header set Access-Control-Allow-Origin "*"
+   Header set Access-Control-Allow-Methods "POST, GET, OPTIONS, PUT, PATCH, DELETE"
+   Header set Access-Control-Allow-Headers "Origin, Content-Type, Authorization"
+</IfModule>
