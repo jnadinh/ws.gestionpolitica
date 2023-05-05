@@ -314,3 +314,261 @@ función PL/pgSQL fun_esquema(character varying,character varying,integer,intege
 [05-May-2023 11:03:15 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 31
 [05-May-2023 11:03:15 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 28
 [05-May-2023 11:03:15 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws\src\Api\Esquemas\Esquemas.php on line 31
+[05-May-2023 21:40:53 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type bool in D:\gestionpolitica\ws.gestionpolitica\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 48
+[05-May-2023 21:40:53 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 48
+[05-May-2023 21:43:48 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 21:43:48 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 21:48:07 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 21:48:07 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 21:48:07 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 21:48:07 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 21:48:25 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 21:48:25 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 21:48:25 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 21:48:25 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 21:48:39 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 21:48:39 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 21:48:39 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 21:48:39 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 21:48:50 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 21:48:50 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 21:48:50 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  el valor null para la columna «estado» viola la restricción not null
+DETAIL:  La fila que falla contiene (1, Jose Herrera, 3117489410, 3117489410, Bucaramanga, null, jnadinh@hotmail.com, obs prueba, superadmin, null, f, 2023-05-05 14:42:58, null, null, null). in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[05-May-2023 21:49:12 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 21:49:12 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 21:49:12 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 21:49:12 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 21:49:20 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 21:49:20 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 21:49:20 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 21:49:20 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 21:49:28 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 21:49:28 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 21:49:29 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 21:49:29 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 21:49:38 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 21:49:38 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 21:49:38 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 21:49:38 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 21:49:48 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 21:49:48 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 21:49:48 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  el valor null para la columna «estado» viola la restricción not null
+DETAIL:  La fila que falla contiene (1, Jose Herrera, 3117489410, 3117489410, Bucaramanga, null, jnadinh@hotmail.com, obs prueba, superadmin, null, f, 2023-05-05 14:42:58, null, null, null). in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[05-May-2023 21:52:35 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 21:52:35 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 21:52:35 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 21:52:35 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 21:52:47 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 21:52:47 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 21:52:47 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 21:52:47 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 22:02:24 Europe/Berlin] Slim Application Error
+Type: Error
+Code: 0
+Message: Call to a member function select() on null
+File: D:\gestionpolitica\ws.gestionpolitica\src\Api\Esquemas\Esquemas.php
+Line: 38
+Trace: #0 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(43): App\Api\Esquemas\Esquemas->obtenerEsquemas(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#1 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\Route.php(384): Slim\Handlers\Strategies\RequestResponse->__invoke(Array, Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#2 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#3 D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware2.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#4 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): App\Middleware\UserAuthMiddleware2->__invoke(Object(Slim\Psr7\Request), Object(Slim\MiddlewareDispatcher))
+#5 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#6 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#7 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\RouteRunner.php(84): Slim\Routing\Route->run(Object(Slim\Psr7\Request))
+#8 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\BodyParsingMiddleware.php(68): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#9 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(147): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#10 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php(59): class@anonymous->handle(Object(Slim\Psr7\Request))
+#11 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(147): Slim\Middleware\RoutingMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#12 D:\gestionpolitica\ws.gestionpolitica\vendor\selective\basepath\src\BasePathMiddleware.php(52): class@anonymous->handle(Object(Slim\Psr7\Request))
+#13 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): Selective\BasePath\BasePathMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#14 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\ErrorMiddleware.php(107): class@anonymous->handle(Object(Slim\Psr7\Request))
+#15 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#16 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#17 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#18 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#19 D:\gestionpolitica\ws.gestionpolitica\public\index.php(6): Slim\App->run()
+#20 {main}
+[05-May-2023 22:02:40 Europe/Berlin] Slim Application Error
+Type: Error
+Code: 0
+Message: Call to a member function select() on null
+File: D:\gestionpolitica\ws.gestionpolitica\src\Api\Esquemas\Esquemas.php
+Line: 38
+Trace: #0 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(43): App\Api\Esquemas\Esquemas->obtenerEsquemas(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#1 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\Route.php(384): Slim\Handlers\Strategies\RequestResponse->__invoke(Array, Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#2 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#3 D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware2.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#4 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): App\Middleware\UserAuthMiddleware2->__invoke(Object(Slim\Psr7\Request), Object(Slim\MiddlewareDispatcher))
+#5 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#6 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#7 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\RouteRunner.php(84): Slim\Routing\Route->run(Object(Slim\Psr7\Request))
+#8 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\BodyParsingMiddleware.php(68): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#9 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(147): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#10 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php(59): class@anonymous->handle(Object(Slim\Psr7\Request))
+#11 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(147): Slim\Middleware\RoutingMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#12 D:\gestionpolitica\ws.gestionpolitica\vendor\selective\basepath\src\BasePathMiddleware.php(52): class@anonymous->handle(Object(Slim\Psr7\Request))
+#13 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): Selective\BasePath\BasePathMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#14 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\ErrorMiddleware.php(107): class@anonymous->handle(Object(Slim\Psr7\Request))
+#15 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#16 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#17 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#18 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#19 D:\gestionpolitica\ws.gestionpolitica\public\index.php(6): Slim\App->run()
+#20 {main}
+[05-May-2023 22:02:52 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 22:02:52 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 22:19:14 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 22:19:14 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 22:19:22 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 22:19:22 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 22:19:23 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 22:19:23 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 22:19:56 Europe/Berlin] Slim Application Error
+Type: Error
+Code: 0
+Message: Call to a member function select() on null
+File: D:\gestionpolitica\ws.gestionpolitica\src\Api\Esquemas\Esquemas.php
+Line: 38
+Trace: #0 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(43): App\Api\Esquemas\Esquemas->obtenerEsquemas(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#1 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\Route.php(384): Slim\Handlers\Strategies\RequestResponse->__invoke(Array, Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#2 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#3 D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware2.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#4 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): App\Middleware\UserAuthMiddleware2->__invoke(Object(Slim\Psr7\Request), Object(Slim\MiddlewareDispatcher))
+#5 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#6 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#7 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\RouteRunner.php(84): Slim\Routing\Route->run(Object(Slim\Psr7\Request))
+#8 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\BodyParsingMiddleware.php(68): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#9 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(147): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#10 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php(59): class@anonymous->handle(Object(Slim\Psr7\Request))
+#11 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(147): Slim\Middleware\RoutingMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#12 D:\gestionpolitica\ws.gestionpolitica\vendor\selective\basepath\src\BasePathMiddleware.php(52): class@anonymous->handle(Object(Slim\Psr7\Request))
+#13 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): Selective\BasePath\BasePathMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#14 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\ErrorMiddleware.php(107): class@anonymous->handle(Object(Slim\Psr7\Request))
+#15 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#16 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#17 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#18 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#19 D:\gestionpolitica\ws.gestionpolitica\public\index.php(6): Slim\App->run()
+#20 {main}
+[05-May-2023 22:20:53 Europe/Berlin] Slim Application Error
+Type: Error
+Code: 0
+Message: Call to a member function select() on null
+File: D:\gestionpolitica\ws.gestionpolitica\src\Api\Esquemas\Esquemas.php
+Line: 38
+Trace: #0 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(43): App\Api\Esquemas\Esquemas->obtenerEsquemas(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#1 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\Route.php(384): Slim\Handlers\Strategies\RequestResponse->__invoke(Array, Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#2 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#3 D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware2.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#4 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): App\Middleware\UserAuthMiddleware2->__invoke(Object(Slim\Psr7\Request), Object(Slim\MiddlewareDispatcher))
+#5 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#6 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#7 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\RouteRunner.php(84): Slim\Routing\Route->run(Object(Slim\Psr7\Request))
+#8 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\BodyParsingMiddleware.php(68): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#9 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(147): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#10 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php(59): class@anonymous->handle(Object(Slim\Psr7\Request))
+#11 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(147): Slim\Middleware\RoutingMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#12 D:\gestionpolitica\ws.gestionpolitica\vendor\selective\basepath\src\BasePathMiddleware.php(52): class@anonymous->handle(Object(Slim\Psr7\Request))
+#13 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): Selective\BasePath\BasePathMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#14 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\ErrorMiddleware.php(107): class@anonymous->handle(Object(Slim\Psr7\Request))
+#15 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#16 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#17 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#18 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#19 D:\gestionpolitica\ws.gestionpolitica\public\index.php(6): Slim\App->run()
+#20 {main}
+[05-May-2023 22:26:12 Europe/Berlin] Slim Application Error
+Type: Error
+Code: 0
+Message: Call to a member function select() on null
+File: D:\gestionpolitica\ws.gestionpolitica\src\Api\Esquema\Esquema.php
+Line: 38
+Trace: #0 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(43): App\Api\Esquema\Esquema->obtenerEsquemas(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#1 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\Route.php(384): Slim\Handlers\Strategies\RequestResponse->__invoke(Array, Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#2 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#3 D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware2.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#4 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): App\Middleware\UserAuthMiddleware2->__invoke(Object(Slim\Psr7\Request), Object(Slim\MiddlewareDispatcher))
+#5 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#6 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#7 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\RouteRunner.php(84): Slim\Routing\Route->run(Object(Slim\Psr7\Request))
+#8 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\BodyParsingMiddleware.php(68): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#9 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(147): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#10 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php(59): class@anonymous->handle(Object(Slim\Psr7\Request))
+#11 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(147): Slim\Middleware\RoutingMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#12 D:\gestionpolitica\ws.gestionpolitica\vendor\selective\basepath\src\BasePathMiddleware.php(52): class@anonymous->handle(Object(Slim\Psr7\Request))
+#13 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): Selective\BasePath\BasePathMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#14 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\ErrorMiddleware.php(107): class@anonymous->handle(Object(Slim\Psr7\Request))
+#15 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#16 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#17 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#18 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#19 D:\gestionpolitica\ws.gestionpolitica\public\index.php(6): Slim\App->run()
+#20 {main}
+[05-May-2023 22:26:37 Europe/Berlin] Slim Application Error
+Type: Error
+Code: 0
+Message: Call to a member function select() on null
+File: D:\gestionpolitica\ws.gestionpolitica\src\Api\Esquema\Esquema.php
+Line: 38
+Trace: #0 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(43): App\Api\Esquema\Esquema->obtenerEsquemas(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#1 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\Route.php(384): Slim\Handlers\Strategies\RequestResponse->__invoke(Array, Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#2 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#3 D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware2.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#4 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): App\Middleware\UserAuthMiddleware2->__invoke(Object(Slim\Psr7\Request), Object(Slim\MiddlewareDispatcher))
+#5 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#6 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#7 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\RouteRunner.php(84): Slim\Routing\Route->run(Object(Slim\Psr7\Request))
+#8 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\BodyParsingMiddleware.php(68): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#9 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(147): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#10 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php(59): class@anonymous->handle(Object(Slim\Psr7\Request))
+#11 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(147): Slim\Middleware\RoutingMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#12 D:\gestionpolitica\ws.gestionpolitica\vendor\selective\basepath\src\BasePathMiddleware.php(52): class@anonymous->handle(Object(Slim\Psr7\Request))
+#13 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): Selective\BasePath\BasePathMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#14 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\ErrorMiddleware.php(107): class@anonymous->handle(Object(Slim\Psr7\Request))
+#15 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#16 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#17 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#18 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#19 D:\gestionpolitica\ws.gestionpolitica\public\index.php(6): Slim\App->run()
+#20 {main}
+[05-May-2023 22:46:53 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 22:46:53 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 22:47:06 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 22:47:06 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 22:47:07 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 22:47:07 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 22:47:32 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 22:47:32 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 22:47:32 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 22:47:32 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 22:48:57 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type bool in D:\gestionpolitica\ws.gestionpolitica\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 48
+[05-May-2023 22:48:57 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 48
+[05-May-2023 22:49:16 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type bool in D:\gestionpolitica\ws.gestionpolitica\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 48
+[05-May-2023 22:49:16 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 48
+[05-May-2023 22:50:53 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 22:50:53 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 22:51:46 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 22:51:46 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 22:51:46 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 22:51:46 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 22:52:10 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 22:52:10 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 22:52:10 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 22:52:10 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 22:52:27 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 22:52:27 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 22:52:27 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 22:52:27 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 22:58:54 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[05-May-2023 22:58:54 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[05-May-2023 23:32:47 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «id»
+LINE 1: id, nombre_candidato, corporaciones_id, departamentos_id, mu...
+        ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[05-May-2023 23:33:31 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «FROM»
+LINE 3:         FROM public.tab_parametros  
+                ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[06-May-2023 00:00:05 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «FROM»
+LINE 4:         FROM public.tab_parametros  
+                ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[06-May-2023 00:04:39 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  hay múltiples asignaciones a la misma columna «fecha_actualiza» in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67

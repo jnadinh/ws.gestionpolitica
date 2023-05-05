@@ -48,14 +48,14 @@ return function (App $app) {
         $group2->post('/crear_usuario', \App\Api\Usuario\Usuario::class . ':crearUsuario');
         $group2->post('/editar_usuario', \App\Api\Usuario\Usuario::class . ':editarUsuario');
 
-        $group2->post('/obtener_esquemas', \App\Api\Esquemas\Esquemas::class . ':obtenerEsquemas');
-        $group2->post('/editar_esquema', \App\Api\Esquemas\Esquemas::class . ':editarEsquema');
-        $group2->post('/crear_esquema', \App\Api\Esquemas\Esquemas::class . ':crearEsquema');
+        $group2->post('/obtener_esquemas', \App\Api\Esquema\Esquema::class . ':obtenerEsquemas');
+        $group2->post('/editar_esquema', \App\Api\Esquema\Esquema::class . ':editarEsquema');
+        $group2->post('/crear_esquema', \App\Api\Esquema\Esquema::class . ':crearEsquema');
 
-        $group2->post('/obtener_pagos_esquemas', \App\Api\Esquemas\Esquemas::class . ':obtenerPagosEsquemas');
-        $group2->post('/crear_pago_esquema', \App\Api\Esquemas\Esquemas::class . ':crearPagoEsquema');
-        $group2->post('/editar_pago_esquema', \App\Api\Esquemas\Esquemas::class . ':editarPagoEsquema');
-        $group2->post('/eliminar_pago_esquema', \App\Api\Esquemas\Esquemas::class . ':eliminarPagoEsquema');
+        $group2->post('/obtener_recargas', \App\Api\Recarga\Recarga::class . ':obtenerRecargas');
+        $group2->post('/crear_recarga', \App\Api\Recarga\Recarga::class . ':crearRecarga');
+        $group2->post('/editar_recarga', \App\Api\Recarga\Recarga::class . ':editarRecarga');
+        $group2->post('/eliminar_recarga', \App\Api\Recarga\Recarga::class . ':eliminarRecarga');
 
     })->add(UserAuthMiddleware2::class);
 
