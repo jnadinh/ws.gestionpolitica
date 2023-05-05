@@ -8,8 +8,8 @@ class Variables {
 
 	public static $USUARIO_DB = "gestionpolitica";								// USUARIO DE LA BASE DE DATOS
     public static $CLAVE_DB   = "junimajo123";									// CLAVE DE LA BASE DE DATOS
-//    public static $HOST_DB    = "192.34.58.242";								// HOST DE LA BASE DE DATOS
-    public static $HOST_DB    = "localhost";									// HOST DE LA BASE DE DATOS
+    public static $HOST_DB    = "192.34.58.242";								// HOST DE LA BASE DE DATOS
+//    public static $HOST_DB    = "localhost";									// HOST DE LA BASE DE DATOS
 	public static $NOMBRE_DB  = "db_gestion_politica";							// NOMBRE DE LA BASE DE DATO	S
 
 	public static $tiempoSESION = 60;											// TIEMPO MAXIMO DE SESION INACTIVA EN MINUTOS
