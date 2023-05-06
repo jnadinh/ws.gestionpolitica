@@ -82,7 +82,7 @@ class Esquema {
         $cedula_administrador   = $json['cedula_administrador'];
         $celular_administrador  = $json['celular_administrador'];
         $genero_administrador   = $json['genero_administrador'];
-        $municipios_id          = $json['municipios_id'];
+        $municipios_id          = isset($json['municipios_id']) && $json['municipios_id']!=""? "'".$json["municipios_id"]."'":0 ;
         $telefono_administrador = $json['telefono_administrador'];
         $email_administrador    = $json['email_administrador'];
         $direccion_administrador= $json['direccion_administrador'];
@@ -103,9 +103,9 @@ class Esquema {
         $sql="SELECT public.fun_esquema('$nombre_esquema', '$nombre_candidato', $corporaciones_id, $departamentos_id,
         $municipios_id, '$nombre_administrador', '$apellidos_administrador', '$cedula_administrador', '$celular_administrador',
         '$telefono_administrador', '$email_administrador', '$direccion_administrador', '$genero_administrador')";
-
+        //die($sql);
         $res = $this->conector->select($sql);
-        // var_dump($res);die($sql);
+
         if($res==2) {
             // si no trae datos retorna codigo 2 no creo el registro
             $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ERROR DB', 'DATOS' => 'NO SE CREO EL REGISTRO' );

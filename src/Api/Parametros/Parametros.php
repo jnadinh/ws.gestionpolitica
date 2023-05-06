@@ -30,15 +30,21 @@ class Parametros {
         $json = (array)$request->getParsedBody();
 
         $where = "";
-        if (isset($json['nombre_esquema']) && $json['nombre_esquema']!="") {
-            $where = " WHERE nombre esquema = ".$json['nombre_esquema'] ;
+        if (isset($json['id']) && $json['id']!="") {
+            $where = " WHERE id = ".$json['id'] ;
         }
 
         // hace la consulta
-        $sql="SELECT id, nombre_candidato, corporaciones_id, departamentos_id, municipios_id, nombre_administrador,
-        telefono, celular, nombre_esquema, enviar_sms_crear_referido, enviar_sms_crear_lider, enviar_sms_recuperar_clave,
-        fecha_crea, fecha_actualiza, crea_usuarios_id, actualiza_usuarios_id
-        FROM public.tab_parametros $where ";
+        $sql="SELECT p.id, p.nombre_candidato, p.corporaciones_id, c.nombre AS corporaciones_nombre,
+        p.departamentos_id, d.nombre AS departamentos_nombre, p.municipios_id, m.nombre AS municipios_nombre,
+        p.nombre_administrador, p.telefono, p.celular, p.nombre_esquema,
+        p.enviar_sms_crear_referido, p.enviar_sms_crear_lider, p.enviar_sms_recuperar_clave,
+        p.fecha_crea, p.fecha_actualiza, p.crea_usuarios_id, p.actualiza_usuarios_id
+        FROM public.tab_parametros p
+        INNER JOIN public.tab_corporaciones c ON c.id = p.corporaciones_id
+        INNER JOIN public.tab_departamentos d ON d.id = p.departamentos_id
+        LEFT JOIN public.tab_municipios m ON m.id = p.municipios_id
+        $where ORDER BY p.id DESC";
         //die($sql);
         $res = $this->conector->select($sql);;
 

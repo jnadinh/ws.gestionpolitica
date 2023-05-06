@@ -572,3 +572,104 @@ LINE 3:         FROM public.tab_parametros
 LINE 4:         FROM public.tab_parametros  
                 ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
 [06-May-2023 00:04:39 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  hay múltiples asignaciones a la misma columna «fecha_actualiza» in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[06-May-2023 04:37:53 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «id»
+LINE 1: id, nombre, codigo_dane FROM public.tab_departamentos ORDER ...
+        ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[06-May-2023 04:39:01 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «id»
+LINE 1: id, nombre, codigo_dane FROM public.tab_departamentos ORDER ...
+        ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[06-May-2023 04:56:55 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «public.departamentos»
+LINE 4:         INNER JOIN public.departamentos d ON d.id = p.depart...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[06-May-2023 04:57:42 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  falta una entrada para la tabla «p» en la cláusula FROM
+LINE 4: ...  INNER JOIN public.tab_departamentos d ON d.id = p.departam...
+                                                             ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[06-May-2023 06:44:41 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[06-May-2023 06:44:41 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[06-May-2023 07:45:56 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «,»
+LINE 2:         , 'Juan', 'Joven', '151515', '3151515',
+                ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[06-May-2023 07:47:59 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «,»
+LINE 2:         , 'Juan', 'Joven', '1515151', '3151515',
+                ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[06-May-2023 07:49:33 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «,»
+LINE 2:         , 'Jose', 'Herrera', '10178092', '3117489410',
+                ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[06-May-2023 07:51:47 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «,»
+LINE 2:         , 'Jose', 'Herrera', '10178092', '3117489410',
+                ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[06-May-2023 07:56:47 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «,»
+LINE 2:         , 'Jose', 'Herrera', '10178092', '3117489410',
+                ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[06-May-2023 08:00:20 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «,»
+LINE 2:         , 'Jose', 'Herrera', '10178092', '3117489410',
+                ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[06-May-2023 08:07:27 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «,»
+LINE 2:         , 'Jose', 'Herrera', '10178092', '3117489410',
+                ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[06-May-2023 08:10:43 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «)»
+LINE 2:         NULLIF(), 'Jose', 'Herrera', '10178092', '3117489410...
+                       ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[06-May-2023 08:11:32 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «,»
+LINE 2:         NULLIF(,null), 'Jose', 'Herrera', '10178092', '31174...
+                       ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[06-May-2023 08:15:34 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «,»
+LINE 2:         NULLIF(,0), 'Jose', 'Herrera', '10178092', '31174894...
+                       ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[06-May-2023 08:17:21 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «as»
+LINE 2:         cast( as integer), 'Jose', 'Herrera', '10178092', '3...
+                      ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[06-May-2023 08:17:50 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «as»
+LINE 2:         cast( as integer), 'Jose', 'Herrera', '10178092', '3...
+                      ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[06-May-2023 08:18:21 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «,»
+LINE 2:         coalesce(, null), 'Jose', 'Herrera', '10178092', '31...
+                         ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[06-May-2023 08:18:31 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «,»
+LINE 2:         coalesce(, null), 'Jose', 'Herrera', '10178092', '31...
+                         ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[06-May-2023 08:20:39 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «,»
+LINE 2:         coalesce (, null), 'Jose', 'Herrera', '10178092', '3...
+                          ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[06-May-2023 08:24:09 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «USING»
+LINE 2:         USING ('candidatoh', 'Jose Herrera', 1, 1,
+                ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[06-May-2023 08:24:39 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «USING»
+LINE 2:         USING ('candidatoh', 'Jose Herrera', 1, 1,
+                ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[06-May-2023 08:30:17 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «,»
+LINE 1: SELECT public.fun_esquema(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?...
+                                   ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[06-May-2023 08:30:37 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «,»
+LINE 1: SELECT public.fun_esquema(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?...
+                                   ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[06-May-2023 08:38:38 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «,»
+LINE 2:         , 'Jose', 'Herrera', '10178092', '3117489410',
+                ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[06-May-2023 08:39:28 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «,»
+LINE 2:         NULLIF(,NULL), 'Jose', 'Herrera', '10178092', '31174...
+                       ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[06-May-2023 08:39:46 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «,»
+LINE 2:         NULLIF(,''), 'Jose', 'Herrera', '10178092', '3117489...
+                       ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[06-May-2023 08:40:16 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la función public.fun_esquema(unknown, unknown, integer, integer, text, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown)
+LINE 1: SELECT public.fun_esquema('candidatoh', 'Jose Herrera', 1, 1...
+               ^
+HINT:  Ninguna función coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos. in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[06-May-2023 08:40:33 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la función public.fun_esquema(unknown, unknown, integer, integer, text, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown)
+LINE 1: SELECT public.fun_esquema('candidatoh', 'Jose Herrera', 1, 1...
+               ^
+HINT:  Ninguna función coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos. in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[06-May-2023 08:40:56 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la función public.fun_esquema(unknown, unknown, integer, integer, text, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown)
+LINE 1: SELECT public.fun_esquema('candidatoh', 'Jose Herrera', 1, 1...
+               ^
+HINT:  Ninguna función coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos. in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[06-May-2023 08:48:37 Europe/Berlin] PHP Warning:  pg_query(): Query failed:  in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[06-May-2023 08:48:51 Europe/Berlin] PHP Warning:  pg_query(): Query failed:  in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[06-May-2023 08:48:53 Europe/Berlin] PHP Warning:  pg_query(): Query failed:  in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[06-May-2023 08:48:54 Europe/Berlin] PHP Warning:  pg_query(): Query failed:  in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[06-May-2023 08:49:24 Europe/Berlin] PHP Warning:  pg_query(): Query failed:  in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[06-May-2023 08:59:43 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[06-May-2023 08:59:43 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31
+[06-May-2023 12:16:46 Europe/Berlin] PHP Notice:  Undefined index: id_rol in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 28
+[06-May-2023 12:16:46 Europe/Berlin] PHP Notice:  Undefined index: tipo_casino in D:\gestionpolitica\ws.gestionpolitica\src\Api\Usuario\Usuario.php on line 31

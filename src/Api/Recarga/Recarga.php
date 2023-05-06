@@ -32,7 +32,7 @@ class Recarga {
 
         $where = "";
         if (isset($json['nombre_esquema']) && $json['nombre_esquema']!="") {
-            $where = " WHERE nombre esquema = ".$json['nombre_esquema'] ;
+            $where = " WHERE nombre_esquema = ".$json['nombre_esquema'] ;
         }
 
         // hace la consulta

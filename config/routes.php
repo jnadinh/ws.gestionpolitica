@@ -39,10 +39,6 @@ return function (App $app) {
 
         $group2->post('/obtener_parametros', \App\Api\Parametros\Parametros::class . ':obtenerParametros');
         $group2->post('/editar_parametros', \App\Api\Parametros\Parametros::class . ':editarParametros');
-        $group2->post('/crear_firma', \App\Api\Parametros\Parametros::class . ':crearFirma');
-        $group2->post('/obtener_firmas', \App\Api\Parametros\Parametros::class . ':obtenerFirmas');
-        $group2->post('/editar_firma', \App\Api\Parametros\Parametros::class . ':editarFirma');
-        $group2->post('/eliminar_firma', \App\Api\Parametros\Parametros::class . ':eliminarFirma');
 
         $group2->post('/obtener_usuarios', \App\Api\Usuario\Usuario::class . ':obtenerUsuarios');
         $group2->post('/crear_usuario', \App\Api\Usuario\Usuario::class . ':crearUsuario');
@@ -56,6 +52,11 @@ return function (App $app) {
         $group2->post('/crear_recarga', \App\Api\Recarga\Recarga::class . ':crearRecarga');
         $group2->post('/editar_recarga', \App\Api\Recarga\Recarga::class . ':editarRecarga');
         $group2->post('/eliminar_recarga', \App\Api\Recarga\Recarga::class . ':eliminarRecarga');
+
+        $group2->post('/obtener_departamentos_sa', \App\Api\Listado\Listado::class . ':obtenerDepartamentos');
+        $group2->post('/obtener_municipios_sa', \App\Api\Listado\Listado::class . ':obtenerMunicipios');
+        $group2->post('/obtener_corporaciones_sa', \App\Api\Listado\Listado::class . ':obtenerCorporaciones');
+        $group2->post('/obtener_puestos_sa', \App\Api\Listado\Listado::class . ':obtenerPuestos');
 
     })->add(UserAuthMiddleware2::class);
 
