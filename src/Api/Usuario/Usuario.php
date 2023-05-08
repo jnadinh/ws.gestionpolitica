@@ -19,16 +19,12 @@ class Usuario {
     private $id_usuario;
     private $usuario;
     private $esquema_db;
-    private $id_rol;
-    private $tipo_casino;
 
     private $conector;
     public function __construct() {
         $this -> conector = ConectorDBPostgres::get_conectorPostgres(Variables::$HOST_DB,Variables::$USUARIO_DB,Variables::$CLAVE_DB,Variables::$NOMBRE_DB);
-        $this -> id_rol = $_SESSION['id_rol'];
         $this -> id_usuario = $_SESSION['id_usuario'];
         $this -> usuario    = $_SESSION['usuario'];
-        $this -> tipo_casino= $_SESSION['tipo_casino'];
     }
 
     public function obtenerUsuarios(ServerRequestInterface $request, ResponseInterface $response, array $args = [] ): ResponseInterface {

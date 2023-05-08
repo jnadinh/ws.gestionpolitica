@@ -39,10 +39,10 @@ class ConectorDBPostgres {
                 throw new Exception("Database connection Error");
             }else{
                 $this->con = ConectorDBPostgres::$conector;
-            }       
+            }
         }catch(Exception $e){
         }
-       
+
     }
 
     public static function get_conectorPostgres($servidor, $usuario, $clave, $base_datos){
@@ -60,7 +60,7 @@ class ConectorDBPostgres {
        }
        $datos = pg_fetch_all($result);
        return $datos;
-    }  
+    }
 
     public function update($sql){
         // $sql=strtoupper($sql);
@@ -69,8 +69,8 @@ class ConectorDBPostgres {
             return false;
         }
         return true;
-    } 
-    
+    }
+
     public function delete($sql){
         $result = pg_query($this->con,$sql);
         if (!$result) {

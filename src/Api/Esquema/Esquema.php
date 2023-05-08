@@ -31,7 +31,7 @@ class Esquema {
         $json = (array)$request->getParsedBody();
 
         // hace la consulta
-        $sql = "SELECT s.oid AS id, s.nspname AS nombre, u.usename
+        $sql = "SELECT s.oid AS id, s.nspname AS nombre_esquema, u.usename
         FROM pg_catalog.pg_namespace s
         JOIN pg_catalog.pg_user u ON u.usesysid = s.nspowner
         WHERE nspname NOT IN ('information_schema', 'pg_catalog', 'public')
@@ -135,24 +135,31 @@ class Esquema {
         $nombre = $json['nombre_esquema'];
 
         // valida si hay un esquema con el nuevo nombre
-        $sql0="select nspname as nombre FROM pg_catalog.pg_namespace where nspname = '$nombre';";
+        $sql0="select nspname as nombre_esquema FROM pg_catalog.pg_namespace where nspname = '$nombre';";
         $nom_esquema = $this->conector->select($sql0);
         $res0 = $this->conector->select($sql0);
-        // var_dump($res0);
+        // var_dump($res0); die($sql0);
+
+        // obtiene el nombre del esquema
+        $sql1="select nspname as nombre_esquema FROM pg_catalog.pg_namespace where oid = $id";
+        $nom_esquema = $this->conector->select($sql1);
+
         if($res0) {
+
+            if($nom_esquema[0]['nombre_esquema']==$json['nombre_esquema']) {
+                //
+                $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'TIENE EL MISMO NOMBRE', 'DATOS' => "NO HAY DATOS PARA EDITAR");
+                $response->getBody()->write(json_encode($respuesta));
+                return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+            }
             // si trae datos retorna codigo 2
             $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ERROR REGISTRO DUPLICADO', 'DATOS' => "NO PUEDEN HABER 2 ESQUEMAS CON EL MISMO NOMBRE");
             $response->getBody()->write(json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }
 
-        // obtiene el nombre del esquema
-        $sql1="select nspname as nombre FROM pg_catalog.pg_namespace where oid = $id";
-        $nom_esquema = $this->conector->select($sql1);
-
-        $sql = "ALTER SCHEMA ".$nom_esquema[0]["nombre"]." RENAME TO $nombre ;";
+        $sql = "ALTER SCHEMA ".$nom_esquema[0]["nombre_esquema"]." RENAME TO $nombre ;";
         $sql=reemplazar_vacios($sql);
-        // var_dump($nom_esquema[0]["nombre"]);
         // die($sql);
         $res = $this->conector->update($sql);
         if(!$res) {

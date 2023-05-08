@@ -1,8 +1,8 @@
 <?php
 namespace App\Api\Login;
 
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
+// error_reporting(E_ALL);
+// ini_set('display_errors', '1');
 
 require_once __DIR__ . '/../../componentes/conector/ConectorDBPostgres.php';
 require_once __DIR__ . '/../../componentes/general/general.php';
@@ -16,13 +16,16 @@ use Variables;
 
 class Login {
 
-    private $id_rol;
-    private $tipo_casino;
+    private $id_usuario;
+    private $usuario;
+    private $esquema_db;
 
     private $conector;
     public function __construct() {
         $this -> conector = ConectorDBPostgres::get_conectorPostgres(Variables::$HOST_DB,Variables::$USUARIO_DB,Variables::$CLAVE_DB,Variables::$NOMBRE_DB);
-        $this -> tipo_casino= $_SESSION['tipo_casino'];
+        $this -> esquema_db = $_SESSION['esquema_db'];
+        $this -> id_usuario = $_SESSION['id_usuario'];
+        $this -> usuario    = $_SESSION['usuario'];
     }
 
     public function iniciarSesion(ServerRequestInterface $request, ResponseInterface $response, array $args = [] ): ResponseInterface {
@@ -31,31 +34,133 @@ class Login {
         $json = (array)$request->getParsedBody();
 
         // Valida datos completos
-        if( !isset($json['usuario'])    || $json['usuario']==""      ||
-            !isset($json['clave'])      || $json['clave']==""
-        ){
+        if( !isset($json['usuario'])    || $json['usuario']==""     ||
+            !isset($json['clave'])      || $json['clave']==""       ){
 
             $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => 'FALTAN DATOS' );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }
 
+        $usuario    = $json['usuario'];
+        $clave      = $json['clave'];
+        $esquema_db = $json['esquema_db'];
+
         // si trae el esquema hace el logueo, si no trae el esquema busca en todos.
         // si encuentra el usuario en un esquema, hace el logueo, si esta en mas de uno,
         // devuelve la informacion para permitir elegir esquema
 
-        if(isset($json['esquema']) && $json['esquema'] != "")  {
+        // aqui valida y devuelve los datos de los esquemas y se sale hasta que reciba el esquema
+
+        if(isset($json['esquema_db']) && $json['esquema_db'] != "")  {
+
             // valida el usuario y clave
+            $sql = "SELECT id, nombre, apellidos
+            FROM $esquema_db.tab_personas
+            WHERE (email='$usuario' OR cedula ='$usuario') AND clave= MD5('$clave') ";
+            $sql=reemplazar_vacios($sql);
+            $res = $this->conector->select($sql);
+            // die($sql);
+            $id_usuario = $res[0]['id'];
 
+            if($res==2)  {
+                $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ERROR BBDD', 'DATOS' => 'ERROR EN LA CONSULTA' );
+                $response->getBody()->write((string)json_encode($respuesta));
+                return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+            }else if(count2($res)==0)  {
+                // Construye la respuesta
+                $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => 'USUARIO O PASSWORD INVALIDO' );
+                $response->getBody()->write((string)json_encode($respuesta));
+                return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+            }else{
+                // genera el token
+                mt_srand();
+                $random=null;
+                for($i=1;$i<=16;$i++) {
+                $random .= mt_rand (0, 9);
+                }
+                $token= strtoupper($usuario."CANDIDATO".$esquema_db."GP".$random);
+
+                // crea el token
+                $sqltok = "INSERT INTO $esquema_db.tab_token (personas_id, token, fecha_actualiza)
+                VALUES ('$id_usuario', '$token', now() ) ";
+                $sqltok=reemplazar_vacios($sqltok);
+                $restok=$this->conector->insert($sqltok);
+                //die($sqltok);
+
+                //agreaga el token al array
+                $res[0]['token'] = $token;
+
+                $sqlmod = "SELECT DISTINCT m.id, m.nombre
+                FROM public.tab_modulos m
+                inner join public.tab_roles_modulos rm on m.id = rm.modulos_id
+                inner join $esquema_db.tab_personas_roles pr on rm.roles_id  = pr.roles_id
+                where pr.personas_id = $id_usuario
+                order by m.id";
+                //die($sqlmod);
+                $sqlmod=reemplazar_vacios($sqlmod);
+                $resmod=$this->conector->select($sqlmod);
+
+                //agreaga los modulas al array
+                $res[0]['modulos'] = $resmod;
+
+                $_SESSION['esquema_db']=$esquema_db;
+            }
+            $respuesta = array('CODIGO' => 1, 'MENSAJE' => 'OK', 'DATOS' => $res[0] );
+            $response->getBody()->write((string)json_encode($respuesta) );
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+
+        }else {
+
+            // hace la consulta para obtener los esquemas
+            $sql = "SELECT s.oid AS id, s.nspname AS nombre_esquema, u.usename
+            FROM pg_catalog.pg_namespace s
+            JOIN pg_catalog.pg_user u ON u.usesysid = s.nspowner
+            WHERE nspname NOT IN ('information_schema', 'pg_catalog', 'public')
+            AND nspname NOT LIKE 'pg_toast%' AND nspname NOT LIKE 'pg_temp%'";
+            $res = $this->conector->select($sql);
+            // die($sql);
+            if(!$res){
+                $respuesta = array('CODIGO' => 6, 'MENSAJE' => 'CONSULTA VACIA', 'DATOS' => 'LA CONSULTA NO DEVOLVIÓ DATOS');
+                $response->getBody()->write((string)json_encode($respuesta));
+                return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+            }elseif($res==2){
+                $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ERROR EN LA CONSULTA', 'DATOS' => 'ERROR EN LA CONSULTA');
+                $response->getBody()->write((string)json_encode($respuesta));
+                return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+            }else {
+                $esquemas = array();
+                foreach ($res as $key => $value) {
+
+                    $esquema_db = $value['nombre_esquema'];
+
+                    $sqlus = "SELECT pe.id, '$esquema_db' AS esquema_db, pa.nombre_candidato
+                    FROM $esquema_db.tab_personas pe
+                    LEFT JOIN public.tab_parametros pa ON pa.nombre_esquema = '$esquema_db'
+                    WHERE (pe.email='$usuario' OR pe.cedula ='$usuario') AND pe.clave= MD5('$clave')";
+                    $sqlus=reemplazar_vacios($sqlus);
+                    $resus = $this->conector->select($sqlus);
+                    //die($sqlus);
+                    $id_usuario = $resus[0]['id'];
+
+                    if(count2($resus)>0)  {
+                        array_push($esquemas, $resus[0]);
+                    }
+                }
+
+                if(count2($esquemas)==0)  {
+                    // Construye la respuesta
+                    $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => 'USUARIO O PASSWORD INVALIDO' );
+                    $response->getBody()->write((string)json_encode($respuesta));
+                    return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+                }
+
+                $respuesta = array('CODIGO' => 1, 'MENSAJE' => 'OK', 'DATOS' => $esquemas);
+                $response->getBody()->write((string)json_encode($respuesta) );
+                return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+            }
         }
-
-        $usuario = $json['usuario'];
-        $clave   = $json['clave'];
-        $tipo    = isset($json['tipo'])?$json['tipo']:1;        // 1=casino 2=tienda 3=admin
-        $id_rol  = isset($json['id_rol'])?$json['id_rol']:1;    // 1=usuario 2=admin
-
 	}
-
 
     public function cerrarSesion(ServerRequestInterface $request, ResponseInterface $response, array $args = [] ): ResponseInterface {
 
@@ -65,8 +170,9 @@ class Login {
         $token = $_SESSION['token'];
 
         // elimina el token
-        $sql = "DELETE FROM public.token WHERE token='$token' ;";
+        $sql = "DELETE FROM $this->esquema_db.tab_token WHERE token='$token' ;";
         $res = $this->conector->delete($sql);
+        // die($sql);
 
         if(!$res) {
             $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'NO SE CERRO LA SESION', 'DATOS' => $token );
@@ -85,13 +191,73 @@ class Login {
 
         // El token se valida en el UserAuthMiddleware. Si llega aqui es válido
 
-        $respuesta = array('CODIGO' => 1, 'MENSAJE' => 'OK', 'DATOS' => "Token Válido" );
+        $respuesta = array('CODIGO' => 1, 'MENSAJE' => 'OK', 'DATOS' => "TOKEN VALIDO" );
         $response->getBody()->write((string)json_encode($respuesta));
         return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
     }
 
+    public function cambiarClave(ServerRequestInterface $request, ResponseInterface $response, array $args = [] ): ResponseInterface {
 
-    public function olvidopassword(ServerRequestInterface $request, ResponseInterface $response, array $args = [] ): ResponseInterface {
+        // Recopilar datos de la solicitud HTTP
+        $json = (array)$request->getParsedBody();
+
+        // Valida datos completos
+        if( !isset($json['usuario'])        || $json['usuario']==""     ||
+            !isset($json['clave'])          || $json['clave']==""       ||
+            !isset($json['nueva_clave'])    || $json['nueva_clave']=="" ){
+
+                $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => 'FALTAN DATOS' );
+                $response->getBody()->write((string)json_encode($respuesta));
+                return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+
+        $usuario = $json['usuario'];
+        $clave   = $json['clave'];
+        $nueva_clave = $json['nueva_clave'];
+
+        // valida el usuario y clave
+        $sql = "SELECT id FROM $this->esquema_db.tab_personas
+        WHERE (email='$usuario' OR cedula ='$usuario') AND clave= MD5('$clave') ";
+        $sql=reemplazar_vacios($sql);
+        $res = $this->conector->select($sql);
+        // die($sql);
+
+        if($res==2)  {
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ERROR BBDD', 'DATOS' => 'ERROR EN LA CONSULTA' );
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }else if(count2($res)==0)  {
+            // Construye la respuesta
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => 'USUARIO O PASSWORD INVALIDO' );
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }else{
+
+            $id_usuario = $res[0]['id'];
+
+            // cambia la clave
+            $sqlup = "UPDATE $this->esquema_db.tab_personas SET clave = MD5('$nueva_clave')
+            WHERE id='$id_usuario' ;";
+            $sqlup=reemplazar_vacios($sqlup);
+            //die($sqlup);
+            $resup = $this->conector->update($sqlup);
+
+            // cambia la clave en las demas esquemas donde este la persona
+
+            if(!$resup) {
+                // si no trae datos retorna codigo 2
+                $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ERROR DB', 'DATOS' => "NO SE ACTUALIZO EL REGISTRO");
+                $response->getBody()->write(json_encode($respuesta));
+                return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+            }
+        }
+
+        $respuesta = array('CODIGO' => 1, 'MENSAJE' => 'OK', 'DATOS' => $id_usuario );
+        $response->getBody()->write((string)json_encode($respuesta) );
+        return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+    }
+
+    public function olvidoclave(ServerRequestInterface $request, ResponseInterface $response, array $args = [] ): ResponseInterface {
 
         // Recopilar datos de la solicitud HTTP
         $json = (array)$request->getParsedBody();
@@ -104,208 +270,10 @@ class Login {
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }
 
-        // hace la consulta
-
-        // Crear token
-        //$validar = $c->crearTokenPassword($usuario, $metodo, $ip, Variables::$urlRestaurar);
-
         $response->getBody()->write((string)json_encode("validar"));
         return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
 
 	}
-
-    public function resetPassword(ServerRequestInterface $request, ResponseInterface $response, array $args = [] ): ResponseInterface {
-
-        // Recopilar datos de la solicitud HTTP
-        $json = array_merge($args, (array)$request->getParsedBody());
-
-        $clave = isset($json['clave'])?$json['clave']:null;
-        $token = isset($json['token'])?$json['token']:null;     // url
-
-        // Valida reset_password
-        // $validar = $c->cambiarClave($clave, $token, $metodo, $ip);
-
-        $response->getBody()->write((string)json_encode("validar"));
-        return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
-
-	}
-
-    public function getXml(ServerRequestInterface $request, ResponseInterface $response, array $args = [] ): ResponseInterface {
-
-        $html = "<html lang=\"en\">\n" .
-        "<head>\n" .
-        "  <meta charset=\"UTF-8\">\n" .
-        "  <title>Restaurar Clave Formulario</title>\n" .
-        "</head>\n" .
-        "<body>\n" .
-        "<form id='form' action=\"".Variables::$urlBase."restaurar_clave/".$args['token']."\" method=\"POST\" enctype='text/plain'>\n" .
-        "    <input type=\"password\" id='clave' name='clave'>\n" .
-        "    \n" .
-        "</form> <input type=\"submit\" onclick='enviar()'>\n  <script> function enviar(){var temp = document.getElementById('clave').value;\n" .
-        "  fetch('".Variables::$urlBase."restaurar_clave/".$args['token']."', {\n headers: {\n" .
-        "      'Accept': 'application/json',\n" .
-        "      'Content-Type': 'application/json'\n" .
-        "    }," .
-        "    body: JSON.stringify({clave:temp}),\n" .
-        "    method: 'POST',\n" .
-        "  })\n" .
-        "  .then(function (response) {\n" .
-        "     response.json().then( data => {"
-                                . "document.getElementById('form').innerHTML = data.MENSAJE;\n});" .
-        "    return console.log('Success!', response);\n" .
-        "  })} </script>" .
-
-        "</body>\n" .
-        "</html> ";
-
-        $response->getBody()->write($html);
-        return $response->withHeader('Content-Type', 'text/html')
-        ->withHeader('Access-Control-Allow-Origin', '*')
-        ->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization')
-        ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
-    }
-
-    public function login2(ServerRequestInterface $request, ResponseInterface $response)
-    {
-        $response->getBody()->write("OK");
-        return $response->withHeader('allow','Content-Type', 'application/json')->withStatus(200)
-            ->withHeader('Access-Control-Allow-Origin', '*')
-            ->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization')
-            ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
-    }
-
-    public function cerrarSesion2(ServerRequestInterface $request, ResponseInterface $response)
-    {
-        $response->getBody()->write("OK");
-        return $response->withHeader('allow','Content-Type', 'application/json')->withStatus(200)
-            ->withHeader('Access-Control-Allow-Origin', '*')
-            ->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization')
-            ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
-    }
-
-    public function olvidopassword2(ServerRequestInterface $request, ResponseInterface $response)
-    {
-        $response->getBody()->write("OK");
-        return $response->withHeader('allow','Content-Type', 'application/json')->withStatus(200)
-            ->withHeader('Access-Control-Allow-Origin', '*')
-            ->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization')
-            ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
-    }
-
-    public function resetPassword2(ServerRequestInterface $request, ResponseInterface $response)
-    {
-        $response->getBody()->write("OK");
-        return $response->withHeader('allow','Content-Type', 'application/json')->withStatus(200)
-            ->withHeader('Access-Control-Allow-Origin', '*')
-            ->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization')
-            ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
-    }
-
-    public function cambiarClave(ServerRequestInterface $request, ResponseInterface $response, array $args = [] ): ResponseInterface {
-
-        // Recopilar datos de la solicitud HTTP
-        $json = (array)$request->getParsedBody();
-
-        // Valida datos completos
-        if( !isset($json['usuario'])        || $json['usuario']==""     ||
-            !isset($json['clave'])          || $json['clave']==""       ||
-            !isset($json['nueva_clave'])    || $json['nueva_clave']==""
-        ){
-
-            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => 'FALTAN DATOS' );
-            $response->getBody()->write((string)json_encode($respuesta));
-            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
-        }
-
-        $usuario = $json['usuario'];
-        $clave   = $json['clave'];
-        $nueva_clave = $json['nueva_clave'];
-
-        // valida el usuario y clave
-        $sql = "SELECT id, name, telefono, ciudad, estado, email, obs, usuario
-        FROM public.users
-        WHERE usuario='$usuario' OR email='$usuario' AND clave= MD5('$clave') ";
-        $sql=reemplazar_vacios($sql);
-        $res = $this->conector->select($sql);
-        // print_r($res);die;
-        $id_usuario = $res[0]['id'];
-
-        if($res==2)  {
-            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ERROR BBDD', 'DATOS' => 'ERROR EN LA CONSULTA' );
-            $response->getBody()->write((string)json_encode($respuesta));
-            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
-        }else if(count2($res)==0)  {
-            // Construye la respuesta
-            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => 'USUARIO O PASSWORD INVALIDO' );
-            $response->getBody()->write((string)json_encode($respuesta));
-            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
-        }else{
-            // cambia la clave
-
-            $sqlup = "UPDATE public.users SET clave = MD5('$nueva_clave')  WHERE id='$id_usuario'  ;";
-            $sqlup=reemplazar_vacios($sqlup);
-            //die($sqlup);
-            $resup = $this->conector->update($sqlup);
-            if(!$resup) {
-                // si no trae datos retorna codigo 2
-                $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ERROR DB', 'DATOS' => "NO SE ACTUALIZO EL REGISTRO");
-                $response->getBody()->write(json_encode($respuesta));
-                return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
-            }
-
-        }
-
-        $respuesta = array('CODIGO' => 1, 'MENSAJE' => 'OK', 'DATOS' => $id_usuario );
-        $response->getBody()->write((string)json_encode($respuesta) );
-        return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
-    }
-
-    public function validarUsuarioClave (ResponseInterface $response, $usuario, $clave, $esquema) {
-
-        // valida el usuario y clave
-        $sql = "SELECT id, name, telefono, ciudad, estado, email, obs, usuario, tipo, id_rol
-        FROM $esquema.users
-        WHERE (usuario='$usuario' OR email='$usuario') AND clave= MD5('$clave') ";
-        $sql=reemplazar_vacios($sql);
-        $res = $this->conector->select($sql);
-        $id_usuario = $res[0]['id'];
-        // var_dump($res, $id_usuario);die($sql);
-
-        if($res==2)  {
-            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ERROR BBDD', 'DATOS' => 'ERROR EN LA CONSULTA' );
-            $response->getBody()->write((string)json_encode($respuesta));
-            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
-        }else if(count2($res)==0)  {
-            // Construye la respuesta
-            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => 'USUARIO O PASSWORD INVALIDO' );
-            $response->getBody()->write((string)json_encode($respuesta));
-            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
-        }else{
-            // genera el token
-
-            mt_srand();
-            $random=null;
-            for($i=1;$i<=16;$i++) {
-                $random .= mt_rand (0, 9);
-            }
-            $token= strtoupper($usuario . "CS" . $random);
-
-            // crea el token
-            $sqltok = "INSERT INTO public.token (users_id, token, updated_at)
-            VALUES ('$id_usuario', '$token', now() ) ";
-            $sqltok=reemplazar_vacios($sqltok);
-            $restok=$this->conector->update($sqltok);
-
-            //agreaga el token al array
-            $res[0]['token'] = $token;
-
-        }
-
-        $respuesta = array('CODIGO' => 1, 'MENSAJE' => 'OK', 'DATOS' => $res[0] );
-        $response->getBody()->write((string)json_encode($respuesta) );
-        return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
-
-    }
 
 }
 ?>

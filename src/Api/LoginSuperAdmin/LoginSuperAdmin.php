@@ -1,8 +1,8 @@
 <?php
 namespace App\Api\LoginSuperAdmin;
 
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
+// error_reporting(E_ALL);
+// ini_set('display_errors', '1');
 
 require_once __DIR__ . '/../../componentes/conector/ConectorDBPostgres.php';
 require_once __DIR__ . '/../../componentes/general/general.php';
@@ -150,7 +150,7 @@ class LoginSuperAdmin {
             $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ERROR BBDD', 'DATOS' => 'ERROR EN LA CONSULTA' );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
-        }else if(count($res)==0)  {
+        }else if(count2($res)==0)  {
             // Construye la respuesta
             $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => 'USUARIO O PASSWORD INVALIDO' );
             $response->getBody()->write((string)json_encode($respuesta));
