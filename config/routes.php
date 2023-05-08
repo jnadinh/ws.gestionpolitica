@@ -70,10 +70,66 @@ return function (App $app) {
 
     // valida por modulos
     $app->group('', function (RouteCollectorProxy $misReferidos) {
+        $misReferidos->post('/obtener_mis_referidos', \App\Api\Referido\Referido::class . ':obtenerMisReferidos');
+        $misReferidos->post('/crear_mi_referido', \App\Api\Referido\Referido::class . ':crearMiReferido');
+        $misReferidos->post('/editar_mi_referido', \App\Api\Referido\Referido::class . ':editarReferido');
+        $misReferidos->post('/eliminar_mi_referido', \App\Api\Referido\Referido::class . ':eliminarReferido');
+    })->add(UserAuthMiddleware::class . ':misReferidos');
 
-        $misReferidos->post('/obtener_departamentos_sa_xx', \App\Api\Listado\Listado::class . ':obtenerDepartamentos');
+    $app->group('', function (RouteCollectorProxy $misActividades) {
 
-    })->add(UserAuthMiddleware::class . ':Socio');
+    })->add(UserAuthMiddleware::class . ':misActividades');
+
+    $app->group('', function (RouteCollectorProxy $misReuniones) {
+
+    })->add(UserAuthMiddleware::class . ':misReuniones');
+
+    $app->group('', function (RouteCollectorProxy $misGestiones) {
+
+    })->add(UserAuthMiddleware::class . ':misGestiones');
+
+    $app->group('', function (RouteCollectorProxy $misVisitas) {
+
+    })->add(UserAuthMiddleware::class . ':misVisitas');
+
+    $app->group('', function (RouteCollectorProxy $lideres) {
+
+    })->add(UserAuthMiddleware::class . ':lideres');
+
+    $app->group('', function (RouteCollectorProxy $referidos) {
+        $referidos->post('/obtener_referidos', \App\Api\Referido\Referido::class . ':obtenerReferidos');
+        $referidos->post('/crear_referido', \App\Api\Referido\Referido::class . ':crearReferido');
+        $referidos->post('/editar_referido', \App\Api\Referido\Referido::class . ':editarReferido');
+        $referidos->post('/eliminar_referido', \App\Api\Referido\Referido::class . ':eliminarReferido');
+    })->add(UserAuthMiddleware::class . ':referidos');
+
+    $app->group('', function (RouteCollectorProxy $actividades) {
+
+    })->add(UserAuthMiddleware::class . ':actividades');
+
+    $app->group('', function (RouteCollectorProxy $reuniones) {
+
+    })->add(UserAuthMiddleware::class . ':reuniones');
+
+    $app->group('', function (RouteCollectorProxy $gestiones) {
+
+    })->add(UserAuthMiddleware::class . ':gestiones');
+
+    $app->group('', function (RouteCollectorProxy $visitas) {
+
+    })->add(UserAuthMiddleware::class . ':visitas');
+
+    $app->group('', function (RouteCollectorProxy $reportes) {
+
+    })->add(UserAuthMiddleware::class . ':reportes');
+
+    $app->group('', function (RouteCollectorProxy $mensajes) {
+
+    })->add(UserAuthMiddleware::class . ':mensajes');
+
+    $app->group('', function (RouteCollectorProxy $registroAsistentesReuniones) {
+
+    })->add(UserAuthMiddleware::class . ':registroAsistentesReuniones');
 
 
     $app->group('', function (RouteCollectorProxy $group) {
@@ -81,6 +137,10 @@ return function (App $app) {
         $group->post('/cerrar_sesion', \App\Api\Login\Login::class . ':cerrarSesion');
         $group->post('/validar_token', \App\Api\Login\Login::class . ':validarToken');
         $group->post('/cambiar_clave', \App\Api\Login\Login::class . ':cambiarClave');
+
+        $group->post('/obtener_publicaciones', \App\Api\Publicacion\Publicacion::class . ':obtenerPublicaciones');
+        $group->post('/crear_publicacion', \App\Api\Publicacion\Publicacion::class . ':crearPublicacion');
+        $group->post('/editar_publicacion', \App\Api\Publicacion\Publicacion::class . ':editarPublicacion');    // eliminar edita eliminado=true
 
         // queda de ejemplo modulo socio
         $group->post('/crear_socio', \App\Api\Socio\Socio::class . ':crearSocio');
@@ -96,9 +156,6 @@ return function (App $app) {
         // $group->post('/editar_archivo', \App\Api\Archivo\Archivo::class . ':editarArchivo');
         // $group->post('/eliminar_archivo', \App\Api\Archivo\Archivo::class . ':eliminarArchivo');
 
-        // $group->post('/obtener_publicaciones', \App\Api\Publicacion\Publicacion::class . ':obtenerPublicaciones');
-        // $group->post('/crear_publicacion', \App\Api\Publicacion\Publicacion::class . ':crearPublicacion');
-        // $group->post('/editar_publicacion', \App\Api\Publicacion\Publicacion::class . ':editarPublicacion');    // eliminar edita eliminado=true
 
         /////////////////////////////////////////////////////////////////////////////////
 

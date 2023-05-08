@@ -2270,3 +2270,1237 @@ LINE 1: ALTER SCHEMA  RENAME TO pablopascual1 ;
 [08-May-2023 09:13:03 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in D:\gestionpolitica\ws.gestionpolitica\src\componentes\general\general.php on line 48
 [08-May-2023 09:16:36 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  ya existe el esquema «pepitoperez» in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
 [08-May-2023 09:16:39 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  ya existe el esquema «pepitoperez» in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 16:15:00 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 16:15:00 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 16:15:00 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 16:15:00 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 16:15:00 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 16:15:00 Europe/Berlin] Slim Application Error
+Type: RuntimeException
+Code: 0
+Message: Callable App\Api\Referido\Referido does not exist
+File: D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\CallableResolver.php
+Line: 147
+Trace: #0 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\CallableResolver.php(101): Slim\CallableResolver->resolveSlimNotation('App\\Api\\Referid...')
+#1 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\CallableResolver.php(71): Slim\CallableResolver->resolveByPredicate('App\\Api\\Referid...', Array, 'handle')
+#2 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\Route.php(366): Slim\CallableResolver->resolveRoute('App\\Api\\Referid...')
+#3 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#4 D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php(122): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): App\Middleware\UserAuthMiddleware->misReferidos(Object(Slim\Psr7\Request), Object(Slim\MiddlewareDispatcher))
+#6 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#7 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#8 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\RouteRunner.php(84): Slim\Routing\Route->run(Object(Slim\Psr7\Request))
+#9 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\BodyParsingMiddleware.php(68): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#10 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(147): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#11 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php(59): class@anonymous->handle(Object(Slim\Psr7\Request))
+#12 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(147): Slim\Middleware\RoutingMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#13 D:\gestionpolitica\ws.gestionpolitica\vendor\selective\basepath\src\BasePathMiddleware.php(52): class@anonymous->handle(Object(Slim\Psr7\Request))
+#14 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): Selective\BasePath\BasePathMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#15 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\ErrorMiddleware.php(107): class@anonymous->handle(Object(Slim\Psr7\Request))
+#16 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#17 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#18 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#19 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#20 D:\gestionpolitica\ws.gestionpolitica\public\index.php(6): Slim\App->run()
+#21 {main}
+[08-May-2023 16:32:54 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 16:32:54 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 16:32:54 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 16:32:54 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 16:32:54 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 16:32:54 Europe/Berlin] Slim Application Error
+Type: ParseError
+Code: 0
+Message: syntax error, unexpected 'SELECT' (T_STRING)
+File: D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php
+Line: 66
+Trace: #0 D:\gestionpolitica\ws.gestionpolitica\vendor\composer\ClassLoader.php(322): Composer\Autoload\includeFile('D:\\gestionpolit...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Api\\Referid...')
+#2 [internal function]: spl_autoload_call('App\\Api\\Referid...')
+#3 D:\gestionpolitica\ws.gestionpolitica\vendor\php-di\php-di\src\Definition\Source\ReflectionBasedAutowiring.php(23): class_exists('App\\Api\\Referid...')
+#4 D:\gestionpolitica\ws.gestionpolitica\vendor\php-di\php-di\src\Definition\Source\ReflectionBasedAutowiring.php(42): DI\Definition\Source\ReflectionBasedAutowiring->autowire('App\\Api\\Referid...')
+#5 D:\gestionpolitica\ws.gestionpolitica\vendor\php-di\php-di\src\Definition\Source\SourceChain.php(54): DI\Definition\Source\ReflectionBasedAutowiring->getDefinition('App\\Api\\Referid...')
+#6 D:\gestionpolitica\ws.gestionpolitica\vendor\php-di\php-di\src\Container.php(154): DI\Definition\Source\SourceChain->getDefinition('App\\Api\\Referid...')
+#7 D:\gestionpolitica\ws.gestionpolitica\vendor\php-di\php-di\src\Container.php(221): DI\Container->getDefinition('App\\Api\\Referid...')
+#8 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\CallableResolver.php(143): DI\Container->has('App\\Api\\Referid...')
+#9 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\CallableResolver.php(101): Slim\CallableResolver->resolveSlimNotation('App\\Api\\Referid...')
+#10 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\CallableResolver.php(71): Slim\CallableResolver->resolveByPredicate('App\\Api\\Referid...', Array, 'handle')
+#11 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\Route.php(366): Slim\CallableResolver->resolveRoute('App\\Api\\Referid...')
+#12 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#13 D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php(122): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#14 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): App\Middleware\UserAuthMiddleware->misReferidos(Object(Slim\Psr7\Request), Object(Slim\MiddlewareDispatcher))
+#15 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#16 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#17 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\RouteRunner.php(84): Slim\Routing\Route->run(Object(Slim\Psr7\Request))
+#18 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\BodyParsingMiddleware.php(68): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#19 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(147): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#20 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php(59): class@anonymous->handle(Object(Slim\Psr7\Request))
+#21 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(147): Slim\Middleware\RoutingMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#22 D:\gestionpolitica\ws.gestionpolitica\vendor\selective\basepath\src\BasePathMiddleware.php(52): class@anonymous->handle(Object(Slim\Psr7\Request))
+#23 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): Selective\BasePath\BasePathMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#24 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\ErrorMiddleware.php(107): class@anonymous->handle(Object(Slim\Psr7\Request))
+#25 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#26 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#27 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#28 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#29 D:\gestionpolitica\ws.gestionpolitica\public\index.php(6): Slim\App->run()
+#30 {main}
+[08-May-2023 16:33:10 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 26
+[08-May-2023 16:33:10 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 26
+[08-May-2023 16:33:10 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 27
+[08-May-2023 16:33:10 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 27
+[08-May-2023 16:33:10 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 28
+[08-May-2023 16:33:10 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 28
+[08-May-2023 16:33:10 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type bool in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 92
+[08-May-2023 16:33:10 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 92
+[08-May-2023 16:33:32 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 16:33:32 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 16:33:32 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 16:33:32 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 16:33:32 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 16:33:32 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 85
+[08-May-2023 16:33:32 Europe/Berlin] Slim Application Error
+Type: ParseError
+Code: 0
+Message: syntax error, unexpected 'SELECT' (T_STRING)
+File: D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php
+Line: 66
+Trace: #0 D:\gestionpolitica\ws.gestionpolitica\vendor\composer\ClassLoader.php(322): Composer\Autoload\includeFile('D:\\gestionpolit...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Api\\Referid...')
+#2 [internal function]: spl_autoload_call('App\\Api\\Referid...')
+#3 D:\gestionpolitica\ws.gestionpolitica\vendor\php-di\php-di\src\Definition\Source\ReflectionBasedAutowiring.php(23): class_exists('App\\Api\\Referid...')
+#4 D:\gestionpolitica\ws.gestionpolitica\vendor\php-di\php-di\src\Definition\Source\ReflectionBasedAutowiring.php(42): DI\Definition\Source\ReflectionBasedAutowiring->autowire('App\\Api\\Referid...')
+#5 D:\gestionpolitica\ws.gestionpolitica\vendor\php-di\php-di\src\Definition\Source\SourceChain.php(54): DI\Definition\Source\ReflectionBasedAutowiring->getDefinition('App\\Api\\Referid...')
+#6 D:\gestionpolitica\ws.gestionpolitica\vendor\php-di\php-di\src\Container.php(154): DI\Definition\Source\SourceChain->getDefinition('App\\Api\\Referid...')
+#7 D:\gestionpolitica\ws.gestionpolitica\vendor\php-di\php-di\src\Container.php(221): DI\Container->getDefinition('App\\Api\\Referid...')
+#8 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\CallableResolver.php(143): DI\Container->has('App\\Api\\Referid...')
+#9 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\CallableResolver.php(101): Slim\CallableResolver->resolveSlimNotation('App\\Api\\Referid...')
+#10 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\CallableResolver.php(71): Slim\CallableResolver->resolveByPredicate('App\\Api\\Referid...', Array, 'handle')
+#11 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\Route.php(366): Slim\CallableResolver->resolveRoute('App\\Api\\Referid...')
+#12 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#13 D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php(89): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#14 D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php(95): App\Middleware\UserAuthMiddleware->__invoke(Object(Slim\Psr7\Request), Object(Slim\MiddlewareDispatcher))
+#15 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): App\Middleware\UserAuthMiddleware->misReferidos(Object(Slim\Psr7\Request), Object(Slim\MiddlewareDispatcher))
+#16 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#17 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#18 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\RouteRunner.php(84): Slim\Routing\Route->run(Object(Slim\Psr7\Request))
+#19 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\BodyParsingMiddleware.php(68): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#20 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(147): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#21 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php(59): class@anonymous->handle(Object(Slim\Psr7\Request))
+#22 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(147): Slim\Middleware\RoutingMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#23 D:\gestionpolitica\ws.gestionpolitica\vendor\selective\basepath\src\BasePathMiddleware.php(52): class@anonymous->handle(Object(Slim\Psr7\Request))
+#24 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): Selective\BasePath\BasePathMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#25 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\ErrorMiddleware.php(107): class@anonymous->handle(Object(Slim\Psr7\Request))
+#26 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#27 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#28 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#29 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#30 D:\gestionpolitica\ws.gestionpolitica\public\index.php(6): Slim\App->run()
+#31 {main}
+[08-May-2023 16:39:33 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 16:39:33 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 16:39:33 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 16:39:33 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 16:39:33 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 16:39:33 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 85
+[08-May-2023 16:39:33 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 16:39:48 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 16:39:48 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 16:39:48 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 16:39:48 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 16:39:48 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 16:39:48 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 85
+[08-May-2023 16:39:48 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 16:40:18 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 16:40:18 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 16:40:18 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 16:40:18 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 16:40:18 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 16:40:18 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 85
+[08-May-2023 16:40:18 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 16:44:26 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 16:44:26 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 16:44:26 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 16:44:26 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 16:44:26 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 16:44:26 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 85
+[08-May-2023 16:44:26 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 17:08:36 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:08:36 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:08:36 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:08:36 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:08:36 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 17:08:36 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 85
+[08-May-2023 17:08:36 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 17:15:57 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:15:57 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:15:57 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:15:57 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:15:57 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 17:15:57 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 85
+[08-May-2023 17:15:57 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 17:19:05 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:19:05 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:19:05 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:19:05 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:19:05 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 17:19:05 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 25
+[08-May-2023 17:19:05 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 25
+[08-May-2023 17:19:05 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 26
+[08-May-2023 17:19:05 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 26
+[08-May-2023 17:19:05 Europe/Berlin] Slim Application Error
+Type: RuntimeException
+Code: 0
+Message: App\Api\Referido\Referido:crearReferido is not resolvable
+File: D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\CallableResolver.php
+Line: 165
+Trace: #0 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\CallableResolver.php(107): Slim\CallableResolver->assertCallable(Array, 'App\\Api\\Referid...')
+#1 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\CallableResolver.php(71): Slim\CallableResolver->resolveByPredicate('App\\Api\\Referid...', Array, 'handle')
+#2 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\Route.php(366): Slim\CallableResolver->resolveRoute('App\\Api\\Referid...')
+#3 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#4 D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php(122): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): App\Middleware\UserAuthMiddleware->misReferidos(Object(Slim\Psr7\Request), Object(Slim\MiddlewareDispatcher))
+#6 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#7 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#8 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\RouteRunner.php(84): Slim\Routing\Route->run(Object(Slim\Psr7\Request))
+#9 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\BodyParsingMiddleware.php(68): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#10 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(147): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#11 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php(59): class@anonymous->handle(Object(Slim\Psr7\Request))
+#12 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(147): Slim\Middleware\RoutingMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#13 D:\gestionpolitica\ws.gestionpolitica\vendor\selective\basepath\src\BasePathMiddleware.php(52): class@anonymous->handle(Object(Slim\Psr7\Request))
+#14 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): Selective\BasePath\BasePathMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#15 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\ErrorMiddleware.php(107): class@anonymous->handle(Object(Slim\Psr7\Request))
+#16 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#17 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#18 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#19 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#20 D:\gestionpolitica\ws.gestionpolitica\public\index.php(6): Slim\App->run()
+#21 {main}
+[08-May-2023 17:21:48 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:21:48 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:21:48 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:21:48 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:21:48 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 17:21:48 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 25
+[08-May-2023 17:21:48 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 25
+[08-May-2023 17:21:48 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 26
+[08-May-2023 17:21:48 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 26
+[08-May-2023 17:21:48 Europe/Berlin] PHP Notice:  Undefined index: telefono in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 86
+[08-May-2023 17:21:48 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 1: INSERT INTO .tab_personas
+                    ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 86
+[08-May-2023 17:21:48 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 98
+[08-May-2023 17:21:48 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 98
+[08-May-2023 17:22:16 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:22:16 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:22:16 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:22:16 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:22:16 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 17:22:16 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 25
+[08-May-2023 17:22:16 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 25
+[08-May-2023 17:22:16 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 26
+[08-May-2023 17:22:16 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 26
+[08-May-2023 17:22:16 Europe/Berlin] PHP Notice:  Undefined index: telefono in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 86
+[08-May-2023 17:25:06 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:25:06 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:25:06 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:25:06 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:25:06 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 17:25:06 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 85
+[08-May-2023 17:25:06 Europe/Berlin] PHP Notice:  Undefined index: telefono in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 86
+[08-May-2023 17:25:33 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:25:33 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:25:33 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:25:33 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:25:33 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 17:25:33 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 85
+[08-May-2023 17:25:33 Europe/Berlin] PHP Notice:  Undefined index: telefono in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 86
+[08-May-2023 17:25:33 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  el valor null para la columna «telefono» viola la restricción not null
+DETAIL:  La fila que falla contiene (2, Juan, Jimenez, 222222, null, 3222222, null, juan@gmail.com, null, calle 18, M, null, f, Prueba creando un referido, 1, 2, 2023-05-08 10:25:33.845681, null, 1, null). in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 86
+[08-May-2023 17:25:33 Europe/Berlin] PHP Notice:  Undefined index: id in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 98
+[08-May-2023 17:25:33 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 17:25:33 Europe/Berlin] PHP Notice:  Undefined index: telefono in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 86
+[08-May-2023 17:25:33 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  el valor null para la columna «telefono» viola la restricción not null
+DETAIL:  La fila que falla contiene (3, Juan, Jimenez, 222222, null, 3222222, null, juan@gmail.com, null, calle 18, M, null, f, Prueba creando un referido, 1, 2, 2023-05-08 10:25:33.849604, null, 1, null). in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 86
+[08-May-2023 17:25:33 Europe/Berlin] PHP Notice:  Undefined index: id in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 98
+[08-May-2023 17:25:42 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:25:42 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:25:42 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:25:42 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:25:42 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 17:25:42 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 85
+[08-May-2023 17:25:42 Europe/Berlin] PHP Notice:  Undefined index: telefono in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 86
+[08-May-2023 17:27:18 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:27:18 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:27:18 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:27:18 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:27:18 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 17:27:18 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 85
+[08-May-2023 17:27:18 Europe/Berlin] PHP Notice:  Undefined index: telefono in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 86
+[08-May-2023 17:27:18 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 17:27:18 Europe/Berlin] PHP Notice:  Undefined index: telefono in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 86
+[08-May-2023 17:27:18 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «idx_personas_cedula»
+DETAIL:  Ya existe la llave (cedula)=(222222). in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 86
+[08-May-2023 17:27:27 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:27:27 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:27:27 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:27:27 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:27:27 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 17:27:27 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 85
+[08-May-2023 17:27:27 Europe/Berlin] PHP Notice:  Undefined index: telefono in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 86
+[08-May-2023 17:28:49 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:28:49 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:28:49 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:28:49 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:28:49 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 17:28:49 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 85
+[08-May-2023 17:28:49 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 17:29:42 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:29:42 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:29:42 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:29:42 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:29:42 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 17:29:42 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 85
+[08-May-2023 17:29:42 Europe/Berlin] PHP Notice:  Undefined index: telefono in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 86
+[08-May-2023 17:29:42 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 17:29:42 Europe/Berlin] PHP Notice:  Undefined index: telefono in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 86
+[08-May-2023 17:29:42 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «idx_personas_cedula»
+DETAIL:  Ya existe la llave (cedula)=(333333). in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 86
+[08-May-2023 17:33:08 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:33:08 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:33:08 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:33:08 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:33:08 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 17:33:08 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 85
+[08-May-2023 17:33:08 Europe/Berlin] PHP Notice:  Undefined index: telefono in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 86
+[08-May-2023 17:33:08 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 17:33:08 Europe/Berlin] PHP Notice:  Undefined index: telefono in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 86
+[08-May-2023 17:33:08 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «idx_personas_cedula»
+DETAIL:  Ya existe la llave (cedula)=(444444). in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 86
+[08-May-2023 17:41:30 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:41:30 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:41:30 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:41:30 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:41:30 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 17:41:30 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 25
+[08-May-2023 17:41:30 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 25
+[08-May-2023 17:41:30 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 26
+[08-May-2023 17:41:30 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 26
+[08-May-2023 17:41:30 Europe/Berlin] PHP Notice:  Undefined index: telefono in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 86
+[08-May-2023 17:41:30 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 1: INSERT INTO .tab_personas
+                    ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 86
+[08-May-2023 17:41:30 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 98
+[08-May-2023 17:41:30 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 98
+[08-May-2023 17:43:54 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:43:54 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:43:54 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:43:54 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:43:54 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 17:43:54 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 25
+[08-May-2023 17:43:54 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 25
+[08-May-2023 17:43:54 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 26
+[08-May-2023 17:43:54 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 26
+[08-May-2023 17:43:54 Europe/Berlin] PHP Notice:  Undefined index: telefono in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 86
+[08-May-2023 17:43:54 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 1: INSERT INTO .tab_personas
+                    ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 86
+[08-May-2023 17:43:54 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 98
+[08-May-2023 17:43:54 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 98
+[08-May-2023 17:46:06 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:46:06 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:46:06 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:46:06 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:46:06 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 17:46:06 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 25
+[08-May-2023 17:46:06 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 25
+[08-May-2023 17:46:06 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 26
+[08-May-2023 17:46:06 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 26
+[08-May-2023 17:46:06 Europe/Berlin] PHP Notice:  Undefined index: telefono in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 86
+[08-May-2023 17:46:06 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 1: INSERT INTO .tab_personas
+                    ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 86
+[08-May-2023 17:46:06 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 98
+[08-May-2023 17:46:06 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 98
+[08-May-2023 17:48:11 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:48:11 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:48:11 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:48:11 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:48:24 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 26
+[08-May-2023 17:48:24 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 26
+[08-May-2023 17:48:24 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 27
+[08-May-2023 17:48:24 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 27
+[08-May-2023 17:48:24 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 28
+[08-May-2023 17:48:24 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 28
+[08-May-2023 17:48:24 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type bool in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 92
+[08-May-2023 17:48:24 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 92
+[08-May-2023 17:48:41 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:48:41 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:48:41 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:48:41 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:48:41 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 17:48:41 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 87
+[08-May-2023 17:48:47 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:48:47 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:48:47 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:48:47 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:48:47 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 17:48:47 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 87
+[08-May-2023 17:48:47 Europe/Berlin] PHP Notice:  Undefined index: telefono in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 86
+[08-May-2023 17:48:47 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 17:48:47 Europe/Berlin] PHP Notice:  Undefined index: telefono in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 86
+[08-May-2023 17:48:47 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «idx_personas_cedula»
+DETAIL:  Ya existe la llave (cedula)=(555555). in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 86
+[08-May-2023 17:56:07 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:56:07 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:56:07 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:56:07 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:56:07 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 17:56:07 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 139
+[08-May-2023 17:56:07 Europe/Berlin] Slim Application Error
+Type: TypeError
+Code: 0
+Message: Return value of App\Middleware\UserAuthMiddleware::validarToken() must be an instance of Slim\Psr7\Response, none returned
+File: D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php
+Line: 144
+Trace: #0 D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php(149): App\Middleware\UserAuthMiddleware->validarToken(Object(Slim\Psr7\Request))
+#1 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): App\Middleware\UserAuthMiddleware->misReferidos(Object(Slim\Psr7\Request), Object(Slim\MiddlewareDispatcher))
+#2 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#3 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#4 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\RouteRunner.php(84): Slim\Routing\Route->run(Object(Slim\Psr7\Request))
+#5 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\BodyParsingMiddleware.php(68): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#6 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(147): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#7 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php(59): class@anonymous->handle(Object(Slim\Psr7\Request))
+#8 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(147): Slim\Middleware\RoutingMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#9 D:\gestionpolitica\ws.gestionpolitica\vendor\selective\basepath\src\BasePathMiddleware.php(52): class@anonymous->handle(Object(Slim\Psr7\Request))
+#10 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): Selective\BasePath\BasePathMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#11 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\ErrorMiddleware.php(107): class@anonymous->handle(Object(Slim\Psr7\Request))
+#12 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#13 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#14 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#15 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#16 D:\gestionpolitica\ws.gestionpolitica\public\index.php(6): Slim\App->run()
+#17 {main}
+[08-May-2023 17:58:23 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:58:23 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 17:58:23 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:58:23 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 17:58:23 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 17:58:23 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 139
+[08-May-2023 17:58:23 Europe/Berlin] Slim Application Error
+Type: TypeError
+Code: 0
+Message: Return value of App\Middleware\UserAuthMiddleware::validarToken() must be an instance of Slim\Psr7\Response, none returned
+File: D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php
+Line: 144
+Trace: #0 D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php(149): App\Middleware\UserAuthMiddleware->validarToken(Object(Slim\Psr7\Request), Object(Slim\MiddlewareDispatcher))
+#1 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): App\Middleware\UserAuthMiddleware->misReferidos(Object(Slim\Psr7\Request), Object(Slim\MiddlewareDispatcher))
+#2 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#3 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#4 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\RouteRunner.php(84): Slim\Routing\Route->run(Object(Slim\Psr7\Request))
+#5 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\BodyParsingMiddleware.php(68): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#6 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(147): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#7 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php(59): class@anonymous->handle(Object(Slim\Psr7\Request))
+#8 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(147): Slim\Middleware\RoutingMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#9 D:\gestionpolitica\ws.gestionpolitica\vendor\selective\basepath\src\BasePathMiddleware.php(52): class@anonymous->handle(Object(Slim\Psr7\Request))
+#10 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): Selective\BasePath\BasePathMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#11 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\ErrorMiddleware.php(107): class@anonymous->handle(Object(Slim\Psr7\Request))
+#12 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#13 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#14 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#15 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#16 D:\gestionpolitica\ws.gestionpolitica\public\index.php(6): Slim\App->run()
+#17 {main}
+[08-May-2023 18:00:21 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 18:00:21 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 18:00:21 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 18:00:21 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 18:00:21 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 18:00:21 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 139
+[08-May-2023 18:00:21 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 18:00:21 Europe/Berlin] PHP Notice:  Undefined index: telefono in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 86
+[08-May-2023 18:00:21 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «idx_personas_cedula»
+DETAIL:  Ya existe la llave (cedula)=(555555). in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 86
+[08-May-2023 18:00:21 Europe/Berlin] PHP Notice:  Undefined index: id in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 98
+[08-May-2023 18:01:22 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 18:01:22 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 18:01:22 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 18:01:22 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 18:01:22 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 18:01:22 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 25
+[08-May-2023 18:01:22 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 25
+[08-May-2023 18:01:22 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 26
+[08-May-2023 18:01:22 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 26
+[08-May-2023 18:01:22 Europe/Berlin] PHP Notice:  Undefined index: telefono in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 86
+[08-May-2023 18:01:22 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 1: INSERT INTO .tab_personas
+                    ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 86
+[08-May-2023 18:01:22 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 98
+[08-May-2023 18:01:22 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 98
+[08-May-2023 18:01:38 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 18:01:38 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 18:01:38 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 18:01:38 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 18:01:38 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 18:01:38 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 25
+[08-May-2023 18:01:38 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 25
+[08-May-2023 18:01:38 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 26
+[08-May-2023 18:01:38 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 26
+[08-May-2023 18:01:38 Europe/Berlin] PHP Notice:  Undefined index: telefono in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 86
+[08-May-2023 18:01:38 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 1: INSERT INTO .tab_personas
+                    ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 86
+[08-May-2023 18:01:38 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 98
+[08-May-2023 18:01:38 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 98
+[08-May-2023 18:02:23 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 18:02:23 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 18:02:23 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 18:02:23 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 18:02:23 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 18:02:23 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 25
+[08-May-2023 18:02:23 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 25
+[08-May-2023 18:02:23 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 26
+[08-May-2023 18:02:23 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 26
+[08-May-2023 18:02:23 Europe/Berlin] PHP Notice:  Undefined index: telefono in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 86
+[08-May-2023 18:02:23 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 1: INSERT INTO .tab_personas
+                    ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 86
+[08-May-2023 18:02:23 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 98
+[08-May-2023 18:02:23 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 98
+[08-May-2023 18:03:03 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 18:03:03 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 18:03:03 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 18:03:03 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 18:03:59 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 18:03:59 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 18:03:59 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 18:03:59 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 18:04:28 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 18:04:28 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 18:04:28 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 18:04:28 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 18:05:24 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 18:05:24 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 18:05:24 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 18:05:24 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 18:05:24 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 18:05:24 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 25
+[08-May-2023 18:05:24 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 25
+[08-May-2023 18:05:24 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 26
+[08-May-2023 18:05:24 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 26
+[08-May-2023 18:05:24 Europe/Berlin] PHP Notice:  Undefined index: telefono in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 86
+[08-May-2023 18:05:24 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 1: INSERT INTO .tab_personas
+                    ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 86
+[08-May-2023 18:05:24 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 98
+[08-May-2023 18:05:24 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 98
+[08-May-2023 18:06:17 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 18:06:17 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 18:06:17 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 18:06:17 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 18:06:17 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 18:06:17 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 25
+[08-May-2023 18:06:17 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 25
+[08-May-2023 18:06:17 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 26
+[08-May-2023 18:06:17 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 26
+[08-May-2023 18:06:17 Europe/Berlin] PHP Notice:  Undefined index: telefono in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 86
+[08-May-2023 18:06:17 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 1: INSERT INTO .tab_personas
+                    ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 86
+[08-May-2023 18:06:17 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 98
+[08-May-2023 18:06:17 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 98
+[08-May-2023 18:07:17 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 18:07:17 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 18:07:17 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 18:07:17 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 18:07:17 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 18:07:17 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 25
+[08-May-2023 18:07:17 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 25
+[08-May-2023 18:07:17 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 26
+[08-May-2023 18:07:17 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 26
+[08-May-2023 18:07:17 Europe/Berlin] PHP Notice:  Undefined index: telefono in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 86
+[08-May-2023 18:07:17 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 1: INSERT INTO .tab_personas
+                    ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 86
+[08-May-2023 18:07:17 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 98
+[08-May-2023 18:07:17 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 98
+[08-May-2023 18:08:13 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 18:08:13 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 38
+[08-May-2023 18:08:13 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 18:08:13 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 39
+[08-May-2023 18:08:13 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 18:08:13 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 25
+[08-May-2023 18:08:13 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 25
+[08-May-2023 18:08:13 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 26
+[08-May-2023 18:08:13 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 26
+[08-May-2023 18:08:13 Europe/Berlin] PHP Notice:  Undefined index: telefono in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 86
+[08-May-2023 18:08:13 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 1: INSERT INTO .tab_personas
+                    ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 86
+[08-May-2023 18:08:13 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 98
+[08-May-2023 18:08:13 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 98
+[08-May-2023 18:14:31 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 18:14:31 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 18:14:31 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 18:14:31 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 18:14:31 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 18:14:31 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 25
+[08-May-2023 18:14:31 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 25
+[08-May-2023 18:14:31 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 26
+[08-May-2023 18:14:31 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 26
+[08-May-2023 18:14:31 Europe/Berlin] PHP Notice:  Undefined index: telefono in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 86
+[08-May-2023 18:14:31 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 1: INSERT INTO .tab_personas
+                    ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 86
+[08-May-2023 18:14:31 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 98
+[08-May-2023 18:14:31 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 98
+[08-May-2023 18:20:44 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 18:20:44 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 18:20:44 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 18:20:44 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 18:26:37 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 18:26:37 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 18:26:37 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 18:26:37 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 18:27:06 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 18:27:06 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 18:27:06 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 18:27:06 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 18:27:06 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 18:27:06 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 89
+[08-May-2023 18:27:13 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 18:27:13 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 18:27:13 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 18:27:13 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 18:27:13 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 18:27:13 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 130
+[08-May-2023 18:27:13 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 18:27:13 Europe/Berlin] PHP Notice:  Undefined index: telefono in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 86
+[08-May-2023 18:27:13 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  llave duplicada viola restricción de unicidad «idx_personas_cedula»
+DETAIL:  Ya existe la llave (cedula)=(555555). in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 86
+[08-May-2023 18:27:13 Europe/Berlin] PHP Notice:  Undefined index: id in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 98
+[08-May-2023 18:33:26 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 18:33:26 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 18:33:26 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 18:33:26 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 18:33:26 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 18:33:26 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 130
+[08-May-2023 18:33:26 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 18:33:26 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la columna «eliminado»
+LINE 1: SELECT id, nombre, apellidos, cedula, eliminado
+                                              ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 18:35:18 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 18:35:18 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 18:35:18 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 18:35:18 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 18:35:18 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 18:35:18 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 130
+[08-May-2023 18:35:18 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 18:35:18 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  el operador no existe: character varying = integer
+LINE 2:         FROM pepitoperez.tab_personas WHERE cedula = 555555
+                                                           ^
+HINT:  Ningún operador coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos. in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 18:36:47 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 18:36:47 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 18:36:47 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 18:36:47 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 18:36:47 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 18:36:47 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 130
+[08-May-2023 18:36:47 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 18:36:47 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  el operador no existe: character varying = integer
+LINE 2:         FROM pepitoperez.tab_personas WHERE cedula = 555555
+                                                           ^
+HINT:  Ningún operador coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos. in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 18:37:11 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 18:37:11 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 18:37:11 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 18:37:11 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 18:37:11 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 18:37:11 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 130
+[08-May-2023 18:37:11 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 18:37:11 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  el operador no existe: character varying = integer
+LINE 2:         FROM pepitoperez.tab_personas WHERE cedula = 555555
+                                                           ^
+HINT:  Ningún operador coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos. in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 19:47:02 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 19:47:02 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 19:47:02 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 19:47:02 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 19:47:12 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 26
+[08-May-2023 19:47:12 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 26
+[08-May-2023 19:47:12 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 27
+[08-May-2023 19:47:12 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 27
+[08-May-2023 19:47:12 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 28
+[08-May-2023 19:47:12 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 28
+[08-May-2023 19:47:12 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type bool in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 92
+[08-May-2023 19:47:12 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 92
+[08-May-2023 19:47:28 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 19:47:28 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 19:47:28 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 19:47:28 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 19:47:28 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 19:47:28 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 89
+[08-May-2023 19:47:33 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 19:47:33 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 19:47:33 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 19:47:33 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 19:47:33 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 19:47:33 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 130
+[08-May-2023 19:47:33 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 19:47:33 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  el operador no existe: character varying = integer
+LINE 2:         FROM pepitoperez.tab_personas WHERE cedula = 555555
+                                                           ^
+HINT:  Ningún operador coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos. in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 19:47:45 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 19:47:45 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 19:47:45 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 19:47:45 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 19:47:45 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 19:47:45 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 130
+[08-May-2023 19:47:45 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 19:47:45 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  el operador no existe: character varying = integer
+LINE 2:         FROM pepitoperez.tab_personas WHERE cedula = 5555556
+                                                           ^
+HINT:  Ningún operador coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos. in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 19:48:58 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 19:48:58 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 19:48:58 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 19:48:58 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 19:48:58 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 19:48:58 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 130
+[08-May-2023 19:48:58 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 19:48:58 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  el operador no existe: character varying = integer
+LINE 2:         FROM pepitoperez.tab_personas WHERE cedula = 5555556
+                                                           ^
+HINT:  Ningún operador coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos. in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 19:50:43 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 19:50:43 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 19:50:43 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 19:50:43 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 19:50:43 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 19:50:43 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 130
+[08-May-2023 19:50:43 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 19:50:43 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  el operador no existe: character varying = integer
+LINE 2:         FROM pepitoperez.tab_personas WHERE cedula = 5555556
+                                                           ^
+HINT:  Ningún operador coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos. in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 19:51:44 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 19:51:44 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 19:51:44 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 19:51:44 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 19:51:44 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 19:51:44 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 130
+[08-May-2023 19:51:44 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 19:51:44 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  el operador no existe: character varying = integer
+LINE 2:         FROM pepitoperez.tab_personas WHERE cedula = 5555556
+                                                           ^
+HINT:  Ningún operador coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos. in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 19:53:10 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 19:53:10 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 19:53:10 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 19:53:10 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 19:53:10 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 19:53:10 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 130
+[08-May-2023 19:53:10 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 19:53:23 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 19:53:23 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 19:53:23 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 19:53:23 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 19:53:23 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 19:53:23 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 130
+[08-May-2023 19:53:23 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 19:53:23 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  el operador no existe: character varying = integer
+LINE 2: ...        FROM pepitoperez.tab_personas WHERE cedula = 5555556
+                                                              ^
+HINT:  Ningún operador coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos. in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 19:54:26 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 19:54:26 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 19:54:26 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 19:54:26 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 19:54:26 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 19:54:26 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 130
+[08-May-2023 19:54:26 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 19:54:26 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  el operador no existe: character varying = integer
+LINE 2: ...        FROM pepitoperez.tab_personas WHERE cedula = 5555556
+                                                              ^
+HINT:  Ningún operador coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos. in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 19:54:34 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 19:54:34 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 19:54:34 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 19:54:34 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 19:54:34 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 19:54:34 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 130
+[08-May-2023 19:54:34 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 19:54:34 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  el operador no existe: character varying = integer
+LINE 2: ...        FROM pepitoperez.tab_personas WHERE cedula = 5555556
+                                                              ^
+HINT:  Ningún operador coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos. in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 19:55:35 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 19:55:35 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 19:55:35 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 19:55:35 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 19:55:35 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 19:55:35 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 130
+[08-May-2023 19:55:35 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 19:55:35 Europe/Berlin] PHP Notice:  Undefined index: telefono in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 121
+[08-May-2023 19:56:03 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 19:56:03 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 19:56:03 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 19:56:03 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 19:56:03 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 19:56:03 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 130
+[08-May-2023 19:56:03 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 19:56:12 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 19:56:12 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 19:56:12 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 19:56:12 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 19:56:12 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 19:56:12 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 130
+[08-May-2023 19:56:12 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 19:56:22 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 19:56:22 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 19:56:22 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 19:56:22 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 19:56:22 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 19:56:22 Europe/Berlin] PHP Notice:  Undefined index: usuario in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 130
+[08-May-2023 19:56:22 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 19:56:22 Europe/Berlin] PHP Notice:  Undefined index: telefono in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 121
+[08-May-2023 21:08:21 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:08:21 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:08:21 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:08:21 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:08:34 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 26
+[08-May-2023 21:08:34 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 26
+[08-May-2023 21:08:34 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 27
+[08-May-2023 21:08:34 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 27
+[08-May-2023 21:08:34 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 28
+[08-May-2023 21:08:34 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 28
+[08-May-2023 21:08:34 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type bool in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 92
+[08-May-2023 21:08:34 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 92
+[08-May-2023 21:08:49 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:08:49 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:08:49 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:08:49 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:08:49 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 21:08:49 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis al final de la entrada
+LINE 5:         WHERE p.eliminado = false AND 
+                                              ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 21:08:49 Europe/Berlin] PHP Notice:  Undefined index: esquema_db in D:\gestionpolitica\ws.gestionpolitica\src\Api\Publicacion\Publicacion.php on line 134
+[08-May-2023 21:08:49 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.publicaciones»
+LINE 3:         FROM pepitoperez.publicaciones p
+                     ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 21:09:42 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:09:42 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:09:42 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:09:42 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:09:42 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 21:09:42 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis al final de la entrada
+LINE 5:         WHERE p.eliminado = false AND 
+                                              ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 21:09:42 Europe/Berlin] PHP Notice:  Undefined index: esquema_db in D:\gestionpolitica\ws.gestionpolitica\src\Api\Publicacion\Publicacion.php on line 134
+[08-May-2023 21:09:42 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la columna p.fecha
+LINE 1: SELECT p.id, p.asunto, p.detalle, p.personas_id, p.fecha,
+                                                         ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 21:12:17 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:12:17 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:12:17 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:12:17 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:12:17 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 21:12:17 Europe/Berlin] PHP Notice:  Undefined index: esquema_db in D:\gestionpolitica\ws.gestionpolitica\src\Api\Publicacion\Publicacion.php on line 132
+[08-May-2023 21:15:51 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:15:51 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:15:51 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:15:51 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:15:51 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 21:15:51 Europe/Berlin] PHP Notice:  Undefined index: esquema_db in D:\gestionpolitica\ws.gestionpolitica\src\Api\Publicacion\Publicacion.php on line 132
+[08-May-2023 21:15:51 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la columna p.esquema_db
+LINE 5:         WHERE p.eliminado = false AND p.esquema_db='pepitope...
+                                              ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 21:16:12 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:16:12 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:16:12 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:16:12 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:16:12 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 21:16:12 Europe/Berlin] PHP Notice:  Undefined index: esquema_db in D:\gestionpolitica\ws.gestionpolitica\src\Api\Publicacion\Publicacion.php on line 132
+[08-May-2023 21:17:55 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:17:55 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:17:55 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:17:55 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:17:55 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 21:19:19 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:19:19 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:19:19 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:19:19 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:19:19 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 21:20:28 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:20:28 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:20:28 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:20:28 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:20:28 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 21:20:28 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.publicaciones»
+LINE 1: INSERT INTO pepitoperez.publicaciones (asunto, detalle, pers...
+                    ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 86
+[08-May-2023 21:20:28 Europe/Berlin] PHP Notice:  Undefined index: id in D:\gestionpolitica\ws.gestionpolitica\src\Api\Publicacion\Publicacion.php on line 59
+[08-May-2023 21:20:43 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:20:43 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:20:43 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:20:43 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:20:43 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 21:21:24 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:21:24 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:21:24 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:21:24 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:21:24 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 21:21:24 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  el valor null para la columna «crea_personas_id» viola la restricción not null
+DETAIL:  La fila que falla contiene (1, Saludo de bienvenida, Un cordial saludo de bienvenida para todos, 1, null, 2023-05-08 14:21:24.319781, null, null, null). in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 86
+[08-May-2023 21:21:24 Europe/Berlin] PHP Notice:  Undefined index: id in D:\gestionpolitica\ws.gestionpolitica\src\Api\Publicacion\Publicacion.php on line 59
+[08-May-2023 21:21:33 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:21:33 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:21:33 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:21:33 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:21:33 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 21:23:49 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:23:49 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:23:49 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:23:49 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:23:49 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 21:23:57 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:23:57 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:23:57 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:23:57 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:23:57 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 21:24:09 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:24:09 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:24:09 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:24:09 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:24:09 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 21:24:13 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:24:13 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:24:13 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:24:13 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:24:13 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 21:26:10 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:26:10 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:26:10 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:26:10 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:26:10 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 21:27:44 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:27:44 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:27:44 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:27:44 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:27:44 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 21:28:01 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:28:01 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:28:01 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:28:01 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:28:01 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 21:30:21 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:30:21 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:30:21 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:30:21 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:30:21 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 21:31:25 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:31:25 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:31:25 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:31:25 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:31:25 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 21:31:53 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:31:53 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:31:53 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:31:53 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:31:53 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 21:32:04 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:32:04 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:32:04 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:32:04 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:32:04 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 21:32:36 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:32:36 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:32:36 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:32:36 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:32:36 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 21:33:43 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:33:43 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:33:43 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:33:43 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:33:43 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 21:33:48 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:33:48 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:33:48 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:33:48 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:33:48 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 21:33:54 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:33:54 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:33:54 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:33:54 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:33:54 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 21:34:42 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:34:42 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:34:42 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:34:42 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:34:42 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 21:34:52 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:34:52 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:34:52 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:34:52 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:34:52 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 21:35:35 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:35:35 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:35:35 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:35:35 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:35:35 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 21:35:35 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 21:36:00 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:36:00 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:36:00 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:36:00 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:36:00 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 21:36:00 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[08-May-2023 21:37:20 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:37:20 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[08-May-2023 21:37:20 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:37:20 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[08-May-2023 21:37:20 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «pepitoperez.token»
+LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
+               ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[08-May-2023 21:37:20 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57

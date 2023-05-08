@@ -9,6 +9,8 @@ require_once __DIR__ . '/../componentes/general/general.php';
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Server\RequestHandlerInterface as RequestHandler;
 use Slim\Psr7\Response;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
 
 use Variables;
 use ConectorDBPostgres;
@@ -41,21 +43,30 @@ final class UserAuthMiddleware
 
     public function __invoke(Request $request, RequestHandler $handler): Response  {
 
-        $response = new Response();
-
-         //obtiene la ip
-        $ip = $_SERVER['REMOTE_ADDR'];
-
         // Recopilar datos de la solicitud HTTP
         $json = (array)$request->getParsedBody();
+
+        $response = new Response();
+
+        // valida token
+        $validar = self::validarToken($json);
+
+        if( $validar!="TOKEN VALIDO"){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => $validar );
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+
+        return $handler->handle($request);
+    }
+
+    public function validarToken($json) {
 
         // Valida datos completos
         if( !isset($json['token'])      || $json['token']==""       ||
             !isset($json['esquema_db']) || $json['esquema_db']==""  ){
 
-            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => 'FALTAN DATOS' );
-            $response->getBody()->write((string)json_encode($respuesta));
-            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+            return "FALTAN DATOS";
         }
 
         $token = $json['token'];
@@ -66,14 +77,11 @@ final class UserAuthMiddleware
         FROM $esquema_db.tab_personas p
         INNER JOIN $esquema_db.tab_token t ON t.personas_id = p.id AND
         t.token ='$token' AND (t.fecha_actualiza + interval '".Variables::$tiempoSESION."minutes') > now() ;";
-        // die($sql);
         $sql=reemplazar_vacios($sql);
         $res = $this->conector->select($sql);
 
         if (!$res) {
-            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => 'SESION INACTIVA' );
-            $response->getBody()->write((string)json_encode($respuesta));
-            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+            return "SESION INACTIVA";
         }
 
         // actualiza fecha actualiza para tiempo de session
@@ -82,25 +90,13 @@ final class UserAuthMiddleware
         $restok=$this->conector->update($sqltok);
 
         $_SESSION['id_usuario']=$res[0]['id'];
-        $_SESSION['usuario']=$res[0]['usuario'];
         $_SESSION['token']=$token;
         $_SESSION['esquema_db']=$esquema_db;
 
-        return $handler->handle($request);
+        return "TOKEN VALIDO";
     }
 
-    public function socio(Request $request, RequestHandler $handler): Response  {
-
-        // valida token en __invoke
-        self::__invoke($request, $handler);
-
-        // Recopilar datos de la solicitud HTTP
-        $json = (array)$request->getParsedBody();
-
-        var_dump($json, "esta en socio");
-
-        $response = new Response();
-        $modulos_id = 1;
+    public function validarModulo($modulos_id) {
 
         // valida que el rol tenga acceso al modulo
         $sql = "SELECT DISTINCT m.id, m.nombre
@@ -114,13 +110,416 @@ final class UserAuthMiddleware
         $res = $this->conector->select($sql);
 
         if (!$res) {
-            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => 'SESION INACTIVA' );
+            return "NO TIENE ACCESO AL MODULO";
+        }
+
+        return "MODULO VALIDO";
+    }
+
+    public function misReferidos(Request $request, RequestHandler $handler): Response  {
+
+        // Recopilar datos de la solicitud HTTP
+        $json = (array)$request->getParsedBody();
+
+        $response = new Response();
+        $modulos_id     = 1;
+        $modulos_nombre = "Mis Referidos";
+
+        // valida token
+        $validarToken = self::validarToken($json);
+        // die($validar);
+        if( $validarToken!="TOKEN VALIDO"  ){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => $validarToken );
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+
+        // valida que el rol tenga acceso al modulo
+        $validarModulo = self::validarModulo($modulos_id);
+        if( $validarModulo!="MODULO VALIDO"  ){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => $validarModulo ." ".$modulos_nombre );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }
 
         return $handler->handle($request);
+    }
 
+    public function misActividades(Request $request, RequestHandler $handler): Response  {
+
+        // Recopilar datos de la solicitud HTTP
+        $json = (array)$request->getParsedBody();
+
+        $response = new Response();
+        $modulos_id     = 2;
+        $modulos_nombre = "Mis Actividades";
+
+        // valida token
+        $validarToken = self::validarToken($json);
+        // die($validar);
+        if( $validarToken!="TOKEN VALIDO"  ){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => $validarToken );
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+
+        // valida que el rol tenga acceso al modulo
+        $validarModulo = self::validarModulo($modulos_id);
+        if( $validarModulo!="MODULO VALIDO"  ){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => $validarModulo ." ".$modulos_nombre );
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+
+        return $handler->handle($request);
+    }
+
+    public function misReuniones(Request $request, RequestHandler $handler): Response  {
+
+        // Recopilar datos de la solicitud HTTP
+        $json = (array)$request->getParsedBody();
+
+        $response = new Response();
+        $modulos_id     = 3;
+        $modulos_nombre = "Mis Reuniones";
+
+        // valida token
+        $validarToken = self::validarToken($json);
+        // die($validar);
+        if( $validarToken!="TOKEN VALIDO"  ){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => $validarToken );
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+
+        // valida que el rol tenga acceso al modulo
+        $validarModulo = self::validarModulo($modulos_id);
+        if( $validarModulo!="MODULO VALIDO"  ){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => $validarModulo ." ".$modulos_nombre );
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+
+        return $handler->handle($request);
+    }
+
+    public function misGestiones(Request $request, RequestHandler $handler): Response  {
+
+        // Recopilar datos de la solicitud HTTP
+        $json = (array)$request->getParsedBody();
+
+        $response = new Response();
+        $modulos_id     = 4;
+        $modulos_nombre = "Mis Gestiones";
+
+        // valida token
+        $validarToken = self::validarToken($json);
+        // die($validar);
+        if( $validarToken!="TOKEN VALIDO"  ){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => $validarToken );
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+
+        // valida que el rol tenga acceso al modulo
+        $validarModulo = self::validarModulo($modulos_id);
+        if( $validarModulo!="MODULO VALIDO"  ){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => $validarModulo ." ".$modulos_nombre );
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+
+        return $handler->handle($request);
+    }
+
+    public function misVisitas(Request $request, RequestHandler $handler): Response  {
+
+        // Recopilar datos de la solicitud HTTP
+        $json = (array)$request->getParsedBody();
+
+        $response = new Response();
+        $modulos_id     = 5;
+        $modulos_nombre = "Mis Visitas";
+
+        // valida token
+        $validarToken = self::validarToken($json);
+        // die($validar);
+        if( $validarToken!="TOKEN VALIDO"  ){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => $validarToken );
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+
+        // valida que el rol tenga acceso al modulo
+        $validarModulo = self::validarModulo($modulos_id);
+        if( $validarModulo!="MODULO VALIDO"  ){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => $validarModulo ." ".$modulos_nombre );
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+
+        return $handler->handle($request);
+    }
+
+    public function lideres(Request $request, RequestHandler $handler): Response  {
+
+        // Recopilar datos de la solicitud HTTP
+        $json = (array)$request->getParsedBody();
+
+        $response = new Response();
+        $modulos_id     = 6;
+        $modulos_nombre = "Lideres";
+
+        // valida token
+        $validarToken = self::validarToken($json);
+        // die($validar);
+        if( $validarToken!="TOKEN VALIDO"  ){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => $validarToken );
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+
+        // valida que el rol tenga acceso al modulo
+        $validarModulo = self::validarModulo($modulos_id);
+        if( $validarModulo!="MODULO VALIDO"  ){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => $validarModulo ." ".$modulos_nombre );
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+
+        return $handler->handle($request);
+    }
+
+    public function referidos(Request $request, RequestHandler $handler): Response  {
+
+        // Recopilar datos de la solicitud HTTP
+        $json = (array)$request->getParsedBody();
+
+        $response = new Response();
+        $modulos_id     = 7;
+        $modulos_nombre = "Referidos";
+
+        // valida token
+        $validarToken = self::validarToken($json);
+        // die($validar);
+        if( $validarToken!="TOKEN VALIDO"  ){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => $validarToken );
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+
+        // valida que el rol tenga acceso al modulo
+        $validarModulo = self::validarModulo($modulos_id);
+        if( $validarModulo!="MODULO VALIDO"  ){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => $validarModulo ." ".$modulos_nombre );
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+
+        return $handler->handle($request);
+    }
+
+    public function actividades(Request $request, RequestHandler $handler): Response  {
+
+        // Recopilar datos de la solicitud HTTP
+        $json = (array)$request->getParsedBody();
+
+        $response = new Response();
+        $modulos_id     = 8;
+        $modulos_nombre = "Actividades";
+
+        // valida token
+        $validarToken = self::validarToken($json);
+        // die($validar);
+        if( $validarToken!="TOKEN VALIDO"  ){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => $validarToken );
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+
+        // valida que el rol tenga acceso al modulo
+        $validarModulo = self::validarModulo($modulos_id);
+        if( $validarModulo!="MODULO VALIDO"  ){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => $validarModulo ." ".$modulos_nombre );
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+
+        return $handler->handle($request);
+    }
+
+    public function reuniones(Request $request, RequestHandler $handler): Response  {
+
+        // Recopilar datos de la solicitud HTTP
+        $json = (array)$request->getParsedBody();
+
+        $response = new Response();
+        $modulos_id     = 9;
+        $modulos_nombre = "Reuniones";
+
+        // valida token
+        $validarToken = self::validarToken($json);
+        // die($validar);
+        if( $validarToken!="TOKEN VALIDO"  ){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => $validarToken );
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+
+        // valida que el rol tenga acceso al modulo
+        $validarModulo = self::validarModulo($modulos_id);
+        if( $validarModulo!="MODULO VALIDO"  ){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => $validarModulo ." ".$modulos_nombre );
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+
+        return $handler->handle($request);
+    }
+
+    public function gestiones(Request $request, RequestHandler $handler): Response  {
+
+        // Recopilar datos de la solicitud HTTP
+        $json = (array)$request->getParsedBody();
+
+        $response = new Response();
+        $modulos_id     = 10;
+        $modulos_nombre = "Gestiones";
+
+        // valida token
+        $validarToken = self::validarToken($json);
+        // die($validar);
+        if( $validarToken!="TOKEN VALIDO"  ){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => $validarToken );
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+
+        // valida que el rol tenga acceso al modulo
+        $validarModulo = self::validarModulo($modulos_id);
+        if( $validarModulo!="MODULO VALIDO"  ){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => $validarModulo ." ".$modulos_nombre );
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+
+        return $handler->handle($request);
+    }
+
+    public function visitas(Request $request, RequestHandler $handler): Response  {
+
+        // Recopilar datos de la solicitud HTTP
+        $json = (array)$request->getParsedBody();
+
+        $response = new Response();
+        $modulos_id     = 11;
+        $modulos_nombre = "Visitas";
+
+        // valida token
+        $validarToken = self::validarToken($json);
+        // die($validar);
+        if( $validarToken!="TOKEN VALIDO"  ){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => $validarToken );
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+
+        // valida que el rol tenga acceso al modulo
+        $validarModulo = self::validarModulo($modulos_id);
+        if( $validarModulo!="MODULO VALIDO"  ){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => $validarModulo ." ".$modulos_nombre );
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+
+        return $handler->handle($request);
+    }
+
+    public function reportes(Request $request, RequestHandler $handler): Response  {
+
+        // Recopilar datos de la solicitud HTTP
+        $json = (array)$request->getParsedBody();
+
+        $response = new Response();
+        $modulos_id     = 12;
+        $modulos_nombre = "Reportes";
+
+        // valida token
+        $validarToken = self::validarToken($json);
+        // die($validar);
+        if( $validarToken!="TOKEN VALIDO"  ){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => $validarToken );
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+
+        // valida que el rol tenga acceso al modulo
+        $validarModulo = self::validarModulo($modulos_id);
+        if( $validarModulo!="MODULO VALIDO"  ){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => $validarModulo ." ".$modulos_nombre );
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+
+        return $handler->handle($request);
+    }
+
+    public function mensajes(Request $request, RequestHandler $handler): Response  {
+
+        // Recopilar datos de la solicitud HTTP
+        $json = (array)$request->getParsedBody();
+
+        $response = new Response();
+        $modulos_id     = 13;
+        $modulos_nombre = "Mensajes";
+
+        // valida token
+        $validarToken = self::validarToken($json);
+        // die($validar);
+        if( $validarToken!="TOKEN VALIDO"  ){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => $validarToken );
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+
+        // valida que el rol tenga acceso al modulo
+        $validarModulo = self::validarModulo($modulos_id);
+        if( $validarModulo!="MODULO VALIDO"  ){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => $validarModulo ." ".$modulos_nombre );
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+
+        return $handler->handle($request);
+    }
+
+    public function registroAsistentesReuniones(Request $request, RequestHandler $handler): Response  {
+
+        // Recopilar datos de la solicitud HTTP
+        $json = (array)$request->getParsedBody();
+
+        $response = new Response();
+        $modulos_id     = 14;
+        $modulos_nombre = "Registro Asistentes Reuniones";
+
+        // valida token
+        $validarToken = self::validarToken($json);
+        // die($validar);
+        if( $validarToken!="TOKEN VALIDO"  ){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => $validarToken );
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+
+        // valida que el rol tenga acceso al modulo
+        $validarModulo = self::validarModulo($modulos_id);
+        if( $validarModulo!="MODULO VALIDO"  ){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => $validarModulo ." ".$modulos_nombre );
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+
+        return $handler->handle($request);
     }
 
 }
