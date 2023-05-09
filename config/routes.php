@@ -6,7 +6,6 @@ use Slim\App;
 use Slim\Routing\RouteCollectorProxy;
 use App\Middleware\UserAuthMiddleware;
 use App\Middleware\UserAuthMiddleware2;
-use App\Middleware\UserAuthMiddlewareSocio;
 
 
 return function (App $app) {
@@ -21,6 +20,14 @@ return function (App $app) {
     $app->get('/', \App\Api\Home\Home::class);
     $app->get('/info', \App\Api\Home\Home::class . ':info');
 
+    $app->post('/iniciar_sesion_super_admin', \App\Api\LoginSuperAdmin\LoginSuperAdmin::class . ':iniciarSesionSuperAdmin');
+    $app->options('/iniciar_sesion_super_admin', \App\Api\LoginSuperAdmin\LoginSuperAdmin::class . ':iniciarSesionSuperAdmin');
+
+    $app->post('/iniciar_sesion', \App\Api\Login\Login::class . ':iniciarSesion');
+    $app->options('/iniciar_sesion', \App\Api\Login\Login::class . ':iniciarSesion');
+
+
+
     $app->post('/archivo/subir', \App\Api\Archivo\Archivo::class . ':uploadFile');
     $app->get('/archivo/descargar_archivo/{tabla}/{id_archivo}/{token}', \App\Api\Archivo\Archivo::class . ':downloadArchivo'); // descarga con id
     // http://localhost:8080/archivo/descargar_archivo/1/1/token    tabla 1 archivos esquemas  tabla 2 public (generales)
@@ -28,12 +35,12 @@ return function (App $app) {
     $app->get('/archivo/descarga/{token}/{nombre}/', \App\Api\Archivo\Archivo::class . ':descargaArchivo');     // descarga con nombre (cualquier tipo de archivo, no solo imagen)
     // http://localhost:8080/archivo/descarga/token/6e92a1dd68963c43.pdf    el punto en la url da error, no funciona
 
-    $app->post('/iniciar_sesion_super_admin', \App\Api\LoginSuperAdmin\LoginSuperAdmin::class . ':iniciarSesionSuperAdmin');
-    $app->options('/iniciar_sesion_super_admin', \App\Api\LoginSuperAdmin\LoginSuperAdmin::class . ':iniciarSesionSuperAdmin');
-
-    $app->post('/iniciar_sesion', \App\Api\Login\Login::class . ':iniciarSesion');
-    $app->options('/iniciar_sesion', \App\Api\Login\Login::class . ':iniciarSesion');
-
+    // ok envia desde el servidor no local
+    $app->get('/prueba_mail/{mail}', \App\Api\Home\PruebaMail::class );
+    // ok envia desde el servidor no local
+    $app->get('/mail', \App\Api\Home\PruebaMail::class. ':mail' );
+    // http://localhost:8080/prueba_mail/jnadinh@hotmail.com
+    // http://localhost:8080/mail/
 
     // con validacion de token super admin
     $app->group('', function (RouteCollectorProxy $groupSuperAdmin) {
@@ -141,14 +148,6 @@ return function (App $app) {
         $group->post('/obtener_publicaciones', \App\Api\Publicacion\Publicacion::class . ':obtenerPublicaciones');
         $group->post('/crear_publicacion', \App\Api\Publicacion\Publicacion::class . ':crearPublicacion');
         $group->post('/editar_publicacion', \App\Api\Publicacion\Publicacion::class . ':editarPublicacion');    // eliminar edita eliminado=true
-
-        // queda de ejemplo modulo socio
-        $group->post('/crear_socio', \App\Api\Socio\Socio::class . ':crearSocio');
-        $group->post('/obtener_socios', \App\Api\Socio\Socio::class . ':obtenerSocios');
-        $group->post('/editar_socio', \App\Api\Socio\Socio::class . ':editarSocio');
-        $group->post('/eliminar_socio', \App\Api\Socio\Socio::class . ':eliminarSocio');
-        $group->post('/obtener_socios_eliminados', \App\Api\Socio\Socio::class . ':obtenerSociosEliminados');
-        $group->post('/habilitar_socio', \App\Api\Socio\Socio::class . ':habilitarSocio');
 
         // $group->post('/obtener_archivos_generales', \App\Api\Archivo\Archivo::class . ':obtenerArchivosGenerales');
         // $group->post('/obtener_archivos', \App\Api\Archivo\Archivo::class . ':obtenerArchivos');

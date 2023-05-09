@@ -30,12 +30,13 @@ final class PruebaMail
 
     public function __invoke(ServerRequestInterface $request, ResponseInterface $response, array $args = [] ): ResponseInterface
     {
-        $json = array_merge($args, (array)$request->getParsedBody());        
+        $json = array_merge($args, (array)$request->getParsedBody());
 
         $jmail= new JMail();
-        $jmail->credentials_mailer('ciatel2021@gmail.com', 'Ciateladmin2021', 'CIATEL', 'CLIENTE');
-        $envio = $jmail->send($json['mail'],'Hello World!','My firts Email HTML','My first mail TEXT');
-        
+        // $jmail->credentials_mailer('jnadinh@gmail.com', 'tpiwymtgegamahao', 'Gestion Politica', 'REFERIDOS');
+        $jmail->credentials_mailer('gestionpolitica2022@gmail.com', 'aeliodsxaxbxpfpq', 'Gestion Politica', 'REFERIDOS');
+        $envio = $jmail->send($json['mail'],'Registro de Referido','Bienvenido al equipo. Ud ha sido registrado en xxx','My first mail TEXT');
+
         exit;
     }
 
@@ -44,7 +45,7 @@ final class PruebaMail
 
         $archivo = __DIR__."/testmail.php";
 
-        $para = 'jose.herrera@systemico.co';
+        $para = 'jnadinh@hotmail.com';
         $asunto = 'este es el asunto';
         $mensaje = 'este es el mensaje';
 
@@ -53,12 +54,12 @@ final class PruebaMail
         $cuentauser = Variables::$Usernamephpmailer ;
         $nomremite  = Variables::$nombreRemite;
         $nomdestino = Variables::$nombreDestino;
-        
+
         passthru("php '$archivo' ' $para' ' $asunto' ' $mensaje' ' $cuentauser' ' $cuentapass' ' $nomremite' ' $nomdestino'  ");
 
-        // exec("dir", $output, $return);
-        // echo "Dir returned $return, and output:\n";
-        // var_dump($output);
+        //exec("dir", $output, $return);
+        //echo "Dir returned $return, and output:\n";
+        //var_dump($output);
 
         exit;
     }

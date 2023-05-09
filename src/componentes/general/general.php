@@ -32,7 +32,7 @@ function reemplazar_vacios($cadena){
 function cadena_editar($datos) {
   $keys = array_keys($datos);
   $sets = "";
-  
+
   foreach ($keys as $key) {
     $sets .= $key." = '".$datos[$key]."', ";
   }
@@ -128,12 +128,12 @@ function sumar_dias_habiles($fecha,$dias) {
   $datesuma = 15 * 86400;
   $diasemana = date('N',$datestart);
   $totaldias = $diasemana+$dias;
-  $findesemana = intval( $totaldias/5) *2 ; 
-  $diasabado = $totaldias % 5 ; 
+  $findesemana = intval( $totaldias/5) *2 ;
+  $diasabado = $totaldias % 5 ;
   if ($diasabado==6) $findesemana++;
   if ($diasabado==0) $findesemana=$findesemana-2;
 
-  $total = (($dias+$findesemana) * 86400)+$datestart ; 
+  $total = (($dias+$findesemana) * 86400)+$datestart ;
   return $fechafinal = date('Y-m-d', $total);
 }
 
@@ -189,5 +189,6 @@ function sumar_dias_calendario($fecha,$dias) {
           }
       }
     }
-  
+
+
 ?>

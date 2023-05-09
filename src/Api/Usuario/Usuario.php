@@ -1,17 +1,19 @@
 <?php
 namespace App\Api\Usuario;
 
-// error_reporting(E_ALL);
-// ini_set('display_errors', '1');
+ error_reporting(E_ALL);
+ ini_set('display_errors', '1');
 
 require_once __DIR__ . '/../../componentes/conector/ConectorDBPostgres.php';
 require_once __DIR__ . '/../../componentes/general/general.php';
 require_once __DIR__ . '/../../conf/configuracion.php';
+require_once __DIR__ . '/../../componentes/correos/Mail.php';
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use ConectorDBPostgres;
 use Variables;
+use JMail;
 
 
 class Usuario {
@@ -86,7 +88,37 @@ class Usuario {
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }else {
-            $respuesta = array('CODIGO' => 1, 'MENSAJE' => 'OK', 'DATOS' => $id );
+
+            // como prueba porque va para lider
+            if (isset($json['email']) || $json['email']!=""){
+                // envia correo
+                $asunto = "Creación de Usuario";
+                $cuerpo="<section>
+                <div class=\"cuadro\" style=\"background-color: white; max-width: 400px; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: 0px solid #000000; margin: 0 auto; margin: 4% auto 0 auto; padding: 0px 0px 20px 0px; -webkit-box-shadow: 0px 3px 3px 2px rgba(0,0,0,0.16); -moz-box-shadow: 0px 3px 3px 2px rgba(0,0,0,0.10); box-shadow: 0px 3px3px 2px rgba(0,0,0,0.16);  overflow: hidden;\">
+                <img style=\"width:100%; height: 180px;\" src=\"https://gestionpolitica.com/images/logo.png\">
+                    <center><p style=\"text-align: center; font-size: 14px; color: #636A76;\">Hola!, bienvenido. <br> A continuación verá el usuario y clave<br> para ingresar a Gestión Política</p></center>
+                    <center><p style= \"padding: 10px 0px 0px 0px;text-align: center; font-size: 16px; color: #636A76; font-weight: bold;\">Datos de acceso</p></center>
+                    <div style=\"padding: 0px 20%;\" class=\"user\">
+                        <p style=\"text-align: left; font-size: 12px; color: #A0B0CB; height: 12px;\">Usuario</p>
+                        <p style=\"text-align: left; font-size: 14px; color: #448AFC;\">".$json['usuario']."</p>
+                    </div>
+                    <div style=\"padding: 0px 20%;\" class=\"password\">
+                        <p style=\"text-align: left; font-size: 12px; color: #A0B0CB; height: 12px;\">Contraseña</p>
+                        <p style=\"text-align: left; font-size: 14px; color: #448AFC;\">".$json['clave']."</p>
+                    </div>
+                    <center><p style= \"padding: 10px 0px 20px 0px; text-align: center; font-size: 16px; color: #636A76; font-weight: bold;\">Por favor, ingrese desde aquí</p></center>
+                    <center><a href=\" ".Variables::$urlIngreso." \" style=\"padding: 10px 44px; border-radius: 20px; background-color: #448AFC; font-size: 14px; color: white; text-decoration: none;\">INGRESAR</a></center>
+                    <br><br>
+                </div>
+                </section>";
+
+                // enviar correo con phpmailer
+                $res1[0]['info_correo'] = enviar_mail($json['email'], $asunto, $cuerpo);
+
+            }
+            $res1[0]['id'] = $id;
+
+            $respuesta = array('CODIGO' => 1, 'MENSAJE' => 'OK', 'DATOS' => $res1 );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }
