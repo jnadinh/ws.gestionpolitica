@@ -8,7 +8,7 @@ class Variables {
 
 	public static $USUARIO_DB = "gestionpolitica";								// USUARIO DE LA BASE DE DATOS
     public static $CLAVE_DB   = "junimajo123";									// CLAVE DE LA BASE DE DATOS
-//    public static $HOST_DB    = "192.34.58.242";								// HOST DE LA BASE DE DATOS
+//    public static $HOST_DB    = "xxx.xx.xx.xx";								// HOST DE LA BASE DE DATOS
     public static $HOST_DB    = "localhost";									// HOST DE LA BASE DE DATOS
 	public static $NOMBRE_DB  = "db_gestion_politica";							// NOMBRE DE LA BASE DE DATO	S
 
@@ -21,7 +21,7 @@ class Variables {
 	public static $hostphpmailer="smtp.gmail.com";      						// HOST PHPMAILER
 	public static $puertohpmailer=587;         	 								// PUERTO PHPMAILER Port
 	public static $Usernamephpmailer="gestionpolitica2022@gmail.com";			// CORREO PHPMAILER Username
-    public static $Passwordphpmailer="aeliodsxaxbxpfpq"; 						// PASSWORD PHPMAILER
+    public static $Passwordphpmailer="xxxxxxxxxxxxxxx"; 						// PASSWORD PHPMAILER
 
 //	public static $urlBase="http://ws.gestionpolitica.com/";                    // URL BASE
 	public static $urlBase="http://localhost:8080/";                            // URL BASE
