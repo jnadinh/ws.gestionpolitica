@@ -29,6 +29,6 @@ class Variables {
 	public static $urlTemp		=__DIR__ . '/../archivos_temporales/';			// URL DE LOS ARCHIVOS TEMPORALES
 	public static $urlArchivos	=__DIR__ . '/../archivos/';						// URL DE LOS ARCHIVOS FIJOS ESQUEMAS
 	public static $urlRest="https://gestionpolitica.com/recovery/change-pass/"; // URL RESTABLECER CONTRASEÑA
-    public static $urlIngreso="https://gestionpolitica.com/";         			// URL LOGIN
+    public static $urlIngreso="www.gestionpolitica.com/";         			    // URL LOGIN
 }
 ?>

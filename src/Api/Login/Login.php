@@ -329,10 +329,9 @@ class Login {
             $cuerpo="<section>
             <div class=\"cuadro\" style=\"background-color: white; max-width: 400px; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: 0px solid #000000; margin: 0 auto; margin: 4% auto 0 auto; padding: 0px 0px 20px 0px; -webkit-box-shadow: 0px 3px 3px 2px rgba(0,0,0,0.16); -moz-box-shadow: 0px 3px 3px 2px rgba(0,0,0,0.10); box-shadow: 0px 3px3px 2px rgba(0,0,0,0.16);  overflow: hidden;\">
             <img style=\"width:100%; height: 180px;\" src=\"https://cdn.gestionpolitica.com/images/logo.png\">
-                <center><p style=\"text-align: center; font-size: 14px; color: #636A76;\">".$nombre."  <br> A continuación verá Clave Temporal<br> para ingresar a Gestión Política</p></center>
+                <center><p style=\"text-align: center; font-size: 14px; color: #636A76;\"> Hola ".$nombre."  <br> A continuación verá la Clave Temporal<br> para ingresar a Gestión Política</p></center>
                 <center><p style= \"padding: 10px 0px 0px 0px;text-align: center; font-size: 16px; color: #636A76; font-weight: bold;\">Clave Temporal</p></center>
                 <div style=\"padding: 0px 20%;\" class=\"password\">
-                    <p style=\"text-align: left; font-size: 12px; color: #A0B0CB; height: 12px;\">Clave</p>
                     <p style=\"text-align: left; font-size: 14px; color: #448AFC;\">".$clave."</p>
                 </div>
                 <center><p style= \"padding: 10px 0px 20px 0px; text-align: center; font-size: 16px; color: #636A76; font-weight: bold;\">Por favor, ingrese desde aquí</p></center>
@@ -352,7 +351,7 @@ class Login {
 
             // enviar sms
             $sms    = new Sms();
-            $res1[0]['info_sms'] = $sms->enviar_sms($celular1, "Su clave temporal es:" .$clave. "Ingrese aqui". Variables::$urlIngreso );
+            $res1[0]['info_sms'] = $sms->enviar_sms($celular1, "Su clave temporal es: " .$clave. " Ingrese aqui ". Variables::$urlIngreso );
 
         }
 

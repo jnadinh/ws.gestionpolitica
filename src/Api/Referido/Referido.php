@@ -41,7 +41,7 @@ class Referido {
         fecha_actualiza, crea_personas_id, actualiza_personas_id
         FROM $this->esquema_db.tab_personas WHERE lider_personas_id= $this->id_usuario $where";
         $res = $this->conector->select($sql);
-        // die($sql);
+        //var_dump($_SESSION); die($sql);
 
         if(!$res){
             $respuesta = array('CODIGO' => 6, 'MENSAJE' => 'CONSULTA VACIA', 'DATOS' => 'LA CONSULTA NO DEVOLVIÓ DATOS');
