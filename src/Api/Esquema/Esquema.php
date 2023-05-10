@@ -37,7 +37,7 @@ class Esquema {
         WHERE nspname NOT IN ('information_schema', 'pg_catalog', 'public')
         AND nspname NOT LIKE 'pg_toast%' AND nspname NOT LIKE 'pg_temp%'";
         $res = $this->conector->select($sql);
-        // die($sql);
+        //var_dump($res); die($sql);
         if(!$res){
             $respuesta = array('CODIGO' => 6, 'MENSAJE' => 'CONSULTA VACIA', 'DATOS' => 'LA CONSULTA NO DEVOLVIÓ DATOS');
             $response->getBody()->write((string)json_encode($respuesta));

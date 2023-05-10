@@ -26,6 +26,7 @@ return function (App $app) {
     $app->post('/iniciar_sesion', \App\Api\Login\Login::class . ':iniciarSesion');
     $app->options('/iniciar_sesion', \App\Api\Login\Login::class . ':iniciarSesion');
 
+    $app->post('/olvido_clave', \App\Api\Login\Login::class . ':olvidoClave');
 
 
     $app->post('/archivo/subir', \App\Api\Archivo\Archivo::class . ':uploadFile');

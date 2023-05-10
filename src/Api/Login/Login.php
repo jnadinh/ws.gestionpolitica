@@ -8,6 +8,8 @@ require_once __DIR__ . '/../../componentes/conector/ConectorDBPostgres.php';
 require_once __DIR__ . '/../../componentes/general/general.php';
 require_once __DIR__ . '/../../conf/configuracion.php';
 
+use App\Api\Correo\Mail as Mail;
+use App\Api\Sms\Sms as Sms;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use ConectorDBPostgres;
@@ -47,8 +49,7 @@ class Login {
         $esquema_db = $json['esquema_db'];
 
         // si trae el esquema hace el logueo, si no trae el esquema busca en todos.
-        // si encuentra el usuario en un esquema, hace el logueo, si esta en mas de uno,
-        // devuelve la informacion para permitir elegir esquema
+        // busca en los esquemas y devuelve la informacion para permitir elegir esquema
 
         // aqui valida y devuelve los datos de los esquemas y se sale hasta que reciba el esquema
 
@@ -117,11 +118,11 @@ class Login {
             FROM pg_catalog.pg_namespace s
             JOIN pg_catalog.pg_user u ON u.usesysid = s.nspowner
             WHERE nspname NOT IN ('information_schema', 'pg_catalog', 'public')
-            AND nspname NOT LIKE 'pg_toast%' AND nspname NOT LIKE 'pg_temp%'";
+            AND nspname NOT LIKE 'pg_toast%' AND nspname NOT LIKE 'pg_temp%';";
             $res = $this->conector->select($sql);
-            // die($sql);
+            // var_dump($res); die($sql);
             if(!$res){
-                $respuesta = array('CODIGO' => 6, 'MENSAJE' => 'CONSULTA VACIA', 'DATOS' => 'LA CONSULTA NO DEVOLVIÓ DATOS');
+                $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => 'USUARIO O PASSWORD INVALIDO' );
                 $response->getBody()->write((string)json_encode($respuesta));
                 return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
             }elseif($res==2){
@@ -257,23 +258,110 @@ class Login {
         return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
     }
 
-    public function olvidoclave(ServerRequestInterface $request, ResponseInterface $response, array $args = [] ): ResponseInterface {
+    public function olvidoClave(ServerRequestInterface $request, ResponseInterface $response, array $args = [] ): ResponseInterface {
 
         // Recopilar datos de la solicitud HTTP
         $json = (array)$request->getParsedBody();
 
         // Valida datos completos
-        if( !isset($json['cedula'])    || $json['cedula']==""     ){
+        if( !isset($json['cedula']) || $json['cedula']==""     ){
 
             $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => 'FALTAN DATOS' );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }
+        $cedula = $json['cedula'];
 
-        $response->getBody()->write((string)json_encode("validar"));
+        //generar clave aleatoria
+        mt_srand();
+        $random=null;
+        for($i=1;$i<=5;$i++) {
+        $random .= mt_rand (0, 9);
+        }
+        $clave= $cedula.$random;
+        // die($clave);
+        // cambia la clave en todos los esquemas
+        // hace la consulta para obtener los esquemas
+        $sql = "SELECT s.oid AS id, s.nspname AS nombre_esquema, u.usename
+        FROM pg_catalog.pg_namespace s
+        JOIN pg_catalog.pg_user u ON u.usesysid = s.nspowner
+        WHERE nspname NOT IN ('information_schema', 'pg_catalog', 'public')
+        AND nspname NOT LIKE 'pg_toast%' AND nspname NOT LIKE 'pg_temp%'";
+        $res = $this->conector->select($sql);
+        //var_dump($res, $sql);
+        $email = array();
+        $celular = array();
+        $nombre = "";
+        foreach ($res as $key => $value) {
+
+            $esquema_db = $value['nombre_esquema'];
+
+            $sqlus = "SELECT id, email, celular, nombre, apellidos
+            FROM $esquema_db.tab_personas
+            WHERE cedula = '$cedula' ";
+            $sqlus=reemplazar_vacios($sqlus);
+            $resus = $this->conector->select($sqlus);
+            // die($sqlus);
+            if(count2($resus)>0) {
+                $id_usuario = $resus[0]['id'];
+                $email[] = $resus[0]['email'];
+                $celular[] = $resus[0]['celular'];
+                $nombre = $resus[0]['nombre'];
+                // cambia la clave
+                $sqlup = "UPDATE $esquema_db.tab_personas SET clave = MD5('$clave')
+                WHERE id='$id_usuario' ;";
+                $sqlup=reemplazar_vacios($sqlup);
+                //die($sqlup);
+                $resup = $this->conector->update($sqlup);
+            }
+        }
+
+        // valores unicos en arrays
+        $email = array_unique($email);
+        $celular = array_unique($celular);
+
+        foreach ($email as $key => $value) {
+
+            $email1 = $value;
+
+            // envia correo
+            $asunto = "Olvido de Clave";
+            $cuerpo="<section>
+            <div class=\"cuadro\" style=\"background-color: white; max-width: 400px; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: 0px solid #000000; margin: 0 auto; margin: 4% auto 0 auto; padding: 0px 0px 20px 0px; -webkit-box-shadow: 0px 3px 3px 2px rgba(0,0,0,0.16); -moz-box-shadow: 0px 3px 3px 2px rgba(0,0,0,0.10); box-shadow: 0px 3px3px 2px rgba(0,0,0,0.16);  overflow: hidden;\">
+            <img style=\"width:100%; height: 180px;\" src=\"https://cdn.gestionpolitica.com/images/logo.png\">
+                <center><p style=\"text-align: center; font-size: 14px; color: #636A76;\">".$nombre."  <br> A continuación verá Clave Temporal<br> para ingresar a Gestión Política</p></center>
+                <center><p style= \"padding: 10px 0px 0px 0px;text-align: center; font-size: 16px; color: #636A76; font-weight: bold;\">Clave Temporal</p></center>
+                <div style=\"padding: 0px 20%;\" class=\"password\">
+                    <p style=\"text-align: left; font-size: 12px; color: #A0B0CB; height: 12px;\">Clave</p>
+                    <p style=\"text-align: left; font-size: 14px; color: #448AFC;\">".$clave."</p>
+                </div>
+                <center><p style= \"padding: 10px 0px 20px 0px; text-align: center; font-size: 16px; color: #636A76; font-weight: bold;\">Por favor, ingrese desde aquí</p></center>
+                <center><a href=\" ".Variables::$urlIngreso." \" style=\"padding: 10px 44px; border-radius: 20px; background-color: #448AFC; font-size: 14px; color: white; text-decoration: none;\">INGRESAR</a></center>
+                <br><br>
+            </div>
+            </section>";
+
+            // enviar correo
+            $mail   = new Mail();
+            $res1[0]['info_correo'] = $mail->enviar_mail($email1, $asunto, $cuerpo);
+        }
+
+        foreach ($celular as $key => $value) {
+
+            $celular1 = $value;
+
+            // enviar sms
+            $sms    = new Sms();
+            $res1[0]['info_sms'] = $sms->enviar_sms($celular1, "Su clave temporal es:" .$clave. "Ingrese aqui". Variables::$urlIngreso );
+
+        }
+
+        $respuesta = array('CODIGO' => 1, 'MENSAJE' => 'OK', 'DATOS' => $cedula );
+        $response->getBody()->write((string)json_encode($respuesta) );
         return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
 
 	}
 
 }
+
 ?>
