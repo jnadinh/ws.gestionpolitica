@@ -7,20 +7,18 @@ namespace App\Api\Usuario;
 require_once __DIR__ . '/../../componentes/conector/ConectorDBPostgres.php';
 require_once __DIR__ . '/../../componentes/general/general.php';
 require_once __DIR__ . '/../../conf/configuracion.php';
-require_once __DIR__ . '/../../componentes/correos/Mail.php';
 
+use App\Api\Correo\Mail as Mail;
+use App\Api\Sms\Sms as Sms;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use ConectorDBPostgres;
 use Variables;
-use JMail;
-
 
 class Usuario {
 
     private $id_usuario;
     private $usuario;
-    private $esquema_db;
 
     private $conector;
     public function __construct() {
@@ -57,6 +55,7 @@ class Usuario {
         // Recopilar datos de la solicitud HTTP
         $json = (array)$request->getParsedBody();
 
+
         // Valida datos completos
         if( !isset($json['nombre'])     || $json['nombre']==""    ||
             !isset($json['estado'])     || $json['estado']==""    ||
@@ -89,21 +88,21 @@ class Usuario {
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }else {
 
-            // como prueba porque va para lider
+            // como prueba porque va al crear lider
             if (isset($json['email']) || $json['email']!=""){
                 // envia correo
                 $asunto = "Creación de Usuario";
                 $cuerpo="<section>
                 <div class=\"cuadro\" style=\"background-color: white; max-width: 400px; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: 0px solid #000000; margin: 0 auto; margin: 4% auto 0 auto; padding: 0px 0px 20px 0px; -webkit-box-shadow: 0px 3px 3px 2px rgba(0,0,0,0.16); -moz-box-shadow: 0px 3px 3px 2px rgba(0,0,0,0.10); box-shadow: 0px 3px3px 2px rgba(0,0,0,0.16);  overflow: hidden;\">
-                <img style=\"width:100%; height: 180px;\" src=\"https://gestionpolitica.com/images/logo.png\">
-                    <center><p style=\"text-align: center; font-size: 14px; color: #636A76;\">Hola!, bienvenido. <br> A continuación verá el usuario y clave<br> para ingresar a Gestión Política</p></center>
+                <img style=\"width:100%; height: 180px;\" src=\"https://cdn.gestionpolitica.com/images/logo.png\">
+                    <center><p style=\"text-align: center; font-size: 14px; color: #636A76;\">".$json['nombre'].", bienvenid@. <br> A continuación verá el Usuario y la Clave<br> para ingresar a Gestión Política</p></center>
                     <center><p style= \"padding: 10px 0px 0px 0px;text-align: center; font-size: 16px; color: #636A76; font-weight: bold;\">Datos de acceso</p></center>
                     <div style=\"padding: 0px 20%;\" class=\"user\">
                         <p style=\"text-align: left; font-size: 12px; color: #A0B0CB; height: 12px;\">Usuario</p>
                         <p style=\"text-align: left; font-size: 14px; color: #448AFC;\">".$json['usuario']."</p>
                     </div>
                     <div style=\"padding: 0px 20%;\" class=\"password\">
-                        <p style=\"text-align: left; font-size: 12px; color: #A0B0CB; height: 12px;\">Contraseña</p>
+                        <p style=\"text-align: left; font-size: 12px; color: #A0B0CB; height: 12px;\">Clave</p>
                         <p style=\"text-align: left; font-size: 14px; color: #448AFC;\">".$json['clave']."</p>
                     </div>
                     <center><p style= \"padding: 10px 0px 20px 0px; text-align: center; font-size: 16px; color: #636A76; font-weight: bold;\">Por favor, ingrese desde aquí</p></center>
@@ -112,10 +111,19 @@ class Usuario {
                 </div>
                 </section>";
 
-                // enviar correo con phpmailer
-                $res1[0]['info_correo'] = enviar_mail($json['email'], $asunto, $cuerpo);
-
+                // enviar correo
+                $mail   = new Mail();
+                $res1[0]['info_correo'] = $mail->enviar_mail($json['email'], $asunto, $cuerpo);
             }
+
+            // como prueba porque va al momento de crear lider o referido validando en parametro
+            if (isset($json['celular']) || $json['celular']!=""){
+
+                // enviar sms
+                $sms    = new Sms();
+                $res1[0]['info_sms'] = $sms->enviar_sms($json['celular'], "mensaje de prueba desde la aplicacion");
+            }
+
             $res1[0]['id'] = $id;
 
             $respuesta = array('CODIGO' => 1, 'MENSAJE' => 'OK', 'DATOS' => $res1 );
@@ -127,7 +135,6 @@ class Usuario {
     public function editarUsuario(ServerRequestInterface $request, ResponseInterface $response, array $args = [] ): ResponseInterface {
         // Recopilar datos de la solicitud HTTP
         $json = (array)$request->getParsedBody();
-
         // Valida datos completos
         if(  !isset($json['id'])  || $json['id']==""   ){
 
