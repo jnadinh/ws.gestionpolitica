@@ -7,12 +7,15 @@ namespace App\Api\Correo;
 require_once __DIR__ . '/../../componentes/conector/ConectorDBPostgres.php';
 require_once __DIR__ . '/../../componentes/general/general.php';
 require_once __DIR__ . '/../../conf/configuracion.php';
+require_once (__DIR__."/../../../vendor/autoload.php");
+
+use Systemico\JMail;
 
 use ConectorDBPostgres;
 use Variables;
 
 
-class Mail {
+class Mail2 {
 
     private $id_usuario;
     private $esquema_db;
@@ -25,26 +28,24 @@ class Mail {
 
     function enviar_mail($para, $asunto, $mensaje){
 
-
-        // envia correo phpmailer desde consola
-        // esta clase se usa para enviar los correos con el cronjob ejem cumpleaños
         $archivo = __DIR__."/enviomail.php";
 
         $cuentauser = Variables::$Usernamephpmailer ;
         $cuentapass = Variables::$Passwordphpmailer ;
-        $cuentauser = Variables::$Usernamephpmailer ;
         $nomremite  = Variables::$nombreRemite;
         $nomdestino = Variables::$nombreDestino;
         $smtpserver = Variables::$puertohpmailer;
 
-        $data = passthru("php '$archivo' ' $para' ' $asunto' ' $mensaje' ' $cuentauser' ' $cuentapass' ' $nomremite' ' $nomdestino' ' $smtpserver' ");
+        $jmail= new JMail();
+        $jmail->credentials_mailer($cuentauser, $cuentapass, $nomremite, $nomdestino);
+        $envio = $jmail->send($para, $asunto, $mensaje, $mensaje);
 
         // EJEMPLO ENVIO MAIL
         // $jmail->credentials_mailer('[EMAIL_FROM]', '[EMAIL_FROM_PASSWORD]', '[NAME]', 'NAME_TO', 'SMTP SERVER', true);
 
         // envia los datos del mensaje a la BBDD
 
-        return $data;
+        return $envio;
     }
 }
 

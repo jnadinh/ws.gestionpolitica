@@ -8,7 +8,7 @@ require_once __DIR__ . '/../../componentes/conector/ConectorDBPostgres.php';
 require_once __DIR__ . '/../../componentes/general/general.php';
 require_once __DIR__ . '/../../conf/configuracion.php';
 
-use App\Api\Correo\Mail as Mail;
+use App\Api\Correo\Mail2 as Mail2;
 use App\Api\Sms\Sms as Sms;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -341,8 +341,9 @@ class Login {
             </section>";
 
             // enviar correo
-            $mail   = new Mail();
+            $mail   = new Mail2();
             $res1[0]['info_correo'] = $mail->enviar_mail($email1, $asunto, $cuerpo);
+
         }
 
         foreach ($celular as $key => $value) {
@@ -351,7 +352,8 @@ class Login {
 
             // enviar sms
             $sms    = new Sms();
-            $res1[0]['info_sms'] = $sms->enviar_sms($celular1, "Su clave temporal es: " .$clave. " Ingrese aqui ". Variables::$urlIngreso );
+            $res1[0]['info_sms'] = $sms->enviar_sms($celular1, "Hola Su clave: " .$clave );
+            // $res1[0]['info_sms'] = $sms->enviar_sms($celular1, "Hola ".$nombre." Su clave temporal es: " .$clave. " Por favor ingrese aqui ". Variables::$urlIngreso );
 
         }
 

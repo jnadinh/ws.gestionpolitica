@@ -3713,3 +3713,39 @@ LINE 1: UPDATE pepitoperez.token SET fecha_actualiza=NOW() WHERE tok...
 [10-May-2023 19:37:35 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  error de sintaxis en o cerca de «.»
 LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
                            ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[11-May-2023 06:30:29 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 28
+[11-May-2023 06:30:29 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 28
+[11-May-2023 06:30:29 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 29
+[11-May-2023 06:30:29 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 29
+[11-May-2023 06:30:29 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 30
+[11-May-2023 06:30:29 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 30
+[11-May-2023 06:30:29 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Correo\Mail2.php on line 26
+[11-May-2023 06:30:29 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Correo\Mail2.php on line 26
+[11-May-2023 06:30:32 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Sms\Sms.php on line 23
+[11-May-2023 06:30:32 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Sms\Sms.php on line 23
+[11-May-2023 06:37:20 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 28
+[11-May-2023 06:37:20 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 28
+[11-May-2023 06:37:20 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 29
+[11-May-2023 06:37:20 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 29
+[11-May-2023 06:37:20 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 30
+[11-May-2023 06:37:20 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 30
+[11-May-2023 06:37:20 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Correo\Mail2.php on line 26
+[11-May-2023 06:37:20 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Correo\Mail2.php on line 26
+[11-May-2023 06:37:22 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Correo\Mail2.php on line 26
+[11-May-2023 06:37:22 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Correo\Mail2.php on line 26
+[11-May-2023 06:37:25 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Sms\Sms.php on line 23
+[11-May-2023 06:37:25 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Sms\Sms.php on line 23
+[11-May-2023 06:40:53 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type bool in D:\gestionpolitica\ws.gestionpolitica\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 48
+[11-May-2023 06:40:53 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\LoginSuperAdmin\LoginSuperAdmin.php on line 48
+[11-May-2023 06:48:23 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 28
+[11-May-2023 06:48:23 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 28
+[11-May-2023 06:48:23 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 29
+[11-May-2023 06:48:23 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 29
+[11-May-2023 06:48:23 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 30
+[11-May-2023 06:48:23 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 30
+[11-May-2023 06:48:23 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Correo\Mail2.php on line 26
+[11-May-2023 06:48:23 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Correo\Mail2.php on line 26
+[11-May-2023 06:48:26 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Correo\Mail2.php on line 26
+[11-May-2023 06:48:26 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Correo\Mail2.php on line 26
+[11-May-2023 06:48:29 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Sms\Sms.php on line 23
+[11-May-2023 06:48:29 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Sms\Sms.php on line 23
