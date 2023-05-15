@@ -1,0 +1,44 @@
+<form id="form" name="form" action="#" method="POST" class="flexForm">
+    <div>
+        <div style="display: flex; justify-content: space-around;flex-direction: column;">
+            <div id="consulta_externa" style="width: 100% !important;">
+                <label>No. Identificación:</label><br>
+                <input type="text" id="nuip" name="nuip" class="form-control" maxlength="10" placeholder="Digíte el número sin puntos ni comas" title="El nùmero de cèdula debe ser de 2 a 10 dígitos" style="color:black !important;" autocomplete="off" autofocus="" required="" value="">
+                <span class="animated fadeIn"></span>
+            </div>
+            <div id="consulta_externa" style="width: 100% !important;">
+                <label>Seleccione la elección:</label><br>
+                <select class="sm-form-control" id="tipo" name="tipo" required="">
+                    <option value="-1">LUGAR DE VOTACIÓN ACTUAL...</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="nobottommargin" style="text-align: center;">
+            <label>Marque el cuadro de verificación:</label><br>
+            <div class="text-center" style="display: flex; justify-content: center;">
+                <div class="g-recaptcha" data-sitekey="6LcthjAgAAAAAFIQLxy52074zanHv47cIvmIHglH"><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LcthjAgAAAAAFIQLxy52074zanHv47cIvmIHglH&amp;co=aHR0cHM6Ly93c3AucmVnaXN0cmFkdXJpYS5nb3YuY286NDQz&amp;hl=es&amp;v=wqcyhEwminqmAoT8QO_BkXCr&amp;size=normal&amp;cb=7c29bofrhh27" width="304" height="78" role="presentation" name="a-h2fv1nrxt793" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div>
+            </div>
+            <!--<span class="help-block">Marque el captcha.</span>-->
+            <input type="hidden" class="form-control" id="token" name="token" value="f21affc974cd3690f649f35dc2e2d0cd" required="">
+        </div><br>
+        <div class="bottommargin tright" style="display: flex; justify-content: center; margin-bottom: 5px;">
+            <input type="submit" id="enviar" name="enviar" value="Consultar" class="button button-3d nomargin fright tab-linker btn-block">
+
+        </div>
+    </div>
+    <div style="flex-grow: 1;display: flex; flex-direction: column;">
+        <div class="col-sm-12 topmargin-sm text-center">
+            <h3 class="nobottommargin">INFORMACIÓN DEL LUGAR DE VOTACIÓN</h3>
+        </div>
+        <div id="success" class="col-sm-8 well text-justify" style="display: contents; text-align: center;">
+            <p>Por favor digite su número de cédula, seleccione el tipo de elección y dé clic en consultar.<br><br>
+        </p></div>
+    </div>
+</form>
+
+<iframe src="https://wsp.registraduria.gov.co/censo/consultar"></iframe>
+<style type="text/css">
+    html, body, div, iframe { margin:0; padding:0; height:100%; }
+    iframe { display:block; width:50%;  }
+</style>

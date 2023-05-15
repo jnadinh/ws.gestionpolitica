@@ -1,5 +1,5 @@
 <?php
-namespace App\Api\Referido;
+namespace App\Api\Reunion;
 
 // error_reporting(E_ALL);
 // ini_set('display_errors', '1');
@@ -14,7 +14,7 @@ use ConectorDBPostgres;
 use Variables;
 
 
-class Referido {
+class Reunion {
 
     private $id_usuario;
     private $esquema_db;
@@ -26,7 +26,7 @@ class Referido {
         $this -> id_usuario = $_SESSION['id_usuario'];
     }
 
-    public function obtenerReferidos(ServerRequestInterface $request, ResponseInterface $response, array $args = [] ): ResponseInterface {
+    public function obtenerReuniones(ServerRequestInterface $request, ResponseInterface $response, array $args = [] ): ResponseInterface {
         // Recopilar datos de la solicitud HTTP
         $json = (array)$request->getParsedBody();
 
@@ -34,29 +34,23 @@ class Referido {
         if (isset($json['id']) && $json['id']!="") {
             $where = " AND id = ".$json['id'];
         }
-        if (isset($json['lideres_personas_id']) && $json['lideres_personas_id']!="") {
-            $where = " AND lideres_personas_id = ".$json['lideres_personas_id'];
-        }
-        $where = "";
-        if (isset($json['cedula']) && $json['cedula']!="") {
-            $where = " AND cedula = '".$json['cedula']."'";
-        }
 
         // hace la consulta
-        $sql ="SELECT id, nombre, apellidos, cedula, clave, celular, telefono, email, fecha_nac,
-        direccion, genero, rh, es_lider, obs, lider_personas_id, estados_personas_id, fecha_crea,
-        fecha_actualiza, crea_personas_id, actualiza_personas_id
-        FROM $this->esquema_db.tab_personas WHERE estados_personas_id <> 9  $where ORDER BY nombre";
+        $sql ="SELECT r.id, r.nombre, r.salones_id, r.obs, r.estados_reuniones_id, r.fecha_hora, duracion_horas,
+        r.fecha_crea, r.fecha_actualiza, r.crea_personas_id, r.actualiza_personas_id,
+        s.nombre AS salones_nombre
+        FROM $this->esquema_db.tab_reuniones r
+        INNER JOIN $this->esquema_db.tab_salones s ON s.id=r.salones_id
+        WHERE estados_reuniones_id <> 9 $where ORDER BY r.nombre";
         $res = $this->conector->select($sql);
-        // var_dump($_SESSION);
-        // die($sql);
-
+        // var_dump($_SESSION); die($sql);
+        // WHERE lider_personas_id= $this->id_usuario $where
         if(!$res){
-            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Consulta vacía. La consulta no devolvió datos', 'DATOS' => 'LA CONSULTA NO DEVOLVIÓ DATOS');
+            $respuesta = array('CODIGO' => 6, 'MENSAJE' => 'CONSULTA VACIA', 'DATOS' => 'LA CONSULTA NO DEVOLVIÓ DATOS');
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }elseif($res==2){
-            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Error en la consulta', 'DATOS' => 'ERROR EN LA CONSULTA');
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ERROR EN LA CONSULTA', 'DATOS' => 'ERROR EN LA CONSULTA');
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }
@@ -66,30 +60,31 @@ class Referido {
         return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
     }
 
-    public function crearReferido(ServerRequestInterface $request, ResponseInterface $response, array $args = [] ): ResponseInterface {
+    public function crearReunion(ServerRequestInterface $request, ResponseInterface $response, array $args = [] ): ResponseInterface {
         // Recopilar datos de la solicitud HTTP
         $json = (array)$request->getParsedBody();
 
         // Valida datos completos
         if( !isset($json['nombre'])     || $json['nombre']==""      ||
-            !isset($json['apellidos'])  || $json['apellidos']==""   ||
-            !isset($json['cedula'])     || $json['cedula']==""      ||
-            !isset($json['celular'])    || $json['celular']==""     ||
-            !isset($json['genero'])     || $json['genero']==""      ){
+            !isset($json['salones_id']) || $json['salones_id']==""  ||
+            !isset($json['obs'])        || $json['obs']==""         ||
+            !isset($json['fecha_hora']) || $json['fecha_hora']==""  ){
 
             $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => 'FALTAN DATOS' );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }
 
-        // valida que la cedula no exista en la bbdd
-        $sqlced ="SELECT id, nombre, apellidos, cedula, estados_personas_id
-        FROM $this->esquema_db.tab_personas WHERE cedula = '".$json['cedula']."'" ;
+        // valida que el salon esté libre  ajustar la consulta que tome todo el tiempo de la nueva reunion
+        $sqlced ="SELECT id, nombre, salones_id, fecha_hora
+        FROM $this->esquema_db.tab_reuniones WHERE salones_id = '".$json['salones_id']."'
+        AND fecha_hora BETWEEN '".$json['fecha_hora']."'::TIMESTAMP
+        AND '".$json['fecha_hora']."'::TIMESTAMP + (duracion_horas || ' hr')::INTERVAL ";
         $resced = $this->conector->select($sqlced);
         // die($sqlced);
 
         if($resced){
-            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'REGISTRO DUPLICADO', 'DATOS' => 'YA EXISTE UN REGISTRO CON LA CEDULA '.$json['cedula'] );
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'REGISTRO DUPLICADO', 'DATOS' => 'YA HAY UNA REUNION PROGRAMADA EN ESTE SALON Y FECHA' );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }elseif($resced==2){
@@ -98,42 +93,14 @@ class Referido {
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }
 
-        // valida que el correo no exista en la bbdd
-        if(isset($json['email']) && $json['email']!="") {
-
-            $sqlemail ="SELECT id, nombre, apellidos, cedula, estados_personas_id
-            FROM $this->esquema_db.tab_personas WHERE email = '".$json['email']."'" ;
-            $resemail = $this->conector->select($sqlemail);
-            //die($sqlemail);
-
-            if($resemail){
-                $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'REGISTRO DUPLICADO', 'DATOS' => 'YA EXISTE UN REGISTRO CON EL CORREO '.$json['email'] );
-                $response->getBody()->write((string)json_encode($respuesta));
-                return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
-            }elseif($resced==2){
-                $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ERROR EN LA CONSULTA', 'DATOS' => 'ERROR EN LA CONSULTA cedula');
-                $response->getBody()->write((string)json_encode($respuesta));
-                return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
-            }
-        }
-
         // hace la consulta
-        $sql="INSERT INTO $this->esquema_db.tab_personas
-        (nombre, apellidos, cedula, celular, telefono, email, fecha_nac, direccion, genero, rh, obs,
-        lider_personas_id, estados_personas_id, crea_personas_id)
+        $sql="INSERT INTO $this->esquema_db.tab_reuniones
+        (nombre, salones_id, obs, estados_reuniones_id, fecha_hora, crea_personas_id)
         VALUES(
         '".$json['nombre']."',
-        '".$json['apellidos']."',
-        '".$json['cedula']."',
-        '".$json['celular']."',
-        '".$json['telefono']."',
-        '".$json['email']."',
-        '".$json['fecha_nac']."',
-        '".$json['direccion']."',
-        '".$json['genero']."',
-        '".$json['rh']."',
-        '".$json['obs']."',
-        '".$this->id_usuario."',2,
+        '".$json['salones_id']."',
+        '".$json['obs']."', 1,
+        '".$json['fecha_hora']."',
         '".$this->id_usuario."'  ) RETURNING id;" ;
         $sql=reemplazar_vacios($sql);
         //die($sql);
@@ -152,7 +119,7 @@ class Referido {
         }
     }
 
-    public function editarReferido(ServerRequestInterface $request, ResponseInterface $response, array $args = [] ): ResponseInterface {
+    public function editarReunion(ServerRequestInterface $request, ResponseInterface $response, array $args = [] ): ResponseInterface {
         // Recopilar datos de la solicitud HTTP
         $json = (array)$request->getParsedBody();
         // Valida datos completos
@@ -168,22 +135,12 @@ class Referido {
         //para validar los datos que edita
         $array_editar = array(
             'nombre'=>'',
-            'apellidos'=>'',
-            'celular'=>'',
-            'telefono'=>'',
-            'email'=>'',
-            'fecha_nac'=>'',
-            'direccion'=>'',
-            'genero'=>'',
-            'rh'=>'',
+            'salones_id'=>'',
             'obs'=>'',
-            'estados_personas_id'=>'',
+            'estados_reuniones_id'=>'',
+            'fecha_hora'=>'',
+            'duracion_horas'=>'',
         );
-
-        $clave="";
-        if(isset($json['clave'])) {
-            $clave ="clave=MD5('".$json['clave']."'), ";
-        }
 
         $actualiza="actualiza_personas_id = $this->id_usuario, fecha_actualiza=now(), ";
 
@@ -192,7 +149,7 @@ class Referido {
         if($cadena=="" || $cadena=="'") {
             $cadena = "id='$id' ";
         }
-        $sql = "UPDATE $this->esquema_db.tab_personas SET $actualiza $clave $cadena WHERE id='$id'  ;";
+        $sql = "UPDATE $this->esquema_db.tab_reuniones SET $actualiza $cadena WHERE id='$id'  ;";
         $sql=reemplazar_vacios($sql);
         // die($sql);
         $res = $this->conector->update($sql);

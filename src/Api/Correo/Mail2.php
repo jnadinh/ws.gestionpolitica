@@ -28,8 +28,6 @@ class Mail2 {
 
     function enviar_mail($para, $asunto, $mensaje){
 
-        $archivo = __DIR__."/enviomail.php";
-
         $cuentauser = Variables::$Usernamephpmailer ;
         $cuentapass = Variables::$Passwordphpmailer ;
         $nomremite  = Variables::$nombreRemite;

@@ -103,7 +103,7 @@ class Esquema {
         $sql="SELECT public.fun_esquema('$nombre_esquema', '$nombre_candidato', $corporaciones_id, $departamentos_id,
         $municipios_id, '$nombre_administrador', '$apellidos_administrador', '$cedula_administrador', '$celular_administrador',
         '$telefono_administrador', '$email_administrador', '$direccion_administrador', '$genero_administrador')";
-        //die($sql);
+        // die($sql);
         $res = $this->conector->select($sql);
 
         if($res==2) {

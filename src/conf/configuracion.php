@@ -21,7 +21,7 @@ class Variables {
 	public static $hostphpmailer="smtp.gmail.com";      						// HOST PHPMAILER
 	public static $puertohpmailer=587;         	 								// PUERTO PHPMAILER Port
 	public static $Usernamephpmailer="gestionpolitica2022@gmail.com";			// CORREO PHPMAILER Username
-    public static $Passwordphpmailer="xxxxxxxxxxxxxxx"; 						// PASSWORD PHPMAILER
+    public static $Passwordphpmailer="vymqkgyzgwqcuhie"; 						// PASSWORD PHPMAILER
 
 //	public static $urlBase="http://ws.gestionpolitica.com/";                    // URL BASE
 	public static $urlBase="http://localhost:8080/";                            // URL BASE

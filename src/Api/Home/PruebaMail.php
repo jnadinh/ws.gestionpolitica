@@ -34,7 +34,7 @@ final class PruebaMail
 
         $jmail= new JMail();
         // $jmail->credentials_mailer('jnadinh@gmail.com', 'tpiwymtgegamahao', 'Gestion Politica', 'REFERIDOS');
-        $jmail->credentials_mailer('gestionpolitica2022@gmail.com', 'aeliodsxaxbxpfpq', 'Gestion Politica', 'REFERIDOS');
+        $jmail->credentials_mailer('gestionpolitica2022@gmail.com', 'vymqkgyzgwqcuhie', 'Gestion Politica', 'REFERIDOS');
         $envio = $jmail->send($json['mail'],'Registro de Referido','Bienvenido al equipo. Ud ha sido registrado en xxx','My first mail TEXT');
 
         exit;

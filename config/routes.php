@@ -26,6 +26,7 @@ return function (App $app) {
     $app->post('/iniciar_sesion', \App\Api\Login\Login::class . ':iniciarSesion');
     $app->options('/iniciar_sesion', \App\Api\Login\Login::class . ':iniciarSesion');
 
+    $app->post('/obtener_esquemas_cedula', \App\Api\Login\Login::class . ':obtenerEsquemasCedula');
     $app->post('/olvido_clave', \App\Api\Login\Login::class . ':olvidoClave');
 
 
@@ -40,8 +41,10 @@ return function (App $app) {
     $app->get('/prueba_mail/{mail}', \App\Api\Home\PruebaMail::class );
     // ok envia desde el servidor no local
     $app->get('/mail', \App\Api\Home\PruebaMail::class. ':mail' );
-    // http://localhost:8080/prueba_mail/jnadinh@hotmail.com
-    // http://localhost:8080/mail/
+    // https://ws.gestionpolitica.com/prueba_mail/jnadinh@hotmail.com
+    // https://ws.gestionpolitica.com/mail
+
+    $app->get('/imagen/{esquema_db}', \App\Api\Home\Imagen::class );
 
     // con validacion de token super admin
     $app->group('', function (RouteCollectorProxy $groupSuperAdmin) {
@@ -49,9 +52,6 @@ return function (App $app) {
         $groupSuperAdmin->post('/cerrar_sesion_super_admin', \App\Api\LoginSuperAdmin\LoginSuperAdmin::class . ':cerrarSesionSuperAdmin');
         $groupSuperAdmin->post('/validar_token_super_admin', \App\Api\LoginSuperAdmin\LoginSuperAdmin::class . ':validarTokenSuperAdmin');
         $groupSuperAdmin->post('/cambiar_clave_super_admin', \App\Api\LoginSuperAdmin\LoginSuperAdmin::class . ':cambiarClaveSuperAdmin');
-
-        $groupSuperAdmin->post('/obtener_parametros', \App\Api\Parametros\Parametros::class . ':obtenerParametros');
-        $groupSuperAdmin->post('/editar_parametros', \App\Api\Parametros\Parametros::class . ':editarParametros');
 
         $groupSuperAdmin->post('/obtener_usuarios', \App\Api\Usuario\Usuario::class . ':obtenerUsuarios');
         $groupSuperAdmin->post('/crear_usuario', \App\Api\Usuario\Usuario::class . ':crearUsuario');
@@ -61,11 +61,6 @@ return function (App $app) {
         $groupSuperAdmin->post('/editar_esquema', \App\Api\Esquema\Esquema::class . ':editarEsquema');
         $groupSuperAdmin->post('/crear_esquema', \App\Api\Esquema\Esquema::class . ':crearEsquema');
 
-        $groupSuperAdmin->post('/obtener_recargas', \App\Api\Recarga\Recarga::class . ':obtenerRecargas');
-        $groupSuperAdmin->post('/crear_recarga', \App\Api\Recarga\Recarga::class . ':crearRecarga');
-        $groupSuperAdmin->post('/editar_recarga', \App\Api\Recarga\Recarga::class . ':editarRecarga');
-        $groupSuperAdmin->post('/eliminar_recarga', \App\Api\Recarga\Recarga::class . ':eliminarRecarga');
-
         $groupSuperAdmin->post('/obtener_departamentos_sa', \App\Api\Listado\Listado::class . ':obtenerDepartamentos');
         $groupSuperAdmin->post('/obtener_municipios_sa', \App\Api\Listado\Listado::class . ':obtenerMunicipios');
         $groupSuperAdmin->post('/obtener_corporaciones_sa', \App\Api\Listado\Listado::class . ':obtenerCorporaciones');
@@ -74,12 +69,12 @@ return function (App $app) {
     })->add(UserAuthMiddleware2::class);
 
 
-    // con validacion de token
+    // con validacion de token usuarios
 
     // valida por modulos
     $app->group('', function (RouteCollectorProxy $misReferidos) {
-        $misReferidos->post('/obtener_mis_referidos', \App\Api\Referido\Referido::class . ':obtenerMisReferidos');
-        $misReferidos->post('/crear_mi_referido', \App\Api\Referido\Referido::class . ':crearMiReferido');
+        $misReferidos->post('/obtener_mis_referidos', \App\Api\Referido\Referido::class . ':obtenerReferidos');
+        $misReferidos->post('/crear_mi_referido', \App\Api\Referido\Referido::class . ':crearReferido');
         $misReferidos->post('/editar_mi_referido', \App\Api\Referido\Referido::class . ':editarReferido');
         $misReferidos->post('/eliminar_mi_referido', \App\Api\Referido\Referido::class . ':eliminarReferido');
     })->add(UserAuthMiddleware::class . ':misReferidos');
@@ -116,6 +111,19 @@ return function (App $app) {
     })->add(UserAuthMiddleware::class . ':actividades');
 
     $app->group('', function (RouteCollectorProxy $reuniones) {
+        $reuniones->post('/obtener_salones', \App\Api\Reunion\Salon::class . ':obtenerSalones');
+        $reuniones->post('/crear_salon', \App\Api\Reunion\Salon::class . ':crearSalon');
+        $reuniones->post('/editar_salon', \App\Api\Reunion\Salon::class . ':editarSalon');
+        $reuniones->post('/eliminar_salon', \App\Api\Reunion\Salon::class . ':eliminarSalon');
+
+        $reuniones->post('/obtener_reuniones', \App\Api\Reunion\Reunion::class . ':obtenerReuniones');
+        $reuniones->post('/crear_reunion', \App\Api\Reunion\Reunion::class . ':crearReunion');
+        $reuniones->post('/editar_reunion', \App\Api\Reunion\Reunion::class . ':editarReunion');
+        $reuniones->post('/eliminar_reunion', \App\Api\Reunion\Reunion::class . ':eliminarReunion');
+
+        $reuniones->post('/obtener_asistentes', \App\Api\Reunion\Asistente::class . ':obtenerAsistentes');
+        $reuniones->post('/editar_asistente', \App\Api\Reunion\Asistente::class . ':editarAsistentes');
+        $reuniones->post('/eliminar_asistente', \App\Api\Reunion\Asistente::class . ':eliminarAsistentes');
 
     })->add(UserAuthMiddleware::class . ':reuniones');
 
@@ -136,6 +144,10 @@ return function (App $app) {
     })->add(UserAuthMiddleware::class . ':mensajes');
 
     $app->group('', function (RouteCollectorProxy $registroAsistentesReuniones) {
+
+        $registroAsistentesReuniones->post('/obtener_reuniones_digitador', \App\Api\Reunion\Asistente::class . ':obtenerReunionesDigitador');
+        $registroAsistentesReuniones->post('/crear_asistente', \App\Api\Reunion\Asistente::class . ':crearAsistente');
+        $registroAsistentesReuniones->post('/buscar_por_cedula', \App\Api\Referido\Referido::class . ':obtenerReferidos');
 
     })->add(UserAuthMiddleware::class . ':registroAsistentesReuniones');
 

@@ -121,7 +121,7 @@ class Usuario {
 
                 // enviar sms
                 $sms    = new Sms();
-                $res1[0]['info_sms'] = $sms->enviar_sms($json['celular'], "mensaje de prueba desde la aplicacion");
+                $res1[0]['info_sms'] = $sms->enviar_sms_mercadeo($json['celular'], "mensaje de prueba desde la aplicacion");
             }
 
             $res1[0]['id'] = $id;
