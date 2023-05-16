@@ -39,7 +39,7 @@ class Login {
         if( !isset($json['usuario'])    || $json['usuario']==""     ||
             !isset($json['clave'])      || $json['clave']==""       ){
 
-            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO. FALTAN DATOS', 'DATOS' => 'FALTAN DATOS' );
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado. Faltan datos', 'DATOS' => 'FALTAN DATOS' );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }
@@ -65,12 +65,12 @@ class Login {
             $id_usuario = $res[0]['id'];
 
             if($res==2)  {
-                $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ERROR EN LA CONSULTA', 'DATOS' => 'ERROR EN LA CONSULTA' );
+                $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Error en la consulta', 'DATOS' => 'ERROR EN LA CONSULTA' );
                 $response->getBody()->write((string)json_encode($respuesta));
                 return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
             }else if(count2($res)==0)  {
                 // Construye la respuesta
-                $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO. USUARIO O PASSWORD INVALIDO', 'DATOS' => 'USUARIO O PASSWORD INVALIDO' );
+                $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado. Usuario o clave inválido', 'DATOS' => 'USUARIO O PASSWORD INVALIDO' );
                 $response->getBody()->write((string)json_encode($respuesta));
                 return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
             }else{
@@ -137,11 +137,11 @@ class Login {
             $res = $this->conector->select($sql);
             // var_dump($res); die($sql);
             if(!$res){
-                $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO. USUARIO O PASSWORD INVALIDO', 'DATOS' => 'USUARIO O PASSWORD INVALIDO' );
+                $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado. Usuario o Clave inválido', 'DATOS' => 'USUARIO O PASSWORD INVALIDO' );
                 $response->getBody()->write((string)json_encode($respuesta));
                 return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
             }elseif($res==2){
-                $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ERROR EN LA CONSULTA', 'DATOS' => 'ERROR EN LA CONSULTA');
+                $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Error en la consulta', 'DATOS' => 'ERROR EN LA CONSULTA');
                 $response->getBody()->write((string)json_encode($respuesta));
                 return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
             }else {
@@ -166,7 +166,7 @@ class Login {
 
                 if(count2($esquemas)==0)  {
                     // Construye la respuesta
-                    $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO. USUARIO O PASSWORD INVALIDO', 'DATOS' => 'USUARIO O PASSWORD INVALIDO' );
+                    $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado. Usuario o Clave inválido', 'DATOS' => 'USUARIO O PASSWORD INVALIDO' );
                     $response->getBody()->write((string)json_encode($respuesta));
                     return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
                 }
@@ -191,7 +191,7 @@ class Login {
         // die($sql);
 
         if(!$res) {
-            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'NO SE CERRO LA SESION', 'DATOS' => $token );
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'No se cerró la seión', 'DATOS' => $token );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
 
@@ -222,7 +222,7 @@ class Login {
             !isset($json['clave'])          || $json['clave']==""       ||
             !isset($json['nueva_clave'])    || $json['nueva_clave']=="" ){
 
-                $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO. FALTAN DATOS', 'DATOS' => 'FALTAN DATOS' );
+                $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado. Faltan datos', 'DATOS' => 'FALTAN DATOS' );
                 $response->getBody()->write((string)json_encode($respuesta));
                 return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }
@@ -239,12 +239,12 @@ class Login {
         // die($sql);
 
         if($res==2)  {
-            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ERROR EN LA CONSULTA', 'DATOS' => 'ERROR EN LA CONSULTA' );
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Error en la consulta', 'DATOS' => 'ERROR EN LA CONSULTA' );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }else if(count2($res)==0)  {
             // Construye la respuesta
-            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO. USUARIO O PASSWORD INVALIDO', 'DATOS' => 'USUARIO O PASSWORD INVALIDO' );
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado. Usuario o clave inválidos', 'DATOS' => 'USUARIO O PASSWORD INVALIDO' );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }else{
@@ -262,7 +262,7 @@ class Login {
 
             if(!$resup) {
                 // si no trae datos retorna codigo 2
-                $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ERROR DB. NO SE ACTUALIZO EL REGISTRO', 'DATOS' => "NO SE ACTUALIZO EL REGISTRO");
+                $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Error BBDD. No se actualizó el registro', 'DATOS' => "NO SE ACTUALIZO EL REGISTRO");
                 $response->getBody()->write(json_encode($respuesta));
                 return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
             }
@@ -282,7 +282,7 @@ class Login {
         if( !isset($json['cedula'])        || $json['cedula']==""     ||
             !isset($json['esquema_db'])    || $json['esquema_db']=="" ){
 
-            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO. FALTAN DATOS', 'DATOS' => 'FALTAN DATOS' );
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado. Faltan datos', 'DATOS' => 'FALTAN DATOS' );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }
@@ -376,7 +376,7 @@ class Login {
         // Valida datos completos
         if( !isset($json['cedula']) || $json['cedula']=="" ){
 
-            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO. FALTAN DATOS', 'DATOS' => 'FALTAN DATOS' );
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado. Faltan datos', 'DATOS' => 'FALTAN DATOS' );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }
@@ -392,11 +392,11 @@ class Login {
         $res = $this->conector->select($sql);
         // var_dump($res); die($sql);
         if(!$res){
-            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO. USUARIO O PASSWORD INVALIDO', 'DATOS' => 'USUARIO O PASSWORD INVALIDO' );
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado. Usuario o clave inválido', 'DATOS' => 'USUARIO O PASSWORD INVALIDO' );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }elseif($res==2){
-            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ERROR EN LA CONSULTA', 'DATOS' => 'ERROR EN LA CONSULTA');
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Error en la consulta', 'DATOS' => 'ERROR EN LA CONSULTA');
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }else {
@@ -421,7 +421,7 @@ class Login {
 
             if(count2($esquemas)==0)  {
                 // Construye la respuesta
-                $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO. USUARIO O PASSWORD INVALIDO', 'DATOS' => 'USUARIO O PASSWORD INVALIDO' );
+                $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado. Usuario o clave inválido', 'DATOS' => 'USUARIO O PASSWORD INVALIDO' );
                 $response->getBody()->write((string)json_encode($respuesta));
                 return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
             }
