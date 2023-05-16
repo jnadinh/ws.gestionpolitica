@@ -48,7 +48,7 @@ final class UserAuthMiddleware2
         // Valida datos completos
         if( !isset($json['token'])      || $json['token']=="") {
 
-            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => 'FALTAN DATOS' );
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado Faltan datos', 'DATOS' => 'FALTAN DATOS' );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }
@@ -64,7 +64,7 @@ final class UserAuthMiddleware2
         $res = $this->conector->select($sql);
 
         if (!$res) {
-            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => 'SESION INACTIVA' );
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado Sesión Inactiva', 'DATOS' => 'SESION INACTIVA' );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }
