@@ -61,12 +61,18 @@ return function (App $app) {
         $groupSuperAdmin->post('/editar_esquema', \App\Api\Esquema\Esquema::class . ':editarEsquema');
         $groupSuperAdmin->post('/crear_esquema', \App\Api\Esquema\Esquema::class . ':crearEsquema');
 
-        $groupSuperAdmin->post('/obtener_departamentos_sa', \App\Api\Listado\Listado::class . ':obtenerDepartamentos');
-        $groupSuperAdmin->post('/obtener_municipios_sa', \App\Api\Listado\Listado::class . ':obtenerMunicipios');
-        $groupSuperAdmin->post('/obtener_corporaciones_sa', \App\Api\Listado\Listado::class . ':obtenerCorporaciones');
-        $groupSuperAdmin->post('/obtener_puestos_sa', \App\Api\Listado\Listado::class . ':obtenerPuestos');
+    })->add(UserAuthMiddleware::class . ':superAdmin');
 
-    })->add(UserAuthMiddleware2::class);
+    // validando token de Admin o Superadmin
+    $app->group('', function (RouteCollectorProxy $dobleValidacion) {
+
+        $dobleValidacion->post('/obtener_departamentos', \App\Api\Listado\Listado::class . ':obtenerDepartamentos');
+        $dobleValidacion->post('/obtener_municipios', \App\Api\Listado\Listado::class . ':obtenerMunicipios');
+        $dobleValidacion->post('/obtener_corporaciones', \App\Api\Listado\Listado::class . ':obtenerCorporaciones');
+        $dobleValidacion->post('/obtener_puestos', \App\Api\Listado\Listado::class . ':obtenerPuestos');
+
+    })->add(UserAuthMiddleware::class . ':dobleValidacion');
+
 
 
     // con validacion de token usuarios
@@ -125,6 +131,7 @@ return function (App $app) {
         $reuniones->post('/editar_asistente', \App\Api\Reunion\Asistente::class . ':editarAsistentes');
         $reuniones->post('/eliminar_asistente', \App\Api\Reunion\Asistente::class . ':eliminarAsistentes');
 
+
     })->add(UserAuthMiddleware::class . ':reuniones');
 
     $app->group('', function (RouteCollectorProxy $gestiones) {
@@ -161,6 +168,10 @@ return function (App $app) {
         $group->post('/obtener_publicaciones', \App\Api\Publicacion\Publicacion::class . ':obtenerPublicaciones');
         $group->post('/crear_publicacion', \App\Api\Publicacion\Publicacion::class . ':crearPublicacion');
         $group->post('/editar_publicacion', \App\Api\Publicacion\Publicacion::class . ':editarPublicacion');    // eliminar edita eliminado=true
+
+        // no hay modulo parametros. se debe crear
+        $group->post('/obtener_parametros', \App\Api\Parametros\Parametros::class . ':obtenerParametros');
+        $group->post('/editar_parametros', \App\Api\Parametros\Parametros::class . ':editarParametros');
 
         // $group->post('/obtener_archivos_generales', \App\Api\Archivo\Archivo::class . ':obtenerArchivosGenerales');
         // $group->post('/obtener_archivos', \App\Api\Archivo\Archivo::class . ':obtenerArchivos');

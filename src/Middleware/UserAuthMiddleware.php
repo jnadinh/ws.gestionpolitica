@@ -118,6 +118,82 @@ final class UserAuthMiddleware
         return "Módulo válido";
     }
 
+    public function validarTokenSuperUsuario($json) {
+
+        // Valida datos completos
+        if( !isset($json['token'])      || $json['token']=="") {
+
+            return "Faltan datos";
+        }
+
+        $token = $json['token'];
+
+        // valida el usuario y token
+        $sql = "SELECT u.usuario, u.id FROM public.tab_usuarios u
+        INNER JOIN public.tab_token t ON t.usuarios_id = u.id AND
+        t.token ='$token' AND (t.fecha_actualiza + interval '".Variables::$tiempoSESION."minutes') > now() ;";
+        // die($sql);
+        $sql=reemplazar_vacios($sql);
+        $res = $this->conector->select($sql);
+
+        if (!$res) {
+            return "Sesión inactiva";
+        }
+
+        // actualiza fecha actualiza para tiempo de session
+        $sqltok = "UPDATE public.tab_token SET fecha_actualiza=NOW() WHERE token = '$token' " ;
+        $sqltok=reemplazar_vacios($sqltok);
+        $restok=$this->conector->update($sqltok);
+
+        $_SESSION['id_usuario']=$res[0]['id'];
+        $_SESSION['usuario']=$res[0]['usuario'];
+        $_SESSION['token']=$token;
+
+        return "Token válido";
+    }
+
+    public function dobleValidacion(Request $request, RequestHandler $handler): Response  {
+
+        // Recopilar datos de la solicitud HTTP
+        $json = (array)$request->getParsedBody();
+
+        $response = new Response();
+
+        // valida token
+        $validarToken1 = self::validarToken($json);
+        // valida token
+        $validarToken2 = self::validarTokenSuperUsuario($json);
+        // die($validarToken);
+        if( $validarToken1!="Token válido" && $validarToken2!="Token válido"){
+
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado. Sesión inactiva o Faltan datos', 'DATOS' => $validarToken1. ' '. $validarToken2);
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+
+        return $handler->handle($request);
+    }
+
+    public function superAdmin(Request $request, RequestHandler $handler): Response  {
+
+        // Recopilar datos de la solicitud HTTP
+        $json = (array)$request->getParsedBody();
+
+        $response = new Response();
+
+        // valida token
+        $validarToken2 = self::validarTokenSuperUsuario($json);
+        // die($validarToken);
+        if( $validarToken2!="Token válido"  ){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado. '.$validarToken2, 'DATOS' => $validarToken2 );
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+
+        return $handler->handle($request);
+    }
+
+
     public function misReferidos(Request $request, RequestHandler $handler): Response  {
 
         // Recopilar datos de la solicitud HTTP
@@ -129,7 +205,7 @@ final class UserAuthMiddleware
 
         // valida token
         $validarToken = self::validarToken($json);
-        // die($validar);
+        // die($validarToken);
         if( $validarToken!="Token válido"  ){
             $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado. '.$validarToken, 'DATOS' => $validarToken );
             $response->getBody()->write((string)json_encode($respuesta));
@@ -138,7 +214,7 @@ final class UserAuthMiddleware
 
         // valida que el rol tenga acceso al modulo
         $validarModulo = self::validarModulo($modulos_id);
-        if( $validarModulo!="MODULO VALIDO"  ){
+        if( $validarModulo!="Módulo válido"  ){
             $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado. '.$validarModulo .' '.$modulos_nombre, 'DATOS' => $validarModulo ." ".$modulos_nombre );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
@@ -167,7 +243,7 @@ final class UserAuthMiddleware
 
         // valida que el rol tenga acceso al modulo
         $validarModulo = self::validarModulo($modulos_id);
-        if( $validarModulo!="MODULO VALIDO"  ){
+        if( $validarModulo!="Módulo válido"  ){
             $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado. '.$validarModulo .' '.$modulos_nombre, 'DATOS' => $validarModulo ." ".$modulos_nombre );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
@@ -196,7 +272,7 @@ final class UserAuthMiddleware
 
         // valida que el rol tenga acceso al modulo
         $validarModulo = self::validarModulo($modulos_id);
-        if( $validarModulo!="MODULO VALIDO"  ){
+        if( $validarModulo!="Módulo válido"  ){
             $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado. '.$validarModulo .' '.$modulos_nombre, 'DATOS' => $validarModulo ." ".$modulos_nombre );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
@@ -225,7 +301,7 @@ final class UserAuthMiddleware
 
         // valida que el rol tenga acceso al modulo
         $validarModulo = self::validarModulo($modulos_id);
-        if( $validarModulo!="MODULO VALIDO"  ){
+        if( $validarModulo!="Módulo válido"  ){
             $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado. '.$validarModulo .' '.$modulos_nombre, 'DATOS' => $validarModulo ." ".$modulos_nombre );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
@@ -254,7 +330,7 @@ final class UserAuthMiddleware
 
         // valida que el rol tenga acceso al modulo
         $validarModulo = self::validarModulo($modulos_id);
-        if( $validarModulo!="MODULO VALIDO"  ){
+        if( $validarModulo!="Módulo válido"  ){
             $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado. '.$validarModulo .' '.$modulos_nombre, 'DATOS' => $validarModulo ." ".$modulos_nombre );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
@@ -283,7 +359,7 @@ final class UserAuthMiddleware
 
         // valida que el rol tenga acceso al modulo
         $validarModulo = self::validarModulo($modulos_id);
-        if( $validarModulo!="MODULO VALIDO"  ){
+        if( $validarModulo!="Módulo válido"  ){
             $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado. '.$validarModulo .' '.$modulos_nombre, 'DATOS' => $validarModulo ." ".$modulos_nombre );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
@@ -312,7 +388,7 @@ final class UserAuthMiddleware
 
         // valida que el rol tenga acceso al modulo
         $validarModulo = self::validarModulo($modulos_id);
-        if( $validarModulo!="MODULO VALIDO"  ){
+        if( $validarModulo!="Módulo válido"  ){
             $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado. '.$validarModulo .' '.$modulos_nombre, 'DATOS' => $validarModulo ." ".$modulos_nombre );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
@@ -341,7 +417,7 @@ final class UserAuthMiddleware
 
         // valida que el rol tenga acceso al modulo
         $validarModulo = self::validarModulo($modulos_id);
-        if( $validarModulo!="MODULO VALIDO"  ){
+        if( $validarModulo!="Módulo válido"  ){
             $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado. '.$validarModulo .' '.$modulos_nombre, 'DATOS' => $validarModulo ." ".$modulos_nombre );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
@@ -361,7 +437,7 @@ final class UserAuthMiddleware
 
         // valida token
         $validarToken = self::validarToken($json);
-        // die($validar);
+        // die($validarToken);
         if( $validarToken!="Token válido"  ){
             $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado. '.$validarToken, 'DATOS' => $validarToken );
             $response->getBody()->write((string)json_encode($respuesta));
@@ -370,7 +446,8 @@ final class UserAuthMiddleware
 
         // valida que el rol tenga acceso al modulo
         $validarModulo = self::validarModulo($modulos_id);
-        if( $validarModulo!="MODULO VALIDO"  ){
+        // die($validarModulo);
+        if( $validarModulo!="Módulo válido"  ){
             $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado. '.$validarModulo .' '.$modulos_nombre, 'DATOS' => $validarModulo ." ".$modulos_nombre );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
@@ -399,7 +476,7 @@ final class UserAuthMiddleware
 
         // valida que el rol tenga acceso al modulo
         $validarModulo = self::validarModulo($modulos_id);
-        if( $validarModulo!="MODULO VALIDO"  ){
+        if( $validarModulo!="Módulo válido"  ){
             $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado. '.$validarModulo .' '.$modulos_nombre, 'DATOS' => $validarModulo ." ".$modulos_nombre );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
@@ -428,7 +505,7 @@ final class UserAuthMiddleware
 
         // valida que el rol tenga acceso al modulo
         $validarModulo = self::validarModulo($modulos_id);
-        if( $validarModulo!="MODULO VALIDO"  ){
+        if( $validarModulo!="Módulo válido"  ){
             $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado. '.$validarModulo .' '.$modulos_nombre, 'DATOS' => $validarModulo ." ".$modulos_nombre );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
@@ -457,7 +534,7 @@ final class UserAuthMiddleware
 
         // valida que el rol tenga acceso al modulo
         $validarModulo = self::validarModulo($modulos_id);
-        if( $validarModulo!="MODULO VALIDO"  ){
+        if( $validarModulo!="Módulo válido"  ){
             $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado. '.$validarModulo .' '.$modulos_nombre, 'DATOS' => $validarModulo ." ".$modulos_nombre );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
@@ -486,7 +563,7 @@ final class UserAuthMiddleware
 
         // valida que el rol tenga acceso al modulo
         $validarModulo = self::validarModulo($modulos_id);
-        if( $validarModulo!="MODULO VALIDO"  ){
+        if( $validarModulo!="Módulo válido"  ){
             $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado. '.$validarModulo .' '.$modulos_nombre, 'DATOS' => $validarModulo ." ".$modulos_nombre );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
@@ -515,7 +592,7 @@ final class UserAuthMiddleware
 
         // valida que el rol tenga acceso al modulo
         $validarModulo = self::validarModulo($modulos_id);
-        if( $validarModulo!="MODULO VALIDO"  ){
+        if( $validarModulo!="Módulo válido"  ){
             $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado. '.$validarModulo .' '.$modulos_nombre, 'DATOS' => $validarModulo ." ".$modulos_nombre );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);

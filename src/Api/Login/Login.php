@@ -56,7 +56,7 @@ class Login {
         if(isset($json['esquema_db']) && $json['esquema_db'] != "")  {
 
             // valida el usuario y clave
-            $sql = "SELECT id, nombre, apellidos
+            $sql = "SELECT id, nombre, apellidos, celular, email, cedula, estados_personas_id
             FROM $esquema_db.tab_personas
             WHERE (email='$usuario' OR cedula ='$usuario') AND clave= MD5('$clave') ";
             $sql=reemplazar_vacios($sql);
@@ -207,7 +207,7 @@ class Login {
 
         // El token se valida en el UserAuthMiddleware. Si llega aqui es válido
 
-        $respuesta = array('CODIGO' => 1, 'MENSAJE' => 'OK', 'DATOS' => "TOKEN VALIDO" );
+        $respuesta = array('CODIGO' => 1, 'MENSAJE' => 'Token Válido', 'DATOS' => "TOKEN VALIDO" );
         $response->getBody()->write((string)json_encode($respuesta));
         return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
     }

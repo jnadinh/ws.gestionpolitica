@@ -16,44 +16,30 @@ use Variables;
 class Parametros {
 
     private $id_usuario;
-    private $usuario;
+    private $esquema_db;
 
     private $conector;
     public function __construct() {
         $this -> conector = ConectorDBPostgres::get_conectorPostgres(Variables::$HOST_DB,Variables::$USUARIO_DB,Variables::$CLAVE_DB,Variables::$NOMBRE_DB);
         $this -> id_usuario = $_SESSION['id_usuario'];
-        $this -> usuario    = $_SESSION['usuario'];
+        $this -> esquema_db = $_SESSION['esquema_db'];
     }
 
     public function obtenerParametros(ServerRequestInterface $request, ResponseInterface $response, array $args = [] ): ResponseInterface {
         // Recopilar datos de la solicitud HTTP
         $json = (array)$request->getParsedBody();
 
-        $where = "";
-        if (isset($json['id']) && $json['id']!="") {
-            $where = " WHERE id = ".$json['id'] ;
-        }
-
         // hace la consulta
-        $sql="SELECT p.id, p.nombre_candidato, p.corporaciones_id, c.nombre AS corporaciones_nombre,
-        p.departamentos_id, d.nombre AS departamentos_nombre, p.municipios_id, m.nombre AS municipios_nombre,
-        p.nombre_administrador, p.telefono, p.celular, p.nombre_esquema,
-        p.enviar_sms_crear_referido, p.enviar_sms_crear_lider, p.enviar_sms_recuperar_clave,
-        p.fecha_crea, p.fecha_actualiza, p.crea_usuarios_id, p.actualiza_usuarios_id
-        FROM public.tab_parametros p
-        INNER JOIN public.tab_corporaciones c ON c.id = p.corporaciones_id
-        INNER JOIN public.tab_departamentos d ON d.id = p.departamentos_id
-        LEFT JOIN public.tab_municipios m ON m.id = p.municipios_id
-        $where ORDER BY p.id DESC";
+        $sql="SELECT * FROM $this->esquema_db.tab_parametros WHERE id = 1";
         //die($sql);
         $res = $this->conector->select($sql);;
 
         if(!$res){
-            $respuesta = array('CODIGO' => 6, 'MENSAJE' => 'CONSULTA VACIA', 'DATOS' => 'LA CONSULTA NO DEVOLVIÓ DATOS');
+            $respuesta = array('CODIGO' => 6, 'MENSAJE' => 'Consulta vacía', 'DATOS' => 'LA CONSULTA NO DEVOLVIÓ DATOS');
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }elseif($res==2){
-            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ERROR EN LA CONSULTA', 'DATOS' => 'ERROR EN LA CONSULTA');
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Error en la consulta', 'DATOS' => 'ERROR EN LA CONSULTA');
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }
@@ -69,7 +55,7 @@ class Parametros {
         // Valida datos completos
         if(  !isset($json['id']) || $json['id']==""){
 
-            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => 'FALTAN DATOS' );
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado. Faltan datos', 'DATOS' => 'FALTAN DATOS' );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }
@@ -78,13 +64,21 @@ class Parametros {
 
         //para validar los datos que edita
         $array_editar = array(
+            'admin_personas_id'=>'',
             'nombre_candidato'=>'',
             'corporaciones_id'=>'',
             'departamentos_id'=>'',
             'municipios_id'=>'',
-            'nombre_administrador'=>'',
-            'telefono'=>'',
-            'celular'=>'',
+            'cuenta_correo'=>'',
+            'clave_correo'=>'',
+            'logo_correo'=>'',
+            'logo_pagina'=>'',
+            'foto_inicio'=>'',
+            'foto_app_movil1'=>'',
+            'foto_app_movil2'=>'',
+            'foto_app_movil3'=>'',
+            'account_sms'=>'',
+            'token_sms'=>'',
             'nombre_esquema'=>'',
             'enviar_sms_crear_referido'=>'',
             'enviar_sms_crear_lider'=>'',
@@ -96,13 +90,13 @@ class Parametros {
         if($cadena=="" || $cadena=="'") {
             $cadena = "id='$id' ";
         }
-        $sql = "UPDATE public.tab_parametros SET $cadena, fecha_actualiza = NOW(), actualiza_usuarios_id = $this->id_usuario WHERE id='$id'  ;";
+        $sql = "UPDATE $this->esquema_db.tab_parametros SET $cadena, fecha_actualiza = NOW(), actualiza_personas_id = $this->id_usuario WHERE id=$id;";
         $sql=reemplazar_vacios($sql);
         // die($sql);
         $res = $this->conector->update($sql);
         if(!$res) {
             // si no trae datos retorna codigo 2
-            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ERROR DB', 'DATOS' => "NO SE ACTUALIZO EL REGISTRO");
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Error BBDD. No se actualizó el registro', 'DATOS' => "NO SE ACTUALIZO EL REGISTRO");
             $response->getBody()->write(json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }

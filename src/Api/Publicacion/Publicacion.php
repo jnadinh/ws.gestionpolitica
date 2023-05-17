@@ -42,7 +42,7 @@ final class Publicacion
         if( !isset($json['asunto'])     || $json['asunto']==""       ||
             !isset($json['detalle'])    || $json['detalle']=="" ){
 
-            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => 'FALTAN DATOS' );
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado. Faltan datos', 'DATOS' => 'FALTAN DATOS' );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }
@@ -59,7 +59,7 @@ final class Publicacion
         $id=$_SESSION['id'];
         if(!$res) {
             // si no trae datos retorna codigo 2 no creo el registro
-            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ERROR DB', 'DATOS' => 'NO SE CREO EL REGISTRO' );
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Error BBDD. No se creó el registro', 'DATOS' => 'NO SE CREO EL REGISTRO' );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }else {
@@ -76,7 +76,7 @@ final class Publicacion
         // Valida datos completos
         if(  !isset($json['id'])  || $json['id']==""              ){
 
-            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => 'FALTAN DATOS' );
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado. Faltan datos', 'DATOS' => 'FALTAN DATOS' );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }
@@ -119,7 +119,7 @@ final class Publicacion
         $sql = "SELECT p.id, p.asunto, p.detalle, p.crea_personas_id, p.fecha_crea,
         u.nombre,  u.apellidos
         FROM $this->esquema_db.tab_publicaciones p
-        INNER JOIN $this->esquema_db.tab_personas u ON u.id=p.crea_personas_id
+        LEFT JOIN $this->esquema_db.tab_personas u ON u.id=p.crea_personas_id
         WHERE p.eliminado = false AND ";
 
         //Campos que se excluyen

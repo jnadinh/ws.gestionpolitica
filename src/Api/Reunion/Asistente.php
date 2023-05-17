@@ -36,9 +36,10 @@ class Asistente {
         r.fecha_crea, r.fecha_actualiza, r.crea_personas_id, r.actualiza_personas_id,
         s.nombre AS salones_nombre
         FROM $this->esquema_db.tab_reuniones r
-        INNER JOIN $this->esquema_db.tab_personas_digitadores pd ON pd.reuniones_id=r.id
+        INNER JOIN $this->esquema_db.tab_reuniones_digitadores rd ON rd.reuniones_id=r.id
         INNER JOIN $this->esquema_db.tab_salones s ON s.id=r.salones_id
-        WHERE estados_reuniones_id = 2 AND r.personas_id = $this->id_usuario ORDER BY r.nombre";
+        WHERE estados_reuniones_id = 2 AND rd.personas_id = $this->id_usuario ORDER BY r.nombre";
+        // die($sql);
         $res = $this->conector->select($sql);
 
         if(!$res){
@@ -108,17 +109,17 @@ class Asistente {
         // valida si la cedula ya está registrada en la BBDD
         $sqlced ="SELECT id, cedula
         FROM $this->esquema_db.tab_personas WHERE cedula = '".$json['cedula']."' ";
+        // die($sqlced);
         $resced = $this->conector->select($sqlced);
-        // var_dump($resced); die($sqlced);
 
         if($resced) {
             $personas_id = $resced[0]['id'];
             // valida que la persona no este registrado en la reunion
             $sqlreun ="SELECT personas_id, reuniones_id
-            FROM $this->esquema_db.tab_personas_reuniones
+            FROM $this->esquema_db.tab_reuniones_personas
             WHERE reuniones_id = '".$json['reuniones_id']."' AND personas_id = $personas_id " ;
             $resreun = $this->conector->select($sqlreun);
-            //die($resreun);
+            //die($sqlreun);
 
             if($resreun){
                 $respuesta = array('CODIGO' => 1, 'MENSAJE' => 'La Persona con CC. '.$json['cedula']. ' ya está registrada en la reunión.', 'DATOS' => 'LA PERSONA YA ESTA REGISTRADA EN LA REUNION '.$json['cedula'] );
@@ -182,7 +183,7 @@ class Asistente {
             '".$this->id_usuario."',2,
             '".$this->id_usuario."'  ) RETURNING id;" ;
             $sql=reemplazar_vacios($sql);
-            //die($sql);
+            // die($sql);
             $res = $this->conector->insert($sql);
             $personas_id=$_SESSION['id'];
             // var_dump($res, $sql);
