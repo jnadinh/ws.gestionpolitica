@@ -339,14 +339,14 @@ final class UserAuthMiddleware
         return $handler->handle($request);
     }
 
-    public function lideres(Request $request, RequestHandler $handler): Response  {
+    public function personas(Request $request, RequestHandler $handler): Response  {
 
         // Recopilar datos de la solicitud HTTP
         $json = (array)$request->getParsedBody();
 
         $response = new Response();
         $modulos_id     = 6;
-        $modulos_nombre = "Lideres";
+        $modulos_nombre = "Personas";
 
         // valida token
         $validarToken = self::validarToken($json);

@@ -18,12 +18,14 @@ class Listado {
 
     private $id_usuario;
     private $usuario;
+    private $esquema_db;
 
     private $conector;
     public function __construct() {
         $this -> conector = ConectorDBPostgres::get_conectorPostgres(Variables::$HOST_DB,Variables::$USUARIO_DB,Variables::$CLAVE_DB,Variables::$NOMBRE_DB);
         $this -> id_usuario = $_SESSION['id_usuario'];
         $this -> usuario    = $_SESSION['usuario'];
+        $this -> esquema_db = $_SESSION['esquema_db'];
     }
 
     public function obtenerDepartamentos(ServerRequestInterface $request, ResponseInterface $response, array $args = [] ): ResponseInterface {
@@ -142,5 +144,98 @@ class Listado {
         $response->getBody()->write((string)json_encode($respuesta));
         return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
     }
+
+    public function obtenerRoles(ServerRequestInterface $request, ResponseInterface $response, array $args = [] ): ResponseInterface {
+        // Recopilar datos de la solicitud HTTP
+        $json = (array)$request->getParsedBody();
+
+        // hace la consulta
+        $sql="";
+        if (isset($json['personas_id']) && $json['personas_id']!="" ) {
+            // si recibe id de la persona
+            $sql = "SELECT r.id, r.nombre FROM  tab_roles r
+            INNER JOIN $this->esquema_db.tab_personas_roles pr on pr.roles_id  = r.id
+            INNER JOIN $this->esquema_db.tab_personas p on  p.id = pr.personas_id
+            WHERE p.id = ".$json['personas_id'] ."";
+        }else {
+            $sql = "SELECT id, nombre FROM public.tab_roles ORDER BY id";
+        }
+        $sql=reemplazar_vacios($sql);
+        // die($sql);
+        $res = $this->conector->select($sql);
+
+        if(!$res){
+            $respuesta = array('CODIGO' => 6, 'MENSAJE' => 'Consulta vacía', 'DATOS' => 'LA CONSULTA NO DEVOLVIÓ DATOS');
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }elseif($res==2){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Error en la consulta', 'DATOS' => 'ERROR EN LA CONSULTA');
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+        $respuesta = array('CODIGO' => 1, 'MENSAJE' => 'OK', 'DATOS' => $res);
+        $response->getBody()->write((string)json_encode($respuesta));
+        return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+    }
+
+    public function obtenerEstadosPersonas(ServerRequestInterface $request, ResponseInterface $response, array $args = [] ): ResponseInterface {
+        // Recopilar datos de la solicitud HTTP
+        $json = (array)$request->getParsedBody();
+
+        // hace la consulta
+        $sql = "SELECT id, nombre FROM public.tab_estados_personas ORDER BY id";
+        $sql=reemplazar_vacios($sql);
+        // die($sql);
+        $res = $this->conector->select($sql);
+
+        if(!$res){
+            $respuesta = array('CODIGO' => 6, 'MENSAJE' => 'Consulta vacía', 'DATOS' => 'LA CONSULTA NO DEVOLVIÓ DATOS');
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }elseif($res==2){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Error en la consulta', 'DATOS' => 'ERROR EN LA CONSULTA');
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+        $respuesta = array('CODIGO' => 1, 'MENSAJE' => 'OK', 'DATOS' => $res);
+        $response->getBody()->write((string)json_encode($respuesta));
+        return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+    }
+
+    public function obtenerModulos(ServerRequestInterface $request, ResponseInterface $response, array $args = [] ): ResponseInterface {
+        // Recopilar datos de la solicitud HTTP
+        $json = (array)$request->getParsedBody();
+
+        // hace la consulta
+        $sql="";
+        if (isset($json['roles'])) {
+            // si recibe un arrelo de roles
+            // $roles = $json['roles'];
+            $roles = implode(",", $json['roles']);
+            $sql = "SELECT DISTINCT m.id, m.nombre FROM  tab_modulos m
+            INNER JOIN tab_roles_modulos rm ON rm.modulos_id = m.id
+            INNER JOIN tab_roles r ON  r.id = rm.roles_id
+            WHERE r.id IN($roles) ORDER BY m.id";
+        }else {
+            $sql = "SELECT id, nombre FROM public.tab_modulos ORDER BY id";
+        }
+        $sql=reemplazar_vacios($sql);
+        // var_dump($roles); die($sql);
+        $res = $this->conector->select($sql);
+
+        if(!$res){
+            $respuesta = array('CODIGO' => 6, 'MENSAJE' => 'Consulta vacía', 'DATOS' => 'LA CONSULTA NO DEVOLVIÓ DATOS');
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }elseif($res==2){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Error en la consulta', 'DATOS' => 'ERROR EN LA CONSULTA');
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+        $respuesta = array('CODIGO' => 1, 'MENSAJE' => 'OK', 'DATOS' => $res);
+        $response->getBody()->write((string)json_encode($respuesta));
+        return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+    }
+
 
 }

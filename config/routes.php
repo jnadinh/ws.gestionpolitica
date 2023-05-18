@@ -71,6 +71,10 @@ return function (App $app) {
         $dobleValidacion->post('/obtener_corporaciones', \App\Api\Listado\Listado::class . ':obtenerCorporaciones');
         $dobleValidacion->post('/obtener_puestos', \App\Api\Listado\Listado::class . ':obtenerPuestos');
 
+        $dobleValidacion->post('/obtener_roles', \App\Api\Listado\Listado::class . ':obtenerRoles');
+        $dobleValidacion->post('/obtener_modulos', \App\Api\Listado\Listado::class . ':obtenerModulos');
+        $dobleValidacion->post('/obtener_estados_personas', \App\Api\Listado\Listado::class . ':obtenerEstadosPersonas');
+
     })->add(UserAuthMiddleware::class . ':dobleValidacion');
 
 
@@ -101,9 +105,12 @@ return function (App $app) {
 
     })->add(UserAuthMiddleware::class . ':misVisitas');
 
-    $app->group('', function (RouteCollectorProxy $lideres) {
-
-    })->add(UserAuthMiddleware::class . ':lideres');
+    $app->group('', function (RouteCollectorProxy $personas) {
+        $personas->post('/obtener_personas', \App\Api\Persona\Persona::class . ':obtenerPersonas');
+        $personas->post('/crear_persona', \App\Api\Persona\Persona::class . ':crearPersona');
+        $personas->post('/editar_persona', \App\Api\Persona\Persona::class . ':editarPersona');
+        $personas->post('/eliminar_persona', \App\Api\Persona\Persona::class . ':eliminarPersona');
+    })->add(UserAuthMiddleware::class . ':personas');
 
     $app->group('', function (RouteCollectorProxy $referidos) {
         $referidos->post('/obtener_referidos', \App\Api\Referido\Referido::class . ':obtenerReferidos');
