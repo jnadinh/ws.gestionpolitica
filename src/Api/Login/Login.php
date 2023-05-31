@@ -121,7 +121,7 @@ class Login {
                 $res[0]['parametros'] = $respar[0];
 
             }
-            $respuesta = array('CODIGO' => 1, 'MENSAJE' => 'Bienvenido a Gestión Política', 'DATOS' => $res[0]);
+            $respuesta = array('CODIGO' => 1, 'MENSAJE' => 'Bienvenido a Recuperemos', 'DATOS' => $res[0]);
 
             $response->getBody()->write((string)json_encode($respuesta) );
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
@@ -360,7 +360,7 @@ class Login {
         // enviar sms
         $sms    = new Sms();
         // $res1[0]['info_sms'] = $sms->enviar_sms($celular1, "Hola Su clave: " .$clave );
-        $res1[0]['info_sms'] = $sms->enviar_sms_prioritario($celular, "Hola ".$nombre." Su clave temporal es: " .$clave. " Por favor ingrese aqui ". Variables::$urlIngreso );
+        $res1[0]['info_sms'] = $sms->enviar_sms_prioritario($celular, "Hola ".$nombre." Su clave temporal es: " .$clave. " Por favor ingrese aqui ". Variables::$urlIngreso2 );
 
         $respuesta = array('CODIGO' => 1, 'MENSAJE' => 'OK', 'DATOS' => $res1 );
         $response->getBody()->write((string)json_encode($respuesta) );

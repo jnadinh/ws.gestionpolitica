@@ -17,6 +17,7 @@ class JMail{
     private $sender;
     private $sender_password="";
     private $service;
+    private $hostphpmailer;
     private $name="";
     private $name_to="";
     public static $MAILGUN='MAILGUN';
@@ -48,9 +49,10 @@ class JMail{
    * @param $service --> Tipo de servicio a utilizar JMail::$MAILGUN
    * @param $name Nombre de la cuenta que remite el correo.
    */
-  public function credentials_mailer($sender, $sender_password, $name="", $name_to="", $debug=false){
+  public function credentials_mailer($sender, $sender_password, $hostphpmailer, $name="", $name_to="", $debug=false){
     $this->sender = $sender;
     $this->sender_password = $sender_password;
+    $this->hostphpmailer = $hostphpmailer;
     $this->service = JMail::$PHPMAILER;
     $this->name = $name;
     $this->name_to = $name_to;
@@ -154,16 +156,16 @@ class JMail{
       $mail->isSMTP();
       $mail->CharSet = 'UTF-8';
       //Send using SMTP
-      $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
-      $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+      $mail->SMTPAuth   = true;                              //Enable SMTP authentication
       $mail->Username   = $this->sender;                     //SMTP username
-      $mail->Password   = $this->sender_password;                               //SMTP password
-      $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-      $mail->Port       = 587;                                    //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+      $mail->Password   = $this->sender_password;            //SMTP password
+      $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;    //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+      $mail->Port       = 587;                               //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+      $mail->Host       = $this->hostphpmailer;              //Set the SMTP server to send through
 
       //Recipients
       $mail->setFrom($this->sender, $this->name);
-      $mail->addAddress($email_to, $this->name_to);     //Add a recipient
+      $mail->addAddress($email_to, $this->name_to);         //Add a recipient
 
       //Content
       $mail->isHTML(true);                                  //Set email format to HTML

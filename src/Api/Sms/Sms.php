@@ -65,7 +65,7 @@ class Sms {
 
         // Toma los datos de la tabla configuracion
 
-        $url    = "https://api103.hablame.co/api/sms/v3/send/marketing";
+        $url    = "https://api103.hablame.co/api/sms/v3/send/priority";
         $account= "10025171";
         $apikey = "acoLPkyjYoONo9y8cEQBEpRKTSrm05";
         $token  = "c15467b8e4b88aba4e81b6012510f619";

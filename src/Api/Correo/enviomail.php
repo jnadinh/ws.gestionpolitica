@@ -17,10 +17,11 @@ $cuenta = $_SERVER['argv'][4];
 $clave = $_SERVER['argv'][5];
 $nombreenvia = $_SERVER['argv'][6];
 $nombrerecibe = $_SERVER['argv'][7];
+$smtpserver = $_SERVER['argv'][8];
 
 
 $jmail= new JMail();
-$jmail->credentials_mailer($cuenta, $clave, $nombreenvia, $nombrerecibe);
+$jmail->credentials_mailer($cuenta, $clave, $smtpserver, $nombreenvia, $nombrerecibe);
 $envio = $jmail->send($correo, $asunto, $mensaje, $mensaje);
 
 ?>

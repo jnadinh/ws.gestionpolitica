@@ -32,10 +32,10 @@ class Mail2 {
         $cuentapass = Variables::$Passwordphpmailer ;
         $nomremite  = Variables::$nombreRemite;
         $nomdestino = Variables::$nombreDestino;
-        $smtpserver = Variables::$puertohpmailer;
+        $smtpserver = Variables::$hostphpmailer;
 
         $jmail= new JMail();
-        $jmail->credentials_mailer($cuentauser, $cuentapass, $nomremite, $nomdestino);
+        $jmail->credentials_mailer($cuentauser, $cuentapass, $smtpserver, $nomremite, $nomdestino);
         $envio = $jmail->send($para, $asunto, $mensaje, $mensaje);
 
         // EJEMPLO ENVIO MAIL

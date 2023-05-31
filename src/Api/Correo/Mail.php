@@ -32,10 +32,10 @@ class Mail {
 
         $cuentauser = Variables::$Usernamephpmailer ;
         $cuentapass = Variables::$Passwordphpmailer ;
-        $cuentauser = Variables::$Usernamephpmailer ;
         $nomremite  = Variables::$nombreRemite;
         $nomdestino = Variables::$nombreDestino;
-        $smtpserver = Variables::$puertohpmailer;
+        $puerto     = Variables::$puertohpmailer;
+        $smtpserver = Variables::$hostphpmailer;
 
         $data = passthru("php '$archivo' ' $para' ' $asunto' ' $mensaje' ' $cuentauser' ' $cuentapass' ' $nomremite' ' $nomdestino' ' $smtpserver' ");
 

@@ -167,7 +167,7 @@ class Asistente {
             // hace la consulta
             $sql="INSERT INTO $this->esquema_db.tab_personas
             (nombre, apellidos, cedula, celular, telefono, email, fecha_nac, direccion, genero, rh, obs,
-            lider_personas_id, estados_personas_id, crea_personas_id)
+            estados_personas_id, crea_personas_id)
             VALUES(
             '".$json['nombre']."',
             '".$json['apellidos']."',
@@ -180,7 +180,7 @@ class Asistente {
             '".$json['genero']."',
             '".$json['rh']."',
             '".$json['obs']."',
-            '".$this->id_usuario."',2,
+            2,
             '".$this->id_usuario."'  ) RETURNING id;" ;
             $sql=reemplazar_vacios($sql);
             // die($sql);

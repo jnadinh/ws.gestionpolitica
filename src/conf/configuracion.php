@@ -15,13 +15,18 @@ class Variables {
 	public static $tiempoSESION = 60;											// TIEMPO MAXIMO DE SESION INACTIVA EN MINUTOS
 
 	public static $nombreRemite="Gestión Política";          					// REMITENTE CORREO PARA MAILGUN Y PHPMAILER
-	public static $correoRemite="gestionpolitica2022@gmail.com";			    // CORREO REMITENTE PARA MAILGUN Y PHPMAILER
+	public static $correoRemite="sevastiantarazonapilonieta@gmail.com";			// CORREO REMITENTE PARA MAILGUN Y PHPMAILER
 	public static $nombreDestino="Referido";    						        // NOMBRE DESTINATARIO CORREO PARA MAILGUN Y PHPMAILER
 
-	public static $hostphpmailer="smtp.gmail.com";      						// HOST PHPMAILER
-	public static $puertohpmailer=587;         	 								// PUERTO PHPMAILER Port
-	public static $Usernamephpmailer="gestionpolitica2022@gmail.com";			// CORREO PHPMAILER Username
-    public static $Passwordphpmailer="vymqkgyzgwqcuhie"; 						// PASSWORD PHPMAILER
+//	public static $hostphpmailer="smtp.gmail.com";      						// HOST PHPMAILER
+	public static $hostphpmailer="smtp.office365.com";     						// HOST PHPMAILER
+    public static $puertohpmailer=587;         	 								// PUERTO PHPMAILER Port
+	public static $Usernamephpmailer="jnadinh@hotmail.com";	                    // CORREO PHPMAILER Username
+    public static $Passwordphpmailer="Junimajo123";        						// PASSWORD PHPMAILER
+//	public static $Usernamephpmailer="sevastiantarazonapilonieta@gmail.com";	// CORREO PHPMAILER Username
+//  public static $Passwordphpmailer="dyhmolyqfomnifwa"; 						// PASSWORD PHPMAILER
+//	public static $Usernamephpmailer="gestionpolitica2022@gmail.com";			// CORREO PHPMAILER Username
+//  public static $Passwordphpmailer="vymqkgyzgwqcuhie"; 						// PASSWORD PHPMAILER
 
 //	public static $urlBase="http://ws.gestionpolitica.com/";                    // URL BASE
 	public static $urlBase="http://localhost:8080/";                            // URL BASE
@@ -29,6 +34,7 @@ class Variables {
 	public static $urlTemp		=__DIR__ . '/../archivos_temporales/';			// URL DE LOS ARCHIVOS TEMPORALES
 	public static $urlArchivos	=__DIR__ . '/../archivos/';						// URL DE LOS ARCHIVOS FIJOS ESQUEMAS
 	public static $urlRest="https://gestionpolitica.com/recovery/change-pass/"; // URL RESTABLECER CONTRASEÑA
-    public static $urlIngreso="http://gestionpolitica.com/";         			    // URL LOGIN
+    public static $urlIngreso="https://gestionpolitica.com/";         			// URL LOGIN
+    public static $urlIngreso2="www.gestionpolitica.com/";         			// URL LOGIN
 }
 ?>
