@@ -11760,3 +11760,486 @@ LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
 [29-May-2023 19:10:02 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 30
 [29-May-2023 19:10:02 Europe/Berlin] PHP Notice:  Undefined index: id_usuario in D:\gestionpolitica\ws.gestionpolitica\src\Api\Correo\Mail2.php on line 26
 [29-May-2023 19:10:16 Europe/Berlin] PHP Notice:  Undefined index: id_usuario in D:\gestionpolitica\ws.gestionpolitica\src\Api\Sms\Sms.php on line 23
+[04-Jun-2023 16:58:55 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 28
+[04-Jun-2023 16:58:55 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 28
+[04-Jun-2023 16:58:55 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 29
+[04-Jun-2023 16:58:55 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 29
+[04-Jun-2023 16:58:55 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 30
+[04-Jun-2023 16:58:55 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 30
+[04-Jun-2023 16:58:55 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «juanse.tab_personas»
+LINE 2:             FROM juanse.tab_personas
+                         ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[04-Jun-2023 16:58:55 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 65
+[04-Jun-2023 16:58:55 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 65
+[04-Jun-2023 16:59:07 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 28
+[04-Jun-2023 16:59:07 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 28
+[04-Jun-2023 16:59:07 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 29
+[04-Jun-2023 16:59:07 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 29
+[04-Jun-2023 16:59:07 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 30
+[04-Jun-2023 16:59:07 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 30
+[04-Jun-2023 16:59:07 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «juanse.tab_personas»
+LINE 2:             FROM juanse.tab_personas
+                         ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[04-Jun-2023 16:59:07 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 65
+[04-Jun-2023 16:59:07 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 65
+[04-Jun-2023 16:59:54 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 28
+[04-Jun-2023 16:59:54 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 28
+[04-Jun-2023 16:59:54 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 29
+[04-Jun-2023 16:59:54 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 29
+[04-Jun-2023 16:59:54 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 30
+[04-Jun-2023 16:59:54 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 30
+[04-Jun-2023 16:59:54 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  no existe la relación «juanse.tab_personas»
+LINE 2:             FROM juanse.tab_personas
+                         ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[04-Jun-2023 16:59:54 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type int in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 65
+[04-Jun-2023 16:59:54 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 65
+[04-Jun-2023 17:02:03 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 28
+[04-Jun-2023 17:02:03 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 28
+[04-Jun-2023 17:02:03 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 29
+[04-Jun-2023 17:02:03 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 29
+[04-Jun-2023 17:02:03 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 30
+[04-Jun-2023 17:02:03 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Api\Login\Login.php on line 30
+[04-Jun-2023 17:02:03 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type bool in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 92
+[04-Jun-2023 17:02:03 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 92
+[04-Jun-2023 17:04:49 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 17:04:49 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 17:04:49 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 17:04:49 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 17:04:49 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[04-Jun-2023 17:05:17 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 17:05:17 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 17:05:17 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 17:05:17 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 17:05:18 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[04-Jun-2023 17:05:18 Europe/Berlin] PHP Notice:  Undefined index: modulos_id in D:\gestionpolitica\ws.gestionpolitica\src\Api\Persona\Persona.php on line 396
+[04-Jun-2023 17:08:15 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 17:08:15 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 17:08:15 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 17:08:15 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 17:08:15 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[04-Jun-2023 17:20:49 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 17:20:49 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 17:20:49 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 17:20:49 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 17:20:49 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[04-Jun-2023 17:20:49 Europe/Berlin] PHP Notice:  Undefined index: id in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 92
+[04-Jun-2023 17:20:49 Europe/Berlin] PHP Notice:  Undefined index: id in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 92
+[04-Jun-2023 17:22:46 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 17:22:46 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 17:22:46 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 17:22:46 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 17:22:46 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[04-Jun-2023 17:22:48 Europe/Berlin] PHP Notice:  Undefined index: id in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 92
+[04-Jun-2023 17:22:48 Europe/Berlin] PHP Notice:  Undefined index: id in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 92
+[04-Jun-2023 17:32:00 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 17:32:00 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 17:32:00 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 17:32:00 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 17:32:00 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[04-Jun-2023 17:32:00 Europe/Berlin] PHP Notice:  Undefined index: id in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 92
+[04-Jun-2023 17:32:00 Europe/Berlin] PHP Notice:  Undefined index: id in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 92
+[04-Jun-2023 17:32:19 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 17:32:19 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 17:32:19 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 17:32:19 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 17:32:19 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[04-Jun-2023 17:32:19 Europe/Berlin] PHP Notice:  Undefined index: id in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 92
+[04-Jun-2023 17:32:20 Europe/Berlin] PHP Notice:  Undefined index: id in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 92
+[04-Jun-2023 17:39:25 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 17:39:25 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 17:39:25 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 17:39:25 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 17:39:25 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[04-Jun-2023 17:39:26 Europe/Berlin] PHP Notice:  Undefined index: id in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 92
+[04-Jun-2023 17:39:26 Europe/Berlin] PHP Notice:  Undefined index: id in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 92
+[04-Jun-2023 18:13:48 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 18:13:48 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 18:13:48 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 18:13:48 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 18:14:30 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 18:14:30 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 18:14:30 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 18:14:30 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 18:14:30 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[04-Jun-2023 18:14:49 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 18:14:49 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 18:14:49 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 18:14:49 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 18:14:50 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[04-Jun-2023 18:14:57 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 18:14:57 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 18:14:57 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 18:14:57 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 18:14:58 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[04-Jun-2023 18:15:05 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 18:15:05 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 18:15:05 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 18:15:05 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 18:15:06 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[04-Jun-2023 18:15:10 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 18:15:10 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 18:15:10 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 18:15:10 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 18:15:10 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[04-Jun-2023 19:08:47 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 19:08:47 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 19:08:47 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 19:08:47 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 19:08:48 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[04-Jun-2023 19:08:48 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type bool in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 92
+[04-Jun-2023 19:08:48 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 92
+[04-Jun-2023 19:08:48 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  syntax error at or near &quot;FROM&quot;
+LINE 1: SELECT COUNT * FROM juanse.tab_reuniones_personas
+                       ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[04-Jun-2023 21:34:30 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 21:34:30 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 21:34:30 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 21:34:30 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 21:35:12 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 21:35:12 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 21:35:12 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 21:35:12 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 21:35:12 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[04-Jun-2023 21:35:52 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 21:35:52 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 21:35:52 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 21:35:52 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 21:35:52 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[04-Jun-2023 22:06:13 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 22:06:13 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 22:06:13 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 22:06:13 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 22:06:13 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[04-Jun-2023 22:06:14 Europe/Berlin] PHP Notice:  Undefined index: telefono in D:\gestionpolitica\ws.gestionpolitica\src\Api\Reunion\Asistente.php on line 176
+[04-Jun-2023 22:06:14 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type bool in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 92
+[04-Jun-2023 22:06:14 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 92
+[04-Jun-2023 22:06:42 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 22:06:42 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 22:06:42 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 22:06:42 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 22:06:42 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[04-Jun-2023 22:07:36 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 22:07:36 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 22:07:36 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 22:07:36 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 22:07:37 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 4:         INNER JOIN .tab_personas_roles pr on rm.roles_id  = ...
+                           ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[04-Jun-2023 22:08:26 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 22:08:26 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 22:08:26 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 22:08:26 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 22:11:32 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 22:11:32 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 22:11:32 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 22:11:32 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 22:15:01 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 22:15:01 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 22:15:01 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 22:15:01 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 22:15:17 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 22:15:17 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 22:15:17 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 22:15:17 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 22:17:37 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 22:17:37 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 22:17:37 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 22:17:37 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 22:32:18 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 22:32:18 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 22:32:18 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 22:32:18 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 22:32:32 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 22:32:32 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 22:32:32 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 22:32:32 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 22:32:33 Europe/Berlin] PHP Notice:  Undefined index: telefono in D:\gestionpolitica\ws.gestionpolitica\src\Api\Reunion\Asistente.php on line 195
+[04-Jun-2023 22:32:33 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type bool in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 92
+[04-Jun-2023 22:32:33 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 92
+[04-Jun-2023 22:33:15 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 22:33:15 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 22:33:15 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 22:33:15 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 22:35:12 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 22:35:12 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[04-Jun-2023 22:35:12 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[04-Jun-2023 22:35:12 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 00:43:29 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 00:43:29 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 00:43:29 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 00:43:29 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 00:44:11 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 00:44:11 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 00:44:11 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 00:44:11 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 00:44:41 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 00:44:41 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 00:44:41 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 00:44:41 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 00:44:41 Europe/Berlin] PHP Notice:  Undefined index: telefono in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 129
+[05-Jun-2023 00:55:18 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 00:55:18 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 00:55:18 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 00:55:18 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 00:56:01 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 00:56:01 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 00:56:01 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 00:56:01 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 00:56:02 Europe/Berlin] PHP Notice:  Undefined index: lideres_personas_id in D:\gestionpolitica\ws.gestionpolitica\src\Api\Persona\Persona.php on line 50
+[05-Jun-2023 00:56:02 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  column &quot;lideres_personas_id&quot; does not exist
+LINE 5:         WHERE estados_personas_id &lt;&gt; 9  AND lideres_personas...
+                                                    ^
+HINT:  Perhaps you meant to reference the column &quot;tab_personas.lider_personas_id&quot;. in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 57
+[05-Jun-2023 00:56:15 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 00:56:15 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 00:56:15 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 00:56:15 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 00:56:49 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 00:56:49 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 00:56:49 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 00:56:49 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 00:56:49 Europe/Berlin] PHP Notice:  Undefined index: lideres_personas_id in D:\gestionpolitica\ws.gestionpolitica\src\Api\Persona\Persona.php on line 50
+[05-Jun-2023 00:59:38 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 00:59:38 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 00:59:38 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 00:59:38 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 00:59:39 Europe/Berlin] PHP Notice:  Undefined index: lider_personas_id in D:\gestionpolitica\ws.gestionpolitica\src\Api\Persona\Persona.php on line 50
+[05-Jun-2023 00:59:47 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 00:59:47 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 00:59:47 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 00:59:47 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 00:59:47 Europe/Berlin] PHP Notice:  Undefined index: lider_personas_id in D:\gestionpolitica\ws.gestionpolitica\src\Api\Persona\Persona.php on line 50
+[05-Jun-2023 03:15:41 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 03:15:41 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 03:15:41 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 03:15:41 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 03:15:42 Europe/Berlin] PHP Notice:  Undefined index: lider_personas_id in D:\gestionpolitica\ws.gestionpolitica\src\Api\Persona\Persona.php on line 50
+[05-Jun-2023 03:17:32 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 03:17:32 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 03:17:32 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 03:17:32 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 03:17:32 Europe/Berlin] PHP Notice:  Undefined index: lider_personas_id in D:\gestionpolitica\ws.gestionpolitica\src\Api\Persona\Persona.php on line 50
+[05-Jun-2023 03:17:46 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 03:17:46 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 03:17:46 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 03:17:46 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 03:17:46 Europe/Berlin] Slim Application Error
+Type: Error
+Code: 0
+Message: Object of class App\Api\Referido\Referido could not be converted to string
+File: D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php
+Line: 99
+Trace: #0 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(43): App\Api\Referido\Referido->crearReferido(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#1 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\Route.php(384): Slim\Handlers\Strategies\RequestResponse->__invoke(Array, Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#2 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#3 D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php(223): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#4 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): App\Middleware\UserAuthMiddleware->misReferidos(Object(Slim\Psr7\Request), Object(Slim\MiddlewareDispatcher))
+#5 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#6 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#7 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\RouteRunner.php(84): Slim\Routing\Route->run(Object(Slim\Psr7\Request))
+#8 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\BodyParsingMiddleware.php(68): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#9 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(147): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#10 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php(59): class@anonymous->handle(Object(Slim\Psr7\Request))
+#11 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(147): Slim\Middleware\RoutingMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#12 D:\gestionpolitica\ws.gestionpolitica\vendor\selective\basepath\src\BasePathMiddleware.php(52): class@anonymous->handle(Object(Slim\Psr7\Request))
+#13 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): Selective\BasePath\BasePathMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#14 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\ErrorMiddleware.php(107): class@anonymous->handle(Object(Slim\Psr7\Request))
+#15 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#16 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#17 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#18 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#19 D:\gestionpolitica\ws.gestionpolitica\public\index.php(6): Slim\App->run()
+#20 {main}
+[05-Jun-2023 03:18:24 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 03:18:24 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 03:18:24 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 03:18:24 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 03:18:24 Europe/Berlin] Slim Application Error
+Type: Error
+Code: 0
+Message: Object of class App\Api\Referido\Referido could not be converted to string
+File: D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php
+Line: 99
+Trace: #0 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(43): App\Api\Referido\Referido->crearReferido(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#1 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\Route.php(384): Slim\Handlers\Strategies\RequestResponse->__invoke(Array, Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#2 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#3 D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php(223): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#4 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): App\Middleware\UserAuthMiddleware->misReferidos(Object(Slim\Psr7\Request), Object(Slim\MiddlewareDispatcher))
+#5 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#6 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#7 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Routing\RouteRunner.php(84): Slim\Routing\Route->run(Object(Slim\Psr7\Request))
+#8 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\BodyParsingMiddleware.php(68): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#9 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(147): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#10 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\RoutingMiddleware.php(59): class@anonymous->handle(Object(Slim\Psr7\Request))
+#11 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(147): Slim\Middleware\RoutingMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#12 D:\gestionpolitica\ws.gestionpolitica\vendor\selective\basepath\src\BasePathMiddleware.php(52): class@anonymous->handle(Object(Slim\Psr7\Request))
+#13 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): Selective\BasePath\BasePathMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#14 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\Middleware\ErrorMiddleware.php(107): class@anonymous->handle(Object(Slim\Psr7\Request))
+#15 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(209): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(class@anonymous))
+#16 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\MiddlewareDispatcher.php(81): class@anonymous->handle(Object(Slim\Psr7\Request))
+#17 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#18 D:\gestionpolitica\ws.gestionpolitica\vendor\slim\slim\Slim\App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#19 D:\gestionpolitica\ws.gestionpolitica\public\index.php(6): Slim\App->run()
+#20 {main}
+[05-Jun-2023 03:19:29 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 03:19:29 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 03:19:29 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 03:19:29 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 03:20:21 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 03:20:21 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 03:20:21 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 03:20:21 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 03:21:17 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 03:21:17 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 03:21:17 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 03:21:17 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 03:21:52 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 03:21:52 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 03:21:52 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 03:21:52 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 03:21:52 Europe/Berlin] PHP Notice:  Undefined index: telefono in D:\gestionpolitica\ws.gestionpolitica\src\Api\Referido\Referido.php on line 153
+[05-Jun-2023 03:25:47 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 03:25:47 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 03:25:47 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 03:25:47 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 03:26:00 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 03:26:00 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 03:26:00 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 03:26:00 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 05:12:02 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 05:12:02 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 05:12:02 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 05:12:02 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 05:12:02 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  syntax error at or near &quot;estados_personas_id&quot;
+LINE 2:                 estados_personas_id = 1 WHERE id = 11 ;
+                        ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[05-Jun-2023 05:12:20 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 05:12:20 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 05:12:20 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 05:12:20 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 05:12:40 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 05:12:40 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 05:12:40 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 05:12:40 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 05:12:41 Europe/Berlin] PHP Warning:  pg_query(): Query failed: ERROR:  syntax error at or near &quot;estados_personas_id&quot;
+LINE 2:                 estados_personas_id = 1 WHERE id = 13 ;
+                        ^ in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 67
+[05-Jun-2023 05:13:51 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 05:13:51 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 05:13:51 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 05:13:51 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 05:13:55 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 05:13:55 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 05:13:55 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 05:13:55 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 05:13:58 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 05:13:58 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 05:13:58 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 05:13:58 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 05:14:02 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 05:14:02 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 05:14:02 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 05:14:02 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 05:15:11 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 05:15:11 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 05:15:11 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 05:15:11 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 05:17:58 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 05:17:58 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 05:17:58 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 05:17:58 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 05:18:37 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 05:18:37 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 05:18:37 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 05:18:37 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 05:18:51 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 05:18:51 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 05:18:51 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 05:18:51 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 05:18:58 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 05:18:58 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 05:18:58 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 05:18:58 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 05:39:05 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 05:39:05 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 05:39:05 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 05:39:05 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 05:39:21 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 05:39:21 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 05:39:21 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 05:39:21 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 05:42:37 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 05:42:37 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 05:42:37 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 05:42:37 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 05:42:37 Europe/Berlin] PHP Notice:  Undefined index: cedula in D:\gestionpolitica\ws.gestionpolitica\src\Api\Persona\Persona.php on line 50
+[05-Jun-2023 05:42:49 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 05:42:49 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 05:42:49 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 05:42:49 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 05:42:50 Europe/Berlin] PHP Notice:  Undefined index: cedula in D:\gestionpolitica\ws.gestionpolitica\src\Api\Persona\Persona.php on line 50
+[05-Jun-2023 09:01:45 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 09:01:45 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 09:01:45 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 09:01:45 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 09:01:46 Europe/Berlin] PHP Notice:  Undefined index: id in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 92
+[05-Jun-2023 09:01:46 Europe/Berlin] PHP Notice:  Undefined index: id in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 92
+[05-Jun-2023 09:01:46 Europe/Berlin] PHP Notice:  Undefined index: id in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 92
+[05-Jun-2023 09:05:39 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 09:05:39 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 09:05:39 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 09:05:39 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 09:07:35 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 09:07:35 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 09:07:35 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 09:07:35 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 09:08:14 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 09:08:14 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 09:08:14 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 09:08:14 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 09:08:15 Europe/Berlin] PHP Notice:  Undefined index: id in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 92
+[05-Jun-2023 09:08:15 Europe/Berlin] PHP Notice:  Undefined index: id in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 92
+[05-Jun-2023 09:08:15 Europe/Berlin] PHP Notice:  Undefined index: id in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 92
+[05-Jun-2023 09:10:26 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 09:10:26 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 40
+[05-Jun-2023 09:10:26 Europe/Berlin] PHP Notice:  Undefined variable: _SESSION in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 09:10:26 Europe/Berlin] PHP Notice:  Trying to access array offset on value of type null in D:\gestionpolitica\ws.gestionpolitica\src\Middleware\UserAuthMiddleware.php on line 41
+[05-Jun-2023 09:10:27 Europe/Berlin] PHP Notice:  Undefined index: id in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 92
+[05-Jun-2023 09:10:27 Europe/Berlin] PHP Notice:  Undefined index: id in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 92
+[05-Jun-2023 09:10:27 Europe/Berlin] PHP Notice:  Undefined index: id in D:\gestionpolitica\ws.gestionpolitica\src\componentes\conector\ConectorDBPostgres.php on line 92

@@ -113,7 +113,39 @@ class Reunion {
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }else {
-            $respuesta = array('CODIGO' => 1, 'MENSAJE' => 'OK', 'DATOS' => $id );
+
+            // si trae el array de digitadores
+            if(isset($json['digitadores'])) {
+
+                // elimina los digitadores
+                $sqldel = "DELETE FROM $this->esquema_db.tab_reuniones_digitadores WHERE reunones_id = '$id' ;";
+                $resdel = $this->conector->delete($sqldel);
+                // die($sqldel);
+
+                // crea los roles
+                $creados=0;
+                $no_creados=0;
+                // hace la consulta
+                foreach ($json['digitadores'] as $key => $value) {
+
+                    $sql = "INSERT INTO $this->esquema_db.tab_reuniones_digitadores
+                    (reuniones_id, personas_id, crea_personas_id)
+                    VALUES($id, $value, $this->id_usuario) RETURNING personas_id;" ;
+                    $sql=reemplazar_vacios($sql);
+                    // die($sql);
+                    $res = $this->conector->insert($sql);
+
+                    if(!$res) {
+                        // si no trae datos aagrega a respuesta no creados
+                        $no_creados ++;
+                    }else {
+                        // si no trae datos aagrega a respuesta no creados
+                        $creados ++;
+                    }
+                }
+            }
+
+            $respuesta = array('CODIGO' => 1, 'MENSAJE' => 'OK', 'DATOS2' => "Det cread: ".$creados. ", No cread: ".$no_creados, 'DATOS' => $id );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }
@@ -160,9 +192,79 @@ class Reunion {
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }
 
-        $respuesta = array('CODIGO' => 1, 'MENSAJE' => 'OK', 'DATOS' => $id );
+        // si trae el array de digitadores
+        if(isset($json['digitadores'])) {
+
+            // elimina los digitadores
+            $sqldel = "DELETE FROM $this->esquema_db.tab_reuniones_digitadores WHERE reunones_id = '$id' ;";
+            $resdel = $this->conector->delete($sqldel);
+            // die($sqldel);
+
+            // crea los roles
+            $creados=0;
+            $no_creados=0;
+            // hace la consulta
+            foreach ($json['digitadores'] as $key => $value) {
+
+                $sql = "INSERT INTO $this->esquema_db.tab_reuniones_digitadores
+                (reuniones_id, personas_id, crea_personas_id)
+                VALUES($id, $value, $this->id_usuario) RETURNING personas_id;" ;
+                $sql=reemplazar_vacios($sql);
+                // die($sql);
+                $res = $this->conector->insert($sql);
+
+                if(!$res) {
+                    // si no trae datos aagrega a respuesta no creados
+                    $no_creados ++;
+                }else {
+                    // si no trae datos aagrega a respuesta no creados
+                    $creados ++;
+                }
+            }
+        }
+
+        $respuesta = array('CODIGO' => 1, 'MENSAJE' => 'OK', 'DATOS2' => "Det cread: ".$creados. ", No cread: ".$no_creados, 'DATOS' => $id );
         $response->getBody()->write((string)json_encode($respuesta));
         return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
     }
+
+    public function obtenerDigitadoresReunion(ServerRequestInterface $request, ResponseInterface $response, array $args = [] ): ResponseInterface {
+        // Recopilar datos de la solicitud HTTP
+        $json = (array)$request->getParsedBody();
+        // devuelve los digitadores con permiso a una reunion
+
+        // Valida datos completos
+        if( !isset($json['reuniones_id'])  || $json['reuniones_id']=="" ){
+
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado. Faltan datos', 'DATOS' => 'FALTAN DATOS' );
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+
+        $reuniones_id = $json['reuniones_id'];
+
+        // hace la consulta
+        $sql="SELECT p.id, p.nombre, p.apellidos
+        FROM $this->esquema_db.tab_personas p
+        INNER JOIN $this->esquema_db.tab_reuniones_digitadores rd ON p.id =rd.personas_id
+        WHERE rd.reuniones_id = $reuniones_id ORDER BY p.nombre ";
+        // die($sql);
+        $res = $this->conector->select($sql);
+
+        if(!$res){
+            $respuesta = array('CODIGO' => 6, 'MENSAJE' => 'Consulta vacía. La consulta no devolvió datos', 'DATOS' => 'LA CONSULTA NO DEVOLVIÓ DATOS');
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }elseif($res==2){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Error en la consulta', 'DATOS' => 'ERROR EN LA CONSULTA');
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+
+        $respuesta = array('CODIGO' => 1, 'MENSAJE' => 'OK', 'DATOS' => $res);
+        $response->getBody()->write((string)json_encode($respuesta));
+        return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+    }
+
 
 }

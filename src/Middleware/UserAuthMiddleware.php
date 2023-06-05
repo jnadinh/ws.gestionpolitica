@@ -104,8 +104,8 @@ final class UserAuthMiddleware
         $sql = "SELECT DISTINCT m.id, m.nombre
         FROM public.tab_modulos m
         INNER JOIN public.tab_roles_modulos rm on m.id = rm.modulos_id
-        INNER JOIN $this->esquema_db.tab_personas_roles pr on rm.roles_id  = pr.roles_id
-        WHERE pr.personas_id = 1 AND rm.modulos_id = $modulos_id
+        INNER JOIN ".$_SESSION['esquema_db'].".tab_personas_roles pr on rm.roles_id  = pr.roles_id
+        WHERE pr.personas_id = ".$_SESSION['id_usuario']." AND rm.modulos_id = $modulos_id
         ORDER BY m.id ";
         // die($sql);
         $sql=reemplazar_vacios($sql);
@@ -578,7 +578,7 @@ final class UserAuthMiddleware
         $json = (array)$request->getParsedBody();
 
         $response = new Response();
-        $modulos_id     = 14;
+        $modulos_id     = 13;
         $modulos_nombre = "Registro Asistentes Reuniones";
 
         // valida token
@@ -592,7 +592,8 @@ final class UserAuthMiddleware
 
         // valida que el rol tenga acceso al modulo
         $validarModulo = self::validarModulo($modulos_id);
-        if( $validarModulo!="Módulo válido"  ){
+        // die($validarModulo);
+        if( $validarModulo!="Módulo válido"){
             $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado. '.$validarModulo .' '.$modulos_nombre, 'DATOS' => $validarModulo ." ".$modulos_nombre );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);

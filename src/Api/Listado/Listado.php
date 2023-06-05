@@ -237,5 +237,29 @@ class Listado {
         return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
     }
 
+    public function obtenerEstadosReuniones(ServerRequestInterface $request, ResponseInterface $response, array $args = [] ): ResponseInterface {
+        // Recopilar datos de la solicitud HTTP
+        $json = (array)$request->getParsedBody();
+
+        // hace la consulta
+        $sql = "SELECT id, nombre FROM public.tab_estados_reuniones ORDER BY id";
+        $sql=reemplazar_vacios($sql);
+        // die($sql);
+        $res = $this->conector->select($sql);
+
+        if(!$res){
+            $respuesta = array('CODIGO' => 6, 'MENSAJE' => 'Consulta vacía', 'DATOS' => 'LA CONSULTA NO DEVOLVIÓ DATOS');
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }elseif($res==2){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Error en la consulta', 'DATOS' => 'ERROR EN LA CONSULTA');
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+        $respuesta = array('CODIGO' => 1, 'MENSAJE' => 'OK', 'DATOS' => $res);
+        $response->getBody()->write((string)json_encode($respuesta));
+        return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+    }
+
 
 }

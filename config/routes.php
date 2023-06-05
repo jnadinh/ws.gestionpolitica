@@ -39,6 +39,7 @@ return function (App $app) {
 
     // ok envia desde el servidor no local
     $app->get('/prueba_mail/{mail}', \App\Api\Home\PruebaMail::class );
+    $app->post('/prueba_mail', \App\Api\Home\PruebaMail::class );
     // ok envia desde el servidor no local
     $app->get('/mail', \App\Api\Home\PruebaMail::class. ':mail' );
     // https://ws.gestionpolitica.com/prueba_mail/jnadinh@hotmail.com
@@ -74,19 +75,19 @@ return function (App $app) {
         $dobleValidacion->post('/obtener_roles', \App\Api\Listado\Listado::class . ':obtenerRoles');
         $dobleValidacion->post('/obtener_modulos', \App\Api\Listado\Listado::class . ':obtenerModulos');
         $dobleValidacion->post('/obtener_estados_personas', \App\Api\Listado\Listado::class . ':obtenerEstadosPersonas');
+        $dobleValidacion->post('/obtener_estados_reuniones', \App\Api\Listado\Listado::class . ':obtenerEstadosReuniones');
+        $dobleValidacion->post('/buscar_por_cedula', \App\Api\Persona\Persona::class . ':obtenerPersonas');
 
     })->add(UserAuthMiddleware::class . ':dobleValidacion');
-
-
 
     // con validacion de token usuarios
 
     // valida por modulos
     $app->group('', function (RouteCollectorProxy $misReferidos) {
-        $misReferidos->post('/obtener_mis_referidos', \App\Api\Referido\Referido::class . ':obtenerReferidos');
-        $misReferidos->post('/crear_mi_referido', \App\Api\Referido\Referido::class . ':crearReferido');
-        $misReferidos->post('/editar_mi_referido', \App\Api\Referido\Referido::class . ':editarReferido');
-        $misReferidos->post('/eliminar_mi_referido', \App\Api\Referido\Referido::class . ':eliminarReferido');
+        $misReferidos->post('/obtener_referidos', \App\Api\Persona\Persona::class . ':obtenerPersonas');
+        $misReferidos->post('/crear_referido', \App\Api\Referido\Referido::class . ':crearReferido');
+        $misReferidos->post('/editar_referido', \App\Api\Referido\Referido::class . ':editarReferido');
+        $misReferidos->post('/eliminar_referido', \App\Api\Referido\Referido::class . ':eliminarReferido');
     })->add(UserAuthMiddleware::class . ':misReferidos');
 
     $app->group('', function (RouteCollectorProxy $misActividades) {
@@ -107,17 +108,11 @@ return function (App $app) {
 
     $app->group('', function (RouteCollectorProxy $personas) {
         $personas->post('/obtener_personas', \App\Api\Persona\Persona::class . ':obtenerPersonas');
+        $personas->post('/obtener_personas_modulo', \App\Api\Persona\Persona::class . ':obtenerPersonasModulo');
         $personas->post('/crear_persona', \App\Api\Persona\Persona::class . ':crearPersona');
         $personas->post('/editar_persona', \App\Api\Persona\Persona::class . ':editarPersona');
         $personas->post('/eliminar_persona', \App\Api\Persona\Persona::class . ':eliminarPersona');
     })->add(UserAuthMiddleware::class . ':personas');
-
-    $app->group('', function (RouteCollectorProxy $referidos) {
-        $referidos->post('/obtener_referidos', \App\Api\Referido\Referido::class . ':obtenerReferidos');
-        $referidos->post('/crear_referido', \App\Api\Referido\Referido::class . ':crearReferido');
-        $referidos->post('/editar_referido', \App\Api\Referido\Referido::class . ':editarReferido');
-        $referidos->post('/eliminar_referido', \App\Api\Referido\Referido::class . ':eliminarReferido');
-    })->add(UserAuthMiddleware::class . ':referidos');
 
     $app->group('', function (RouteCollectorProxy $actividades) {
 
@@ -133,6 +128,7 @@ return function (App $app) {
         $reuniones->post('/crear_reunion', \App\Api\Reunion\Reunion::class . ':crearReunion');
         $reuniones->post('/editar_reunion', \App\Api\Reunion\Reunion::class . ':editarReunion');
         $reuniones->post('/eliminar_reunion', \App\Api\Reunion\Reunion::class . ':eliminarReunion');
+        $reuniones->post('/obtener_digitadores_reunion', \App\Api\Reunion\Reunion::class . ':obtenerDigitadoresReunion');
 
         $reuniones->post('/obtener_asistentes', \App\Api\Reunion\Asistente::class . ':obtenerAsistentes');
         $reuniones->post('/editar_asistente', \App\Api\Reunion\Asistente::class . ':editarAsistentes');
@@ -161,7 +157,6 @@ return function (App $app) {
 
         $registroAsistentesReuniones->post('/obtener_reuniones_digitador', \App\Api\Reunion\Asistente::class . ':obtenerReunionesDigitador');
         $registroAsistentesReuniones->post('/crear_asistente', \App\Api\Reunion\Asistente::class . ':crearAsistente');
-        $registroAsistentesReuniones->post('/buscar_por_cedula', \App\Api\Referido\Referido::class . ':obtenerReferidos');
 
     })->add(UserAuthMiddleware::class . ':registroAsistentesReuniones');
 

@@ -106,6 +106,25 @@ class Asistente {
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }
 
+        // valida si tiene permiso de crear asitentes a la reunion
+        $sqlreu ="SELECT r.id, r.nombre
+        FROM $this->esquema_db.tab_reuniones r
+        INNER JOIN $this->esquema_db.tab_reuniones_digitadores rd ON rd.reuniones_id=r.id
+        WHERE estados_reuniones_id = 2 AND rd.personas_id = $this->id_usuario
+        AND r.id = ".$json['reuniones_id']." ORDER BY r.nombre";
+        // die($sqlreu);
+        $resreu = $this->conector->select($sqlreu);
+
+        if(!$resreu){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso Denegado. No tiene acceso a la reunión', 'DATOS' => $json['reuniones_id'] );
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }elseif($resreu==2){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Error en la consulta', 'DATOS' => 'ERROR EN LA CONSULTA');
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+
         // valida si la cedula ya está registrada en la BBDD
         $sqlced ="SELECT id, cedula
         FROM $this->esquema_db.tab_personas WHERE cedula = '".$json['cedula']."' ";
@@ -179,8 +198,7 @@ class Asistente {
             '".$json['direccion']."',
             '".$json['genero']."',
             '".$json['rh']."',
-            '".$json['obs']."',
-            2,
+            '".$json['obs']."', 1,
             '".$this->id_usuario."'  ) RETURNING id;" ;
             $sql=reemplazar_vacios($sql);
             // die($sql);
@@ -219,57 +237,16 @@ class Asistente {
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }else {
-            $respuesta = array('CODIGO' => 1, 'MENSAJE' => 'Registro creado con éxito '.$personas_id, 'DATOS' => $personas_id );
+
+            $sqlcount = "SELECT COUNT (*) AS total FROM $this->esquema_db.tab_reuniones_personas
+            WHERE reuniones_id =". $json['reuniones_id'] ;
+            $rescount = $this->conector->select($sqlcount);
+            //die($sqlcount);
+
+            $respuesta = array('CODIGO' => 1, 'MENSAJE' => 'Registro creado con éxito '.$rescount[0]['total'], 'DATOS' => $personas_id );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }
     }
-
-    public function editarReunionxx(ServerRequestInterface $request, ResponseInterface $response, array $args = [] ): ResponseInterface {
-        // Recopilar datos de la solicitud HTTP
-        $json = (array)$request->getParsedBody();
-        // Valida datos completos
-        if(  !isset($json['id'])  || $json['id']==""   ){
-
-            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => 'FALTAN DATOS' );
-            $response->getBody()->write((string)json_encode($respuesta));
-            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
-        }
-
-        $id = $json['id'];
-
-        //para validar los datos que edita
-        $array_editar = array(
-            'nombre'=>'',
-            'salones_id'=>'',
-            'obs'=>'',
-            'estados_reuniones_id'=>'',
-            'fecha_hora'=>'',
-            'duracion_horas'=>'',
-        );
-
-        $actualiza="actualiza_personas_id = $this->id_usuario, fecha_actualiza=now(), ";
-
-        $json_editar = array_intersect_key($json, $array_editar);
-        $cadena=cadena_editar($json_editar);
-        if($cadena=="" || $cadena=="'") {
-            $cadena = "id='$id' ";
-        }
-        $sql = "UPDATE $this->esquema_db.tab_reuniones SET $actualiza $cadena WHERE id='$id'  ;";
-        $sql=reemplazar_vacios($sql);
-        // die($sql);
-        $res = $this->conector->update($sql);
-        if(!$res) {
-            // si no trae datos retorna codigo 2
-            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ERROR DB', 'DATOS' => "NO SE ACTUALIZO EL REGISTRO");
-            $response->getBody()->write(json_encode($respuesta));
-            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
-        }
-
-        $respuesta = array('CODIGO' => 1, 'MENSAJE' => 'OK', 'DATOS' => $id );
-        $response->getBody()->write((string)json_encode($respuesta));
-        return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
-    }
-
 
 }

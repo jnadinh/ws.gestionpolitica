@@ -232,7 +232,7 @@ class Login {
         $nueva_clave = $json['nueva_clave'];
 
         // valida el usuario y clave
-        $sql = "SELECT id FROM $this->esquema_db.tab_personas
+        $sql = "SELECT id, cedula FROM $this->esquema_db.tab_personas
         WHERE (email='$usuario' OR cedula ='$usuario') AND clave= MD5('$clave') ";
         $sql=reemplazar_vacios($sql);
         $res = $this->conector->select($sql);
@@ -250,15 +250,53 @@ class Login {
         }else{
 
             $id_usuario = $res[0]['id'];
+            $cedula = $res[0]['cedula'];
 
             // cambia la clave
             $sqlup = "UPDATE $this->esquema_db.tab_personas SET clave = MD5('$nueva_clave')
             WHERE id='$id_usuario' ;";
             $sqlup=reemplazar_vacios($sqlup);
-            //die($sqlup);
+            // die($sqlup);
             $resup = $this->conector->update($sqlup);
 
             // cambia la clave en las demas esquemas donde este la persona
+
+            // hace la consulta para obtener los esquemas
+            $sqlesq = "SELECT s.oid AS id, s.nspname AS nombre_esquema, u.usename
+            FROM pg_catalog.pg_namespace s
+            JOIN pg_catalog.pg_user u ON u.usesysid = s.nspowner
+            WHERE nspname NOT IN ('information_schema', 'pg_catalog', 'public')
+            AND nspname NOT LIKE 'pg_toast%' AND nspname NOT LIKE 'pg_temp%'";
+            $resesq = $this->conector->select($sqlesq);
+            //var_dump($res, $sqlesq);
+            $correo = "";
+            $celular = "";
+            $nombre = "";
+            foreach ($resesq as $key => $value) {
+
+                $esquema_db = $value['nombre_esquema'];
+
+                $sqlus = "SELECT id, email, celular, nombre, apellidos
+                FROM $esquema_db.tab_personas
+                WHERE cedula = '$cedula' ";
+                $sqlus=reemplazar_vacios($sqlus);
+                $resus = $this->conector->select($sqlus);
+                // die($sqlus);
+                if(count2($resus)>0) {
+                    if( $esquema_db == $json['esquema_db']) {
+                        $correo = $resus[0]['email'];
+                        $celular = $resus[0]['celular'];
+                    }
+                    $id_usuario = $resus[0]['id'];
+                    $nombre = $resus[0]['nombre'];
+                    // cambia la clave
+                    $sqlup = "UPDATE $esquema_db.tab_personas SET clave = MD5('$nueva_clave')
+                    WHERE id='$id_usuario' ;";
+                    $sqlup=reemplazar_vacios($sqlup);
+                    // die($sqlup);
+                    $resup = $this->conector->update($sqlup);
+                }
+            }
 
             if(!$resup) {
                 // si no trae datos retorna codigo 2

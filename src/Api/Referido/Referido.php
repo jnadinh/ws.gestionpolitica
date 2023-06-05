@@ -26,6 +26,7 @@ class Referido {
         $this -> id_usuario = $_SESSION['id_usuario'];
     }
 
+    // no se esta usando
     public function obtenerReferidos(ServerRequestInterface $request, ResponseInterface $response, array $args = [] ): ResponseInterface {
         // Recopilar datos de la solicitud HTTP
         $json = (array)$request->getParsedBody();
@@ -71,85 +72,120 @@ class Referido {
         $json = (array)$request->getParsedBody();
 
         // Valida datos completos
-        if( !isset($json['nombre'])     || $json['nombre']==""      ||
-            !isset($json['apellidos'])  || $json['apellidos']==""   ||
-            !isset($json['cedula'])     || $json['cedula']==""      ||
-            !isset($json['celular'])    || $json['celular']==""     ||
-            !isset($json['genero'])     || $json['genero']==""      ){
+        if( !isset($json['cedula']) || $json['cedula']==""  ){
 
-            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ACCESO DENEGADO', 'DATOS' => 'FALTAN DATOS' );
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado. Faltan datos', 'DATOS' => 'FALTAN DATOS' );
             $response->getBody()->write((string)json_encode($respuesta));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }
 
-        // valida que la cedula no exista en la bbdd
-        $sqlced ="SELECT id, nombre, apellidos, cedula, estados_personas_id
-        FROM $this->esquema_db.tab_personas WHERE cedula = '".$json['cedula']."'" ;
-        $resced = $this->conector->select($sqlced);
+        // valida si la cedula ya está registrada en la BBDD
+        $sqlced ="SELECT id, cedula, lider_personas_id
+        FROM $this->esquema_db.tab_personas WHERE cedula = '".$json['cedula']."' ";
         // die($sqlced);
+        $resced = $this->conector->select($sqlced);
 
-        if($resced){
-            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'REGISTRO DUPLICADO', 'DATOS' => 'YA EXISTE UN REGISTRO CON LA CEDULA '.$json['cedula'] );
-            $response->getBody()->write((string)json_encode($respuesta));
-            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
-        }elseif($resced==2){
-            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ERROR EN LA CONSULTA', 'DATOS' => 'ERROR EN LA CONSULTA cedula');
-            $response->getBody()->write((string)json_encode($respuesta));
-            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
-        }
-
-        // valida que el correo no exista en la bbdd
-        if(isset($json['email']) && $json['email']!="") {
-
-            $sqlemail ="SELECT id, nombre, apellidos, cedula, estados_personas_id
-            FROM $this->esquema_db.tab_personas WHERE email = '".$json['email']."'" ;
-            $resemail = $this->conector->select($sqlemail);
-            //die($sqlemail);
-
-            if($resemail){
-                $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'REGISTRO DUPLICADO', 'DATOS' => 'YA EXISTE UN REGISTRO CON EL CORREO '.$json['email'] );
+        if($resced) {
+            $personas_id        = $resced[0]['id'];
+            $cedula             = $resced[0]['cedula'];
+            $lider_personas_id  = $resced[0]['lider_personas_id'];
+            // valida que la persona no sea referida de otro lider
+            if(isset($lider_personas_id) && $lider_personas_id != $this->id_usuario){
+                $respuesta = array('CODIGO' => 1, 'MENSAJE' => 'La Persona con CC. '.$json['cedula']. ' ya es referida de otro Lider.', 'DATOS' => 'LA PERSONA YA ES REFERIDA'.$json['cedula'] );
                 $response->getBody()->write((string)json_encode($respuesta));
                 return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
-            }elseif($resced==2){
-                $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ERROR EN LA CONSULTA', 'DATOS' => 'ERROR EN LA CONSULTA cedula');
+            }elseif(isset($lider_personas_id) && $lider_personas_id == $this->id_usuario){
+                $respuesta = array('CODIGO' => 1, 'MENSAJE' => 'La Persona con CC. '.$json['cedula']. ' ya es su referida.', 'DATOS' => 'LA PERSONA YA ES SU REFERIDA '.$json['cedula'] );
+                $response->getBody()->write((string)json_encode($respuesta));
+                return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+            }else {
+                // actualiza el registro
+                $sqlup = "UPDATE $this->esquema_db.tab_personas SET lider_personas_id = $this->id_usuario,
+                estados_personas_id = 1 WHERE id = $personas_id ;";
+                // die($sqlup);
+                $resup = $this->conector->update($sqlup);
+                if(!$resup) {
+                    // si no trae datos retorna codigo 2
+                    $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ERROR DB', 'DATOS' => "NO SE ACTUALIZO EL REGISTRO");
+                    $response->getBody()->write(json_encode($respuesta));
+                    return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+                }
+            }
+
+        }elseif(!$resced) {
+
+            //crea el registro de personas
+            // Valida datos completos
+            if( !isset($json['nombre'])     || $json['nombre']==""      ||
+                !isset($json['apellidos'])  || $json['apellidos']==""   ||
+                !isset($json['celular'])    || $json['celular']==""     ||
+                !isset($json['genero'])     || $json['genero']==""      ){
+
+                $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Acceso denegado. Faltan datos', 'DATOS' => 'FALTAN DATOS' );
                 $response->getBody()->write((string)json_encode($respuesta));
                 return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
             }
+
+            // valida que el correo no exista en la bbdd
+            if(isset($json['email']) && $json['email']!="") {
+
+                $sqlemail ="SELECT id, nombre, apellidos, cedula, estados_personas_id
+                FROM $this->esquema_db.tab_personas WHERE email = '".$json['email']."'" ;
+                $resemail = $this->conector->select($sqlemail);
+                //die($sqlemail);
+
+                if($resemail){
+                    $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Registro duplicado. Ya existe un registro con el correo '.$json['email'], 'DATOS' => 'YA EXISTE UN REGISTRO CON EL CORREO '.$json['email'] );
+                    $response->getBody()->write((string)json_encode($respuesta));
+                    return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+                }elseif($resced==2){
+                    $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Error en la consulta.', 'DATOS' => 'ERROR EN LA CONSULTA cedula');
+                    $response->getBody()->write((string)json_encode($respuesta));
+                    return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+                }
+            }
+
+            // hace la consulta
+            $sql="INSERT INTO $this->esquema_db.tab_personas
+            (nombre, apellidos, cedula, celular, telefono, email, fecha_nac, direccion, genero, rh, obs,
+            estados_personas_id, crea_personas_id, lider_personas_id)
+            VALUES(
+            '".$json['nombre']."',
+            '".$json['apellidos']."',
+            '".$json['cedula']."',
+            '".$json['celular']."',
+            '".$json['telefono']."',
+            '".$json['email']."',
+            '".$json['fecha_nac']."',
+            '".$json['direccion']."',
+            '".$json['genero']."',
+            '".$json['rh']."',
+            '".$json['obs']."', 1,
+            '".$this->id_usuario."',
+            '".$this->id_usuario."'  ) RETURNING id;" ;
+            $sql=reemplazar_vacios($sql);
+            // die($sql);
+            $res = $this->conector->insert($sql);
+            $personas_id=$_SESSION['id'];
+            // var_dump($res, $sql);
+            if(!$res) {
+                // si no trae datos retorna codigo 2 no creo el registro
+                $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Error en la consulta. No se creó el registro', 'DATOS' => 'NO SE CREO EL REGISTRO' );
+                $response->getBody()->write((string)json_encode($respuesta));
+                return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+            }
+
+        }elseif($resced==2){
+            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'Error en la consulta.', 'DATOS' => 'ERROR EN LA CONSULTA');
+            $response->getBody()->write((string)json_encode($respuesta));
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         }
 
-        // hace la consulta
-        $sql="INSERT INTO $this->esquema_db.tab_personas
-        (nombre, apellidos, cedula, celular, telefono, email, fecha_nac, direccion, genero, rh, obs,
-        lider_personas_id, estados_personas_id, crea_personas_id)
-        VALUES(
-        '".$json['nombre']."',
-        '".$json['apellidos']."',
-        '".$json['cedula']."',
-        '".$json['celular']."',
-        '".$json['telefono']."',
-        '".$json['email']."',
-        '".$json['fecha_nac']."',
-        '".$json['direccion']."',
-        '".$json['genero']."',
-        '".$json['rh']."',
-        '".$json['obs']."',
-        '".$this->id_usuario."',2,
-        '".$this->id_usuario."'  ) RETURNING id;" ;
-        $sql=reemplazar_vacios($sql);
-        //die($sql);
-        $res = $this->conector->insert($sql);
-        $id=$_SESSION['id'];
-        // var_dump($res, $sql);
-        if(!$res) {
-            // si no trae datos retorna codigo 2 no creo el registro
-            $respuesta = array('CODIGO' => 2, 'MENSAJE' => 'ERROR DB', 'DATOS' => 'NO SE CREO EL REGISTRO' );
-            $response->getBody()->write((string)json_encode($respuesta));
-            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
-        }else {
-            $respuesta = array('CODIGO' => 1, 'MENSAJE' => 'OK', 'DATOS' => $id );
-            $response->getBody()->write((string)json_encode($respuesta));
-            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
-        }
+        $respuesta = array('CODIGO' => 1, 'MENSAJE' => 'Registro creado con éxito '.$personas_id, 'DATOS' => $personas_id );
+        $response->getBody()->write((string)json_encode($respuesta));
+        return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+
+
     }
 
     public function editarReferido(ServerRequestInterface $request, ResponseInterface $response, array $args = [] ): ResponseInterface {

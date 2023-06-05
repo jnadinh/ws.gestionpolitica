@@ -76,7 +76,8 @@ class JMail{
         $this->send_mailjet($email_to,$subject,$content,$altbody,$tag);
       }
       if($this->service == JMail::$PHPMAILER){
-       $this->send_mailer($email_to, $subject, $content, $altbody, $tag);
+       $algo = $this->send_mailer($email_to, $subject, $content, $altbody, $tag);
+       return $algo;
       }
     }
 
@@ -172,10 +173,13 @@ class JMail{
       $mail->Subject = $subject;
       $mail->Body    = $content;
       $mail->AltBody = $altbody;
-
       $mail->send();
+
     } catch (Exception $e) {
-      echo "Message could not be sent. PHP Mailer Error: {$mail->ErrorInfo}";
+        if (JMail::$DEBUG)
+            echo "Message could not be sent. PHP Mailer Error: {$mail->ErrorInfo}";
+        return "Correo Fallido";
     }
+    return "Correo Exitoso";
   }
 }

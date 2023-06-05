@@ -32,11 +32,14 @@ final class PruebaMail
     {
         $json = array_merge($args, (array)$request->getParsedBody());
 
+        // con todas estas cuentas funciona, la de hotmail la bloquearon pero llega mensaje al correo y se vuelve a habilitar
         $jmail= new JMail();
-        // $jmail->credentials_mailer('jnadinh@gmail.com', 'tpiwymtgegamahao', 'Gestion Politica', 'REFERIDOS');
-        $jmail->credentials_mailer('gestionpolitica2022@gmail.com', 'vymqkgyzgwqcuhie', 'Gestion Politica', 'REFERIDOS');
+        $jmail->credentials_mailer('jnadinh@hotmail.com', 'Junimajo123', 'smtp.office365.com', 'Gestion Politica', 'REFERIDOS');
+        // $jmail->credentials_mailer('jnadinh@gmail.com', 'tpiwymtgegamahao', 'smtp.gmail.com', 'Gestion Politica', 'REFERIDOS');
+        // $jmail->credentials_mailer('gestionpolitica2022@gmail.com', 'vymqkgyzgwqcuhie', 'smtp.gmail.com', 'Gestion Politica', 'REFERIDOS');
+        // $jmail->credentials_mailer('sevastiantarazonapilonieta@gmail.com', 'dyhmolyqfomnifwa', 'smtp.gmail.com', 'Gestion Politica', 'REFERIDOS');
         $envio = $jmail->send($json['mail'],'Registro de Referido','Bienvenido al equipo. Ud ha sido registrado en xxx','My first mail TEXT');
-
+        echo $envio;
         exit;
     }
 
